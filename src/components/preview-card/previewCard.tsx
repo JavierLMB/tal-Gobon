@@ -23,4 +23,3 @@ const StyledProductCard = styled.div`
   display: flex;
   position: relative;
 `;
-/////////
