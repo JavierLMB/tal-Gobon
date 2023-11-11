@@ -13,10 +13,10 @@ export default function PreviewCard({
   price,
   title,
 }: PreviewCardProps) {
-  return <StyledSessionCard> </StyledSessionCard>;
+  return <StyledProductCard> </StyledProductCard>;
 }
 
-const StyledSessionCard = styled.div`
+const StyledProductCard = styled.div`
   height: 72px;
   width: 100%;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
