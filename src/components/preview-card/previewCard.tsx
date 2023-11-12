@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 type PreviewCardProps = {
   category: string;
@@ -13,13 +13,27 @@ export default function PreviewCard({
   price,
   title,
 }: PreviewCardProps) {
-  return <StyledProductCard> </StyledProductCard>;
+  return (
+    <StyledProductCard>
+      <a>
+        <StyledImage src={image}></StyledImage>
+      </a>
+      <h3>{title.length > 20 ? `${title.slice(0, 20)}...` : title}</h3>
+
+      <div>{price}</div>
+    </StyledProductCard>
+  );
 }
 
 const StyledProductCard = styled.div`
-  height: 72px;
-  width: 100%;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
-  display: flex;
-  position: relative;
+  padding: 2rem;
+  width: 19rem;
+`;
+
+const StyledImage = styled.img`
+  display: block;
+  width: 100%;
+  height: 22rem;
+  margin-bottom: 2rem;
 `;
