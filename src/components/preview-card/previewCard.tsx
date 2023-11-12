@@ -1,3 +1,5 @@
+import styled, { css } from "styled-components";
+
 type PreviewCardProps = {
   category: string;
   image: string;
@@ -11,9 +13,13 @@ export default function PreviewCard({
   price,
   title,
 }: PreviewCardProps) {
-  return (
-    <div>
-      {category} {price}
-    </div>
-  );
+  return <StyledSessionCard> </StyledSessionCard>;
 }
+
+const StyledSessionCard = styled.div`
+  height: 72px;
+  width: 100%;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  display: flex;
+  position: relative;
+`;
