@@ -1,7 +1,20 @@
 import { useState, useEffect } from "react";
 
+export type Product = {
+  category: string;
+  description: string;
+  id: number;
+  image: string;
+  price: number;
+  rating: {
+    rate: number;
+    count: number;
+  };
+  title: string;
+};
+
 export function useData() {
-  const [storeProducts, setStoreProducts] = useState([]);
+  const [storeProducts, setStoreProducts] = useState<Product[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
 
