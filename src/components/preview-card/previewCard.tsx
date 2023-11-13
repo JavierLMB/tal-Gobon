@@ -1,9 +1,17 @@
 import styled from "styled-components";
+import { animalImages } from "./usePreviewCardAnimalIcons";
 
 type PreviewCardProps = {
   image1: string;
   name: string;
-  animal: string;
+  animal:
+    | "Cow"
+    | "Sheep"
+    | "Sheep/Goat"
+    | "Cow/Goat"
+    | "Cow/Goat/Buffalo"
+    | "Cow/Sheep/Goat"
+    | "Sheep/Cow/Goat/Buffalo";
   pricePerKg: number;
 };
 
@@ -13,28 +21,75 @@ export default function PreviewCard({
   animal,
   pricePerKg,
 }: PreviewCardProps) {
+  const animalIcons = animalImages[animal];
+
   return (
     <StyledProductCard>
       <a>
         <StyledImage src={image1}></StyledImage>
       </a>
-      <h3>{name.length > 20 ? `${name.slice(0, 20)}...` : name}</h3>
-
-      <div>{pricePerKg}</div>
+      <StyledContent>
+        <div>
+          <StyledName>
+            {name.length > 11 ? `${name.slice(0, 11)}...` : name}
+          </StyledName>
+          <StyledPrice>€ {pricePerKg}</StyledPrice>
+        </div>
+        <StyledAnimalIconsContainer>
+          {animalIcons.map((Icon, index) => (
+            <StyledAnimalIcons key={index} as={Icon} />
+          ))}
+        </StyledAnimalIconsContainer>
+      </StyledContent>
     </StyledProductCard>
   );
 }
 
 const StyledProductCard = styled.div`
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
-  /* padding: 2rem; */
   width: 19rem;
+  background: linear-gradient(
+    45deg,
+    ${({ theme }) => theme.colors.primaryDark},
+    ${({ theme }) => theme.colors.primaryLight}
+  );
 `;
 
 const StyledImage = styled.img`
   display: block;
   width: 100%;
   height: 22rem;
-  margin-bottom: 2rem;
   object-fit: cover;
+`;
+
+const StyledContent = styled.div`
+  display: flex;
+  align-items: center;
+  align-items: stretch;
+  justify-content: space-between;
+  padding: 1rem;
+`;
+
+const StyledName = styled.h3`
+  color: ${({ theme }) => theme.colors.headerFont};
+  font-size: ${({ theme }) => theme.sizes.header3Font};
+`;
+
+const StyledPrice = styled.div`
+  color: ${({ theme }) => theme.colors.defaultFont};
+  font-size: ${({ theme }) => theme.sizes.defaultFont};
+`;
+
+const StyledAnimalIconsContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem;
+  width: 4rem;
+`;
+const StyledAnimalIcons = styled.div`
+  background-color: ${({ theme }) => theme.colors.accentGoldLight};
+  color: ${({ theme }) => theme.colors.primaryDark};
+  font-size: 1.6rem;
+  border-radius: 50%;
+  padding: 0.1rem;
 `;
