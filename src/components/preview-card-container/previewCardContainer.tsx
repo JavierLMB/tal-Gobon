@@ -1,29 +1,24 @@
 "use client";
-import { useState, useEffect } from "react";
-import { useData, Product } from "./useData";
+import { useState } from "react";
+import { cheesesData } from "./cheeseData";
 import PreviewCard from "../preview-card/previewCard";
 import styled from "styled-components";
 
 export default function PreviewCardContainer() {
-  const { storeProducts, isLoading, error } = useData();
-  const [activeProducts, setActiveProducts] = useState<Product[]>([]);
+  const [activeProducts, setActiveProducts] = useState(cheesesData);
 
   console.log(activeProducts);
-
-  useEffect(() => {
-    if (storeProducts) setActiveProducts(storeProducts);
-  }, [storeProducts]);
 
   return (
     <div>
       <StyledProductCardContainer>
-        {activeProducts.map(({ id, category, image, price, title }) => (
+        {activeProducts.map(({ id, images, name, animal, pricePerKg }) => (
           <PreviewCard
             key={id}
-            category={category}
-            image={image}
-            price={price}
-            title={title}
+            image1={images.image1}
+            name={name}
+            animal={animal}
+            pricePerKg={pricePerKg}
           />
         ))}
       </StyledProductCardContainer>
@@ -34,6 +29,6 @@ export default function PreviewCardContainer() {
 const StyledProductCardContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 1rem;
   width: 100%;
 `;
