@@ -1,4 +1,4 @@
-type CheeseDataType = {
+export type CheeseDataType = {
   id: number;
   images: {
     image1: string;

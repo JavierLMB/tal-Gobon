@@ -1,12 +1,16 @@
 "use client";
 import { useState } from "react";
-import { cheesesData } from "./cheeseData";
 import PreviewCard from "../preview-card/previewCard";
 import styled from "styled-components";
+import { CheeseDataType } from "../cheeseViewContainer/cheeseData";
 
-export default function PreviewCardContainer() {
-  const [activeProducts, setActiveProducts] = useState(cheesesData);
+type PreviewCardContainerProps = {
+  activeProducts: CheeseDataType[];
+};
 
+export default function PreviewCardContainer({
+  activeProducts,
+}: PreviewCardContainerProps) {
   console.log(activeProducts);
 
   return (
