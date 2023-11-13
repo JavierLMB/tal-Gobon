@@ -23,9 +23,13 @@ export default function RootLayout({
     <ThemeProvider theme={theme}>
       <html lang="en">
         <StyledComponentsRegistry>
-          <body className={inter.className}>{children}</body>
+          <StyledBody className={inter.className}>{children}</StyledBody>
         </StyledComponentsRegistry>
       </html>
     </ThemeProvider>
   );
 }
+
+const StyledBody = styled.body`
+  background-color: ${({ theme }) => theme.colors.primaryLight};
+`;
