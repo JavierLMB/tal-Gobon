@@ -1,4 +1,25 @@
-export const cheesesData = [
+type CheeseDataType = {
+  id: number;
+  images: {
+    image1: string;
+    image2: string;
+    image3: string;
+  };
+  name: string;
+  desc: string;
+  animal:
+    | "Cow"
+    | "Sheep"
+    | "Sheep/Goat"
+    | "Cow/Goat"
+    | "Cow/Goat/Buffalo"
+    | "Cow/Sheep/Goat"
+    | "Sheep/Cow/Goat/Buffalo";
+  country: string;
+  pricePerKg: number;
+};
+
+export const cheesesData: CheeseDataType[] = [
   {
     id: 1,
     images: {
