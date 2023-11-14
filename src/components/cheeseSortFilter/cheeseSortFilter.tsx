@@ -40,7 +40,7 @@ export default function SortFilterComponent({
           ))}
         </StyledSortContainer>
       </SortFilterButton>
-      <SortFilterButton title={"Filter"}> </SortFilterButton>
+      <SortFilterButton title={"Filter"}>h</SortFilterButton>
     </StyledSortFilterMainContainer>
   );
 }
