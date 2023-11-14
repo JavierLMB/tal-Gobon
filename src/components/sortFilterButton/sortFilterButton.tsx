@@ -3,6 +3,8 @@ import styled from "styled-components";
 import { useState } from "react";
 
 export default function SortFilterButton({ title, children }) {
+  const [buttonState, setButtonState] = useState(false);
+
   return (
     <StyledSortFilterContainer>
       <StyledSortFilterButton>
