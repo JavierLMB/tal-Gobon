@@ -1,26 +1,39 @@
 import { FaAngleDown } from "react-icons/fa";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { useState } from "react";
 
-export default function SortFilterButton({ title, children }) {
+type SortFilterButton = {
+  title: string;
+  children: React.ReactNode;
+};
+
+export default function SortFilterButton({
+  title,
+  children,
+}: SortFilterButton) {
   const [buttonState, setButtonState] = useState(false);
 
   return (
     <StyledSortFilterContainer>
-      <StyledSortFilterButton>
+      <StyledSortFilterButton onClick={() => setButtonState(!buttonState)}>
         <FaAngleDown />
         {title}
       </StyledSortFilterButton>
-      {children}
+      <StyledChildrenContainer $buttonState={buttonState}>
+        {buttonState && children}
+      </StyledChildrenContainer>
     </StyledSortFilterContainer>
   );
 }
 
 const StyledSortFilterContainer = styled.div`
   width: 100%;
+  position: relative;
+  z-index: 1;
 `;
 
 const StyledSortFilterButton = styled.button`
+  border-radius: 0.5rem;
   display: flex;
   align-items: center;
   gap: 0.2rem;
@@ -36,3 +49,16 @@ const StyledSortFilterButton = styled.button`
     ${({ theme }) => theme.colors.primaryLight}
   );
 `;
+
+const StyledChildrenContainer = styled.div<{ $buttonState: boolean }>`
+  position: absolute;
+  z-index: -1;
+  left: 0.5rem;
+  transform: translateY(-5rem);
+  ${({ theme, $buttonState }) => css``};
+`;
+
+// ${({ theme, $mode }) => css`
+//     font-size: ${$mode === "active" ? "35px" : "25px"};
+//     background-color: ${theme.colors.lightGrey};
+//   `};

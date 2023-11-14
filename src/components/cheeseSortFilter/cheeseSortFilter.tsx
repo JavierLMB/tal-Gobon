@@ -26,17 +26,19 @@ export default function SortFilterComponent({
   return (
     <StyledSortFilterMainContainer>
       <SortFilterButton title={"Sort by"}>
-        {radioOptions.map((option) => (
-          <StyledLabel key={option.value}>
-            <input
-              type="radio"
-              value={option.value}
-              checked={selectedOption === option.value}
-              onChange={handleRadioChange}
-            />
-            {option.label}
-          </StyledLabel>
-        ))}
+        <StyledSortContainer>
+          {radioOptions.map((option) => (
+            <StyledLabel key={option.value}>
+              <input
+                type="radio"
+                value={option.value}
+                checked={selectedOption === option.value}
+                onChange={handleRadioChange}
+              />
+              {option.label}
+            </StyledLabel>
+          ))}
+        </StyledSortContainer>
       </SortFilterButton>
       <SortFilterButton title={"Filter"}> </SortFilterButton>
     </StyledSortFilterMainContainer>
@@ -51,9 +53,23 @@ const StyledSortFilterMainContainer = styled.div`
   background-color: ${({ theme }) => theme.colors.primaryLight};
 `;
 
-const StyledLabel = styled.label`
+const StyledSortContainer = styled.label`
   display: flex;
-  display: none;
-  width: 12rem;
-  background-color: ${({ theme }) => theme.colors.accentGoldDark};
+  gap: 0.5rem;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: 0rem 0rem 0.5rem 0.5rem;
+  background: linear-gradient(
+    45deg,
+    ${({ theme }) => theme.colors.primaryDark},
+    ${({ theme }) => theme.colors.primaryLight}
+  );
+`;
+
+const StyledLabel = styled.label`
+  font-size: ${({ theme }) => theme.sizes.defaultFont};
+  color: ${({ theme }) => theme.colors.accentGoldDark};
+  font-weight: 500;
+  display: flex;
+  gap: 0.2rem;
 `;
