@@ -36,4 +36,5 @@ const StyledProductCardContainer = styled.div`
   justify-content: center;
   gap: 1rem;
   width: 100%;
+  padding: 0rem 1rem;
 `;

@@ -48,6 +48,8 @@ export default function PreviewCard({
 const StyledProductCard = styled.div`
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
   width: 19rem;
+  border-radius: 0.5rem;
+
   background: linear-gradient(
     45deg,
     ${({ theme }) => theme.colors.primaryDark},
@@ -60,6 +62,7 @@ const StyledImage = styled.img`
   width: 100%;
   height: 22rem;
   object-fit: cover;
+  border-radius: 0.5rem 0.5rem 0rem 0rem;
 `;
 
 const StyledContent = styled.div`

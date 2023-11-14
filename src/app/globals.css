@@ -16,5 +16,14 @@ html {
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  padding: 1rem;
+  padding: 1rem 0rem;
+}
+
+button {
+  text-align: inherit;
+  background: none;
+  cursor: pointer;
+  border: none;
+  color: inherit;
+  font: inherit;
 }
