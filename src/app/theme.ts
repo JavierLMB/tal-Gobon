@@ -11,6 +11,6 @@ export const theme = {
     defaultFont: "1.2rem",
     header1Font: "2.6rem",
     header2Font: "2.2rem",
-    header3Font: "1.5rem",
+    header3Font: "1.8rem",
   },
 };

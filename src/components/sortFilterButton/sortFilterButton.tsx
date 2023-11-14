@@ -43,7 +43,6 @@ const StyledSortFilterButton = styled.button`
   color: ${({ theme }) => theme.colors.accentGoldDark};
   width: 100%;
   padding: 1.5rem;
-
   background: linear-gradient(
     45deg,
     ${({ theme }) => theme.colors.primaryDark},
@@ -56,7 +55,7 @@ const StyledChildrenContainer = styled.div<{ $buttonState: boolean }>`
   z-index: -1;
   left: 1rem;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
-  transition: transform 0.4s ease-out, opacity 0.3s ease-out;
+  transition: transform 0.4s cubic-bezier(0.01, -0.02, 0.51, 1.6), opacity 0.3s;
   ${({ theme, $buttonState }) => css`
     transform: translateY(${$buttonState ? "0rem" : "-5rem"});
     opacity: ${$buttonState ? "1" : "0"};

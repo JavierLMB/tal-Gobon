@@ -69,7 +69,7 @@ const StyledSortContainer = styled.label`
 const StyledLabel = styled.label`
   font-size: ${({ theme }) => theme.sizes.defaultFont};
   color: ${({ theme }) => theme.colors.accentGoldDark};
-  font-weight: 500;
+  font-weight: 400;
   display: flex;
   gap: 0.2rem;
 `;
