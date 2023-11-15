@@ -1,6 +1,6 @@
 "use client";
-import PreviewCard from "../preview-card/previewCard";
 import styled from "styled-components";
+import PreviewCard from "../molecules/preview-card/previewCard";
 import { CheeseDataType } from "../cheeseViewContainer/cheeseData";
 
 type PreviewCardContainerProps = {

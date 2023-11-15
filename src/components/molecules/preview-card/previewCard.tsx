@@ -90,9 +90,9 @@ const StyledAnimalIconsContainer = styled.div`
   width: 4rem;
 `;
 const StyledAnimalIcons = styled.div`
-  background-color: ${({ theme }) => theme.colors.accentGoldLight};
-  color: ${({ theme }) => theme.colors.primaryDark};
   font-size: 1.9rem;
   border-radius: 50%;
   padding: 0.1rem;
+  background-color: ${({ theme }) => theme.colors.accentGoldLight};
+  color: ${({ theme }) => theme.colors.primaryDark};
 `;
