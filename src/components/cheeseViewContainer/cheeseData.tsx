@@ -121,7 +121,7 @@ export const cheesesData: CheeseDataType[] = [
     name: "Blue Cheese",
     desc: "A type of cheese that has been ripened with cultures of the mold Penicillium.",
     animal: "Cow/Sheep/Goat",
-    country: "Various",
+    country: "Italy",
     pricePerKg: 19.99,
   },
   {

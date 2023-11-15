@@ -14,7 +14,7 @@ export default function PreviewCardContainer({
   console.log(activeProducts);
 
   return (
-    <div>
+    <StyledProductCardMainContainer>
       <StyledProductCardContainer>
         {activeProducts.map(({ id, images, name, animal, pricePerKg }) => (
           <PreviewCard
@@ -26,14 +26,17 @@ export default function PreviewCardContainer({
           />
         ))}
       </StyledProductCardContainer>
-    </div>
+    </StyledProductCardMainContainer>
   );
 }
+
+const StyledProductCardMainContainer = styled.div`
+  // Center this , check it's parent from the cheeseviewcontainer file.
+`;
 
 const StyledProductCardContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 1rem;
   width: 100%;
   padding: 0rem 1rem;
