@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { cheesesData } from "./cheeseData";
-import SortFilterComponent from "@/components/cheeseSortFilter/cheeseSortFilter";
-import PreviewCardContainer from "@/components/preview-card-container/previewCardContainer";
+import SortFilterComponent from "@/components/molecules/cheese-sort-filter/cheeseSortFilter";
+import PreviewCardContainer from "@/components/molecules/preview-card-container/previewCardContainer";
 import useFilterAndSortEffect from "./useFilterAndSortEffect";
 
 export default function CheeseViewContainer() {
