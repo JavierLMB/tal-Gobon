@@ -1,57 +1,53 @@
 import { useState, useEffect } from "react";
 import { cheesesData } from "./cheeseData";
-import { RadioButtonValue } from "../cheeseSortFilter/cheeseSortFilter";
 
 type useFilterAndSortEffectProps = {
-  selectedFilterOptions: string[];
+  selectedFilterCountryOptions: string[];
   selectedFilterAnimalOptions: string[];
-  selectedOption: RadioButtonValue;
+  selectedSortOption: string;
 };
 
 export default function useFilterAndSortEffect({
-  selectedFilterOptions,
+  selectedFilterCountryOptions,
   selectedFilterAnimalOptions,
-  selectedOption,
+  selectedSortOption,
 }: useFilterAndSortEffectProps) {
   const [filteredAndSortedProducts, setFilteredAndSortedProducts] = useState([
     ...cheesesData,
   ]);
 
   useEffect(() => {
-    let filteredAndSortedProductsData = [...cheesesData];
-
-    // Apply country filter
-    if (selectedFilterOptions.length > 0) {
-      filteredAndSortedProductsData = filteredAndSortedProductsData.filter(
-        (product) => selectedFilterOptions.includes(product.country)
-      );
-    }
-
-    // Apply animal filter
-    if (selectedFilterAnimalOptions.length > 0) {
-      filteredAndSortedProductsData = filteredAndSortedProductsData.filter(
+    const filteredAndSortedProductsData = [...cheesesData]
+      .filter(
         (product) =>
+          selectedFilterCountryOptions.length === 0 ||
+          selectedFilterCountryOptions.includes(product.country)
+      )
+      .filter(
+        (product) =>
+          selectedFilterAnimalOptions.length === 0 ||
           product.animal
             .split("/")
             .some((animal) =>
               selectedFilterAnimalOptions.includes(animal.trim())
             )
-      );
-    }
-
-    // Apply sorting
-    if (selectedOption === "priceUp") {
-      filteredAndSortedProductsData.sort((a, b) => a.pricePerKg - b.pricePerKg);
-    } else if (selectedOption === "priceDown") {
-      filteredAndSortedProductsData.sort((a, b) => b.pricePerKg - a.pricePerKg);
-    } else if (selectedOption === "alphabetical") {
-      filteredAndSortedProductsData.sort((a, b) =>
-        a.name.localeCompare(b.name)
-      );
-    }
+      )
+      .sort((a, b) => {
+        if (selectedSortOption === "priceUp")
+          return a.pricePerKg - b.pricePerKg;
+        if (selectedSortOption === "priceDown")
+          return b.pricePerKg - a.pricePerKg;
+        if (selectedSortOption === "alphabetical")
+          return a.name.localeCompare(b.name);
+        return 0;
+      });
 
     setFilteredAndSortedProducts(filteredAndSortedProductsData);
-  }, [selectedFilterOptions, selectedFilterAnimalOptions, selectedOption]);
+  }, [
+    selectedFilterCountryOptions,
+    selectedFilterAnimalOptions,
+    selectedSortOption,
+  ]);
 
   return { filteredAndSortedProducts };
 }

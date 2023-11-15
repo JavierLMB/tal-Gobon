@@ -1,7 +1,6 @@
 import { FaAngleDown } from "react-icons/fa";
 import styled, { css } from "styled-components";
 import { useState } from "react";
-import { stat } from "fs";
 
 type SortFilterButton = {
   title: string;

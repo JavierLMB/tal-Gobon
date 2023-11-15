@@ -7,14 +7,7 @@ export type CheeseDataType = {
   };
   name: string;
   desc: string;
-  animal:
-    | "Cow"
-    | "Sheep"
-    | "Sheep/Goat"
-    | "Cow/Goat"
-    | "Cow/Goat/Buffalo"
-    | "Cow/Sheep/Goat"
-    | "Sheep/Cow/Goat/Buffalo";
+  animal: string;
   country: string;
   pricePerKg: number;
 };

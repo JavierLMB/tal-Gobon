@@ -1,66 +1,39 @@
 import styled from "styled-components";
 import SortFilterButton from "../sortFilterButton/sortFilterButton";
-
-const sortOptions = [
-  { value: "priceUp", label: "Price (Low to High)" },
-  { value: "priceDown", label: "Price (High to Low)" },
-  { value: "alphabetical", label: "Alphabetical Order" },
-];
-
-const filterOptions = [
-  { label: "France" },
-  { label: "United Kingdom" },
-  { label: "Netherlands" },
-  { label: "Greece" },
-  { label: "Spain" },
-  { label: "Switzerland" },
-  { label: "Italy" },
-  { label: "Denmark" },
-  { label: "Belgium" },
-  { label: "United States" },
-];
-
-const filterAnimalOptions = [
-  { label: "Cow" },
-  { label: "Sheep" },
-  { label: "Buffalo" },
-  { label: "Goat" },
-];
-
-export type RadioButtonValue = "priceUp" | "priceDown" | "alphabetical" | "";
+import { options } from "./sortFlterOptions";
 
 type SortFilterComponentProps = {
-  selectedOption: RadioButtonValue;
-  onSelectedOption: (option: RadioButtonValue) => void;
+  selectedSortOption: string;
+  onSelectedSortOption: (value: string) => void;
+  selectedFilterCountryOptions: string[];
+  onSelectedFilterCountryOptions: any;
+  selectedFilterAnimalOptions: string[];
+  onSelectedFilterAnimalOptions: any;
 };
 
 export default function SortFilterComponent({
-  selectedOption,
-  onSelectedOption,
-  selectedFilterOptions,
-  onSelectedFilterOptions,
+  selectedSortOption,
+  onSelectedSortOption,
+  selectedFilterCountryOptions,
+  onSelectedFilterCountryOptions,
   selectedFilterAnimalOptions,
   onSelectedFilterAnimalOptions,
 }: SortFilterComponentProps) {
   const handleRadioChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value as RadioButtonValue;
-    onSelectedOption(value);
+    const value = e.target.value;
+    onSelectedSortOption(value);
   };
 
-  const handleCheckboxChange = (e) => {
+  const handleCheckboxChange = (
+    e: React.ChangeEvent<HTMLInputElement>,
+    selectedFilterOptions: string[],
+    setSelectedFilterOptions: (value: string[]) => void
+  ) => {
     const value = e.target.value;
-    onSelectedFilterOptions(
+    setSelectedFilterOptions(
       selectedFilterOptions.includes(value)
         ? selectedFilterOptions.filter((option) => option !== value)
         : [...selectedFilterOptions, value]
-    );
-  };
-  const handleCheckboxAnimalChange = (e) => {
-    const value = e.target.value;
-    onSelectedFilterAnimalOptions(
-      selectedFilterAnimalOptions.includes(value)
-        ? selectedFilterAnimalOptions.filter((option) => option !== value)
-        : [...selectedFilterAnimalOptions, value]
     );
   };
 
@@ -68,12 +41,12 @@ export default function SortFilterComponent({
     <StyledSortFilterMainContainer>
       <SortFilterButton title={"Sort by"}>
         <StyledSortFilterContainer>
-          {sortOptions.map((option) => (
+          {options.sortOptions.map((option) => (
             <StyledLabel key={option.value}>
               <input
                 type="radio"
                 value={option.value}
-                checked={selectedOption === option.value}
+                checked={selectedSortOption === option.value}
                 onChange={handleRadioChange}
               />
               {option.label}
@@ -84,28 +57,44 @@ export default function SortFilterComponent({
       <SortFilterButton title={"Filter"}>
         <StyledSortFilterContainer>
           <SortFilterButton title={"Country"} variant={"inner"}>
-            {filterOptions.map((option) => (
-              <StyledLabel key={option.label}>
+            {options.filterOptions.map((option) => (
+              <StyledLabel key={option.valueLabel}>
                 <input
                   type="checkbox"
-                  value={option.label}
-                  checked={selectedFilterOptions.includes(option.label)}
-                  onChange={handleCheckboxChange}
+                  value={option.valueLabel}
+                  checked={selectedFilterCountryOptions.includes(
+                    option.valueLabel
+                  )}
+                  onChange={(e) =>
+                    handleCheckboxChange(
+                      e,
+                      selectedFilterCountryOptions,
+                      onSelectedFilterCountryOptions
+                    )
+                  }
                 />
-                {option.label}
+                {option.valueLabel}
               </StyledLabel>
             ))}
           </SortFilterButton>
           <SortFilterButton title={"Animal"} variant={"inner"}>
-            {filterAnimalOptions.map((option) => (
-              <StyledLabel key={option.label}>
+            {options.filterAnimalOptions.map((option) => (
+              <StyledLabel key={option.valueLabel}>
                 <input
                   type="checkbox"
-                  value={option.label}
-                  checked={selectedFilterAnimalOptions.includes(option.label)}
-                  onChange={handleCheckboxAnimalChange}
+                  value={option.valueLabel}
+                  checked={selectedFilterAnimalOptions.includes(
+                    option.valueLabel
+                  )}
+                  onChange={(e) =>
+                    handleCheckboxChange(
+                      e,
+                      selectedFilterAnimalOptions,
+                      onSelectedFilterAnimalOptions
+                    )
+                  }
                 />
-                {option.label}
+                {option.valueLabel}
               </StyledLabel>
             ))}
           </SortFilterButton>

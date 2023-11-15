@@ -1,5 +1,4 @@
 "use client";
-import { useState } from "react";
 import PreviewCard from "../preview-card/previewCard";
 import styled from "styled-components";
 import { CheeseDataType } from "../cheeseViewContainer/cheeseData";
@@ -14,7 +13,7 @@ export default function PreviewCardContainer({
   console.log(activeProducts);
 
   return (
-    <StyledProductCardMainContainer>
+    <div>
       <StyledProductCardContainer>
         {activeProducts.map(({ id, images, name, animal, pricePerKg }) => (
           <PreviewCard
@@ -26,16 +25,13 @@ export default function PreviewCardContainer({
           />
         ))}
       </StyledProductCardContainer>
-    </StyledProductCardMainContainer>
+    </div>
   );
 }
 
-const StyledProductCardMainContainer = styled.div`
-  // Center this , check it's parent from the cheeseviewcontainer file.
-`;
-
 const StyledProductCardContainer = styled.div`
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 1rem;
   width: 100%;

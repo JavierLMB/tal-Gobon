@@ -1,23 +1,22 @@
-import styled from "styled-components";
-import { cheesesData } from "./cheeseData";
-import PreviewCardContainer from "@/components/preview-card-container/previewCardContainer";
-import SortFilterComponent, {
-  RadioButtonValue,
-} from "@/components/cheeseSortFilter/cheeseSortFilter";
-import useFilterAndSortEffect from "./useFilterAndSortEffect";
 import { useState, useEffect } from "react";
+import { cheesesData } from "./cheeseData";
+import SortFilterComponent from "@/components/cheeseSortFilter/cheeseSortFilter";
+import PreviewCardContainer from "@/components/preview-card-container/previewCardContainer";
+import useFilterAndSortEffect from "./useFilterAndSortEffect";
 
 export default function CheeseViewContainer() {
   const [activeProducts, setActiveProducts] = useState(cheesesData);
-  const [selectedOption, setSelectedOption] = useState<RadioButtonValue>("");
-  const [selectedFilterOptions, setSelectedFilterOptions] = useState([]);
+  const [selectedSortOption, setSelectedSortOption] = useState("");
+  const [selectedFilterCountryOptions, setSelectedFilterCountryOptions] =
+    useState([]);
   const [selectedFilterAnimalOptions, setSelectedFilterAnimalOptions] =
     useState([]);
 
+  console.log();
   const { filteredAndSortedProducts } = useFilterAndSortEffect({
-    selectedFilterOptions,
+    selectedFilterCountryOptions,
     selectedFilterAnimalOptions,
-    selectedOption,
+    selectedSortOption,
   });
 
   useEffect(() => {
@@ -27,10 +26,10 @@ export default function CheeseViewContainer() {
   return (
     <div>
       <SortFilterComponent
-        selectedOption={selectedOption}
-        onSelectedOption={setSelectedOption}
-        selectedFilterOptions={selectedFilterOptions}
-        onSelectedFilterOptions={setSelectedFilterOptions}
+        selectedSortOption={selectedSortOption}
+        onSelectedSortOption={setSelectedSortOption}
+        selectedFilterCountryOptions={selectedFilterCountryOptions}
+        onSelectedFilterCountryOptions={setSelectedFilterCountryOptions}
         selectedFilterAnimalOptions={selectedFilterAnimalOptions}
         onSelectedFilterAnimalOptions={setSelectedFilterAnimalOptions}
       />
@@ -38,61 +37,3 @@ export default function CheeseViewContainer() {
     </div>
   );
 }
-// import styled from "styled-components";
-// import { cheesesData } from "./cheeseData";
-// import PreviewCardContainer from "@/components/preview-card-container/previewCardContainer";
-// import SortFilterComponent, {
-//   RadioButtonValue,
-// } from "@/components/cheeseSortFilter/cheeseSortFilter";
-// import useSortEffect from "./useSortEffect";
-// import useFilterEffect from "./useFilterEffect";
-// import useFilterAnimalEffect from "./useFilterAnimalEffect";
-// import { useState, useEffect } from "react";
-
-// export default function CheeseViewContainer() {
-//   const [activeProducts, setActiveProducts] = useState(cheesesData);
-//   const [selectedOption, setSelectedOption] = useState<RadioButtonValue>("");
-//   const [selectedFilterOptions, setSelectedFilterOptions] = useState([]);
-//   const [selectedFilterAnimalOptions, setSelectedFilterAnimalOptions] =
-//     useState([]);
-//   console.log(selectedFilterOptions, "hi");
-//   console.log(selectedFilterAnimalOptions, "yo");
-
-//   const { updatedProducts } = useSortEffect({
-//     selectedOption,
-//   });
-
-//   const { filteredProducts } = useFilterEffect({
-//     selectedFilterOptions,
-//   });
-
-//   const { filteredAnimalProducts } = useFilterAnimalEffect({
-//     selectedFilterAnimalOptions,
-//   });
-
-//   useEffect(() => {
-//     setActiveProducts(updatedProducts);
-//   }, [updatedProducts]);
-
-//   useEffect(() => {
-//     setActiveProducts(filteredProducts);
-//   }, [filteredProducts]);
-
-//   useEffect(() => {
-//     setActiveProducts(filteredAnimalProducts);
-//   }, [filteredAnimalProducts]);
-
-//   return (
-//     <div>
-//       <SortFilterComponent
-//         selectedOption={selectedOption}
-//         onSelectedOption={setSelectedOption}
-//         selectedFilterOptions={selectedFilterOptions}
-//         onSelectedFilterOptions={setSelectedFilterOptions}
-//         selectedFilterAnimalOptions={selectedFilterAnimalOptions}
-//         onSelectedFilterAnimalOptions={setSelectedFilterAnimalOptions}
-//       />
-//       <PreviewCardContainer activeProducts={activeProducts} />
-//     </div>
-//   );
-// }
