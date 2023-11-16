@@ -12,20 +12,14 @@ export default function CheeseViewContainer() {
     useState([]);
   const [selectedFilterAnimalOptions, setSelectedFilterAnimalOptions] =
     useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
 
   const { filteredAndSortedProducts } = useFilterAndSortEffect({
     selectedFilterCountryOptions,
     selectedFilterAnimalOptions,
     selectedSortOption,
+    searchTerm,
   });
-
-  const handleSearch = (searchTerm) => {
-    console.log("Search term:", searchTerm);
-    const searchResult = [...cheesesData].filter((product) =>
-      product.name.includes(searchTerm)
-    );
-    console.log(searchResult);
-  };
 
   useEffect(() => {
     setActiveProducts(filteredAndSortedProducts);
@@ -33,7 +27,7 @@ export default function CheeseViewContainer() {
 
   return (
     <div>
-      <SearchBar onSearch={handleSearch} />
+      <SearchBar searchTerm={searchTerm} onSearchTerm={setSearchTerm} />
       <SortFilterComponent
         selectedSortOption={selectedSortOption}
         onSelectedSortOption={setSelectedSortOption}

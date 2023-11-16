@@ -1,14 +1,18 @@
 import styled from "styled-components";
 import { useState } from "react";
 
-export default function SearchBar({ onSearch }) {
-  const [searchTerm, setSearchTerm] = useState("");
+type SearchBarProps = {
+  searchTerm: string;
+  onSearchTerm: (value: string) => void;
+};
 
-  const handleInputChange = (e) => {
+export default function SearchBar({
+  searchTerm,
+  onSearchTerm,
+}: SearchBarProps) {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
-    setSearchTerm(value);
-
-    onSearch(value);
+    onSearchTerm(value);
   };
 
   return (

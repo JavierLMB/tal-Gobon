@@ -5,12 +5,14 @@ type useFilterAndSortEffectProps = {
   selectedFilterCountryOptions: string[];
   selectedFilterAnimalOptions: string[];
   selectedSortOption: string;
+  searchTerm: string;
 };
 
 export default function useFilterAndSortEffect({
   selectedFilterCountryOptions,
   selectedFilterAnimalOptions,
   selectedSortOption,
+  searchTerm,
 }: useFilterAndSortEffectProps) {
   const [filteredAndSortedProducts, setFilteredAndSortedProducts] = useState([
     ...cheesesData,
@@ -20,8 +22,10 @@ export default function useFilterAndSortEffect({
     const filteredAndSortedProductsData = [...cheesesData]
       .filter(
         (product) =>
-          selectedFilterCountryOptions.length === 0 ||
-          selectedFilterCountryOptions.includes(product.country)
+          (searchTerm === "" ||
+            product.name.toLowerCase().includes(searchTerm.toLowerCase())) &&
+          (selectedFilterCountryOptions.length === 0 ||
+            selectedFilterCountryOptions.includes(product.country))
       )
       .filter(
         (product) =>
@@ -47,6 +51,7 @@ export default function useFilterAndSortEffect({
     selectedFilterCountryOptions,
     selectedFilterAnimalOptions,
     selectedSortOption,
+    searchTerm,
   ]);
 
   return { filteredAndSortedProducts };
