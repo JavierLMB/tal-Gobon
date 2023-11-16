@@ -25,6 +25,7 @@ const StyledHeaderContainer = styled.div`
   align-items: center;
   padding: 1rem;
   margin-bottom: 4rem;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
   background: linear-gradient(
     45deg,
     ${({ theme }) => theme.colors.primaryDark},

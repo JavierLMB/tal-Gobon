@@ -49,7 +49,6 @@ const StyledProductCard = styled.div`
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
   width: 19rem;
   border-radius: 0.5rem;
-
   background: linear-gradient(
     45deg,
     ${({ theme }) => theme.colors.primaryDark},
