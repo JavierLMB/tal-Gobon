@@ -36,4 +36,9 @@ const SearchBarInput = styled.input`
   padding: 1rem;
   border: 1px solid #ccc;
   border-radius: 0.5rem;
+  color: ${({ theme }) => theme.colors.primaryDark};
+
+  &:focus {
+    outline: 2px solid ${({ theme }) => theme.colors.primaryDark};
+  }
 `;

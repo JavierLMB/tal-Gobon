@@ -31,7 +31,7 @@ export default function PreviewCardContainer({
 
 const StyledProductCardContainer = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   gap: 1rem;
   width: 100%;

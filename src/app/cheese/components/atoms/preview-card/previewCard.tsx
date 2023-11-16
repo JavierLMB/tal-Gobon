@@ -26,7 +26,7 @@ export default function PreviewCard({
   return (
     <StyledProductCard>
       <a>
-        <StyledImage src={image1}></StyledImage>
+        <StyledImage src={image1} alt="cheese"></StyledImage>
       </a>
       <StyledContent>
         <div>
