@@ -31,5 +31,9 @@ export default function RootLayout({
 }
 
 const StyledBody = styled.body`
-  background-color: ${({ theme }) => theme.colors.primaryLight};
+  background: linear-gradient(
+    45deg,
+    ${({ theme }) => theme.colors.primaryDark},
+    ${({ theme }) => theme.colors.primaryLight}
+  );
 `;

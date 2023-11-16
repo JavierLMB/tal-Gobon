@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import SortFilterButton from "../../atoms/sort-filter-button/sortFilterButton";
-import { options } from "./sortFlterOptions";
+import { options } from "./useSortFlterOptions";
 
 type SortFilterComponentProps = {
   selectedSortOption: string;
@@ -109,7 +109,6 @@ const StyledSortFilterMainContainer = styled.div`
   justify-content: center;
   gap: 1rem;
   padding: 1rem;
-  background-color: ${({ theme }) => theme.colors.primaryLight};
 `;
 
 const StyledSortFilterContainer = styled.label`

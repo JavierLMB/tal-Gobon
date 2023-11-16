@@ -1,7 +1,7 @@
 "use client";
 import styled from "styled-components";
 import PreviewCard from "../../atoms/preview-card/previewCard";
-import { CheeseDataType } from "../../organism/cheese-view-container/cheeseData";
+import { CheeseDataType } from "../../organism/cheese-view-container/useCheeseData";
 
 type PreviewCardContainerProps = {
   activeProducts: CheeseDataType[];

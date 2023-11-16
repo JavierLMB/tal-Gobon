@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { cheesesData } from "./cheeseData";
+import { cheesesData } from "./useCheeseData";
 
 type useFilterAndSortEffectProps = {
   selectedFilterCountryOptions: string[];

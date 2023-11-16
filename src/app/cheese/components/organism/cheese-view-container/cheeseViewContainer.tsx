@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
-import { cheesesData } from "./cheeseData";
+import { cheesesData } from "./useCheeseData";
 import SortFilterComponent from "../../molecules/cheese-sort-filter/cheeseSortFilter";
 import PreviewCardContainer from "../../molecules/preview-card-container/previewCardContainer";
 import useFilterAndSortEffect from "./useFilterAndSortEffect";
+import SearchBar from "../../atoms/search-bar/searchBar";
 
 export default function CheeseViewContainer() {
   const [activeProducts, setActiveProducts] = useState(cheesesData);
@@ -12,12 +13,19 @@ export default function CheeseViewContainer() {
   const [selectedFilterAnimalOptions, setSelectedFilterAnimalOptions] =
     useState([]);
 
-  console.log();
   const { filteredAndSortedProducts } = useFilterAndSortEffect({
     selectedFilterCountryOptions,
     selectedFilterAnimalOptions,
     selectedSortOption,
   });
+
+  const handleSearch = (searchTerm) => {
+    console.log("Search term:", searchTerm);
+    const searchResult = [...cheesesData].filter((product) =>
+      product.name.includes(searchTerm)
+    );
+    console.log(searchResult);
+  };
 
   useEffect(() => {
     setActiveProducts(filteredAndSortedProducts);
@@ -25,6 +33,7 @@ export default function CheeseViewContainer() {
 
   return (
     <div>
+      <SearchBar onSearch={handleSearch} />
       <SortFilterComponent
         selectedSortOption={selectedSortOption}
         onSelectedSortOption={setSelectedSortOption}
