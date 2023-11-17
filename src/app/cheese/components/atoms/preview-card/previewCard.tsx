@@ -73,12 +73,13 @@ const StyledContent = styled.div`
 `;
 
 const StyledName = styled.h3`
-  color: ${({ theme }) => theme.colors.headerFont};
+  color: ${({ theme }) => theme.colors.accentGoldLighter};
   font-size: ${({ theme }) => theme.sizes.header3Font};
 `;
 
 const StyledPrice = styled.div`
-  color: ${({ theme }) => theme.colors.defaultFont};
+  /* color: ${({ theme }) => theme.colors.defaultFont}; */
+  color: #ffffea;
   font-size: ${({ theme }) => theme.sizes.defaultFont};
 `;
 
@@ -92,6 +93,6 @@ const StyledAnimalIcons = styled.div`
   font-size: 1.9rem;
   border-radius: 50%;
   padding: 0.1rem;
-  background-color: ${({ theme }) => theme.colors.accentGoldLight};
+  background-color: ${({ theme }) => theme.colors.accentGoldLighter};
   color: ${({ theme }) => theme.colors.primaryDark};
 `;

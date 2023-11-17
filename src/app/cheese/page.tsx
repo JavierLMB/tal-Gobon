@@ -4,12 +4,10 @@ import CheeseViewContainer from "./components/organism/cheese-view-container/che
 import Header from "@/components/atom/header/header";
 export default function CheesePage() {
   return (
-    <div>
-      <StyledCheesePageContainer>
-        <Header />
-        <CheeseViewContainer />
-      </StyledCheesePageContainer>
-    </div>
+    <StyledCheesePageContainer>
+      <Header />
+      <CheeseViewContainer />
+    </StyledCheesePageContainer>
   );
 }
 

@@ -10,7 +10,7 @@ type PreviewCardContainerProps = {
 export default function PreviewCardContainer({
   activeProducts,
 }: PreviewCardContainerProps) {
-  console.log(activeProducts);
+  console.log(activeProducts, "test");
 
   return (
     <div>
@@ -35,5 +35,6 @@ const StyledProductCardContainer = styled.div`
   flex-wrap: wrap;
   gap: 1rem;
   width: 100%;
+  min-height: 30rem;
   padding: 0rem 1rem;
 `;

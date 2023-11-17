@@ -1,13 +1,13 @@
 "use client";
 
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Alkatra } from "next/font/google";
 import "./globals.css";
 import StyledComponentsRegistry from "../../registery";
 import styled, { ThemeProvider } from "styled-components";
 import { theme } from "./theme";
 
-const inter = Inter({ subsets: ["latin"] });
+const alkatra = Alkatra({ subsets: ["latin"] });
 
 const metadata: Metadata = {
   title: "Create Next App",
@@ -23,7 +23,7 @@ export default function RootLayout({
     <ThemeProvider theme={theme}>
       <html lang="en">
         <StyledComponentsRegistry>
-          <StyledBody className={inter.className}>{children}</StyledBody>
+          <StyledBody className={alkatra.className}>{children}</StyledBody>
         </StyledComponentsRegistry>
       </html>
     </ThemeProvider>
@@ -33,7 +33,9 @@ export default function RootLayout({
 const StyledBody = styled.body`
   background: linear-gradient(
     45deg,
-    ${({ theme }) => theme.colors.primaryDark},
-    ${({ theme }) => theme.colors.primaryLight}
+    ${({ theme }) => theme.colors.accentGoldLight},
+    ${({ theme }) => theme.colors.accentGoldLighter}
   );
+
+  background-repeat: no-repeat;
 `;

@@ -44,7 +44,7 @@ const StyledSortFilterButton = styled.button<{ $variant: string }>`
   gap: 0.2rem;
   font-size: ${({ theme }) => theme.sizes.header3Font};
   font-weight: 600;
-  color: ${({ theme }) => theme.colors.accentGoldDark};
+  color: ${({ theme }) => theme.colors.accentGoldLight};
   width: 100%;
 
   ${({ theme, $variant }) => css`

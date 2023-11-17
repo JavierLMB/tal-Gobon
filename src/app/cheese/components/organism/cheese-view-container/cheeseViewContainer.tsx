@@ -1,3 +1,4 @@
+import styled from "styled-components";
 import { useState, useEffect } from "react";
 import { cheesesData } from "./useCheeseData";
 import SortFilterComponent from "../../molecules/cheese-sort-filter/cheeseSortFilter";
@@ -26,7 +27,7 @@ export default function CheeseViewContainer() {
   }, [filteredAndSortedProducts]);
 
   return (
-    <div>
+    <StyledCheeseViewContainer>
       <SearchBar searchTerm={searchTerm} onSearchTerm={setSearchTerm} />
       <SortFilterComponent
         selectedSortOption={selectedSortOption}
@@ -37,6 +38,8 @@ export default function CheeseViewContainer() {
         onSelectedFilterAnimalOptions={setSelectedFilterAnimalOptions}
       />
       <PreviewCardContainer activeProducts={activeProducts} />
-    </div>
+    </StyledCheeseViewContainer>
   );
 }
+
+const StyledCheeseViewContainer = styled.div``;
