@@ -5,7 +5,7 @@ export const theme = {
     accentGoldLighter: "#f3cf9e",
     accentGoldLight: "#e3b277",
     accentGoldDark: "#c49977",
-    defaultFont: "#a9a5a4",
+    defaultFont: "#f7f7ec",
     headerFont: "#d5b481",
   },
   sizes: {

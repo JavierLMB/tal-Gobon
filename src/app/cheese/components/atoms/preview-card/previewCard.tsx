@@ -29,12 +29,12 @@ export default function PreviewCard({
         <StyledImage src={image1} alt="cheese"></StyledImage>
       </a>
       <StyledContent>
-        <div>
+        <StyledProductContainer>
           <StyledName>
             {name.length > 11 ? `${name.slice(0, 11)}...` : name}
           </StyledName>
           <StyledPrice>€ {pricePerKg}</StyledPrice>
-        </div>
+        </StyledProductContainer>
         <StyledAnimalIconsContainer>
           {animalIcons.map((Icon, index) => (
             <StyledAnimalIcons key={index} as={Icon} />
@@ -67,19 +67,23 @@ const StyledImage = styled.img`
 const StyledContent = styled.div`
   display: flex;
   align-items: center;
-  align-items: stretch;
   justify-content: space-between;
   padding: 1rem;
+`;
+
+const StyledProductContainer = styled.div`
+  display: flex;
+  flex-direction: column;
 `;
 
 const StyledName = styled.h3`
   color: ${({ theme }) => theme.colors.accentGoldLighter};
   font-size: ${({ theme }) => theme.sizes.header3Font};
+  margin-bottom: -1rem;
 `;
 
 const StyledPrice = styled.div`
-  /* color: ${({ theme }) => theme.colors.defaultFont}; */
-  color: #ffffea;
+  color: ${({ theme }) => theme.colors.defaultFont};
   font-size: ${({ theme }) => theme.sizes.defaultFont};
 `;
 

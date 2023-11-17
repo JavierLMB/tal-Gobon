@@ -32,6 +32,7 @@ const SearchContainer = styled.div`
 `;
 
 const SearchBarInput = styled.input`
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
   width: 100%;
   padding: 1rem;
   border: 1px solid #ccc;

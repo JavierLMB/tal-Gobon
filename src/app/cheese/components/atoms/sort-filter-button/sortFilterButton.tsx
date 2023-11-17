@@ -22,7 +22,7 @@ export default function SortFilterButton({
         $variant={variant}
       >
         <FaAngleDown />
-        {title}
+        <StyledTitle>{title}</StyledTitle>
       </StyledSortFilterButton>
       <StyledChildrenContainer $buttonState={buttonState} $variant={variant}>
         {children}
@@ -42,9 +42,7 @@ const StyledSortFilterButton = styled.button<{ $variant: string }>`
   display: flex;
   align-items: center;
   gap: 0.2rem;
-  font-size: ${({ theme }) => theme.sizes.header3Font};
-  font-weight: 600;
-  color: ${({ theme }) => theme.colors.accentGoldLight};
+  color: ${({ theme }) => theme.colors.accentGoldLighter};
   width: 100%;
 
   ${({ theme, $variant }) => css`
@@ -58,8 +56,14 @@ const StyledSortFilterButton = styled.button<{ $variant: string }>`
     box-shadow: ${$variant === "inner"
       ? "none"
       : "0px 2px 2px rgba(0, 0, 0, 0.25)"};
-    padding: ${$variant === "inner" ? "0rem" : "1.5rem"};
+    padding: ${$variant === "inner" ? "0rem" : "0.5rem"};
   `};
+`;
+
+const StyledTitle = styled.div`
+  font-size: ${({ theme }) => theme.sizes.header3Font};
+  font-weight: 600;
+  color: ${({ theme }) => theme.colors.accentGoldLighter};
 `;
 
 const StyledChildrenContainer = styled.div<{

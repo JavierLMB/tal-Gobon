@@ -1,14 +1,12 @@
 import styled from "styled-components";
 import { FaAlignRight, FaCartShopping } from "react-icons/fa6";
+import { LiaCheeseSolid } from "react-icons/lia";
 
 export default function Header() {
   return (
     <StyledHeaderContainer>
       <StyledLogoContainer>
-        <StyledLogoImage
-          src="/cheeseLogo.png"
-          alt="tal-Gobon logo"
-        ></StyledLogoImage>
+        <StyledGobonLogo />
         <StyledLogoName>tal-Gobon</StyledLogoName>
       </StyledLogoContainer>
       <StyledIcon>
@@ -24,7 +22,7 @@ const StyledHeaderContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  margin-bottom: 4rem;
+  margin-bottom: 1rem;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
   background: linear-gradient(
     45deg,
@@ -38,11 +36,7 @@ const StyledLogoContainer = styled.div`
   align-items: center;
   gap: 1rem;
 `;
-const StyledLogoImage = styled.img`
-  display: block;
-  width: 4rem;
-  height: 4rem;
-`;
+
 const StyledLogoName = styled.div`
   font-size: ${({ theme }) => theme.sizes.header1Font};
   color: ${({ theme }) => theme.colors.accentGoldLighter};
@@ -53,4 +47,13 @@ const StyledIcon = styled.div`
   gap: 2rem;
   font-size: ${({ theme }) => theme.sizes.header1Font};
   color: ${({ theme }) => theme.colors.accentGoldLighter};
+`;
+
+const StyledGobonLogo = styled(LiaCheeseSolid)`
+  padding: 0.5rem;
+  font-size: 4rem;
+  color: ${({ theme }) => theme.colors.primaryDark};
+  background-color: ${({ theme }) => theme.colors.accentGoldLighter};
+  border-radius: 50%;
+  transform: rotate(10deg);
 `;

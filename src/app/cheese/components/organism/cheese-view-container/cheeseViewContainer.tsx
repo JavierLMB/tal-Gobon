@@ -6,8 +6,12 @@ import PreviewCardContainer from "../../molecules/preview-card-container/preview
 import useFilterAndSortEffect from "./useFilterAndSortEffect";
 import SearchBar from "../../atoms/search-bar/searchBar";
 
+const defaultActiveProducts = cheesesData.sort(
+  (a, b) => a.pricePerKg - b.pricePerKg
+);
+
 export default function CheeseViewContainer() {
-  const [activeProducts, setActiveProducts] = useState(cheesesData);
+  const [activeProducts, setActiveProducts] = useState(defaultActiveProducts);
   const [selectedSortOption, setSelectedSortOption] = useState("");
   const [selectedFilterCountryOptions, setSelectedFilterCountryOptions] =
     useState([]);
