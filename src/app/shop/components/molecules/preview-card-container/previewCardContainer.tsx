@@ -32,7 +32,6 @@ export default function PreviewCardContainer({
             animal={animal}
             pricePerKg={pricePerKg}
             onClick={() => handleCardClick(name)}
-            onClick={() => handleCardClick(name)}
           />
         ))}
       </StyledProductCardContainer>
