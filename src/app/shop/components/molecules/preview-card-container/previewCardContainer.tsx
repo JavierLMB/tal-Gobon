@@ -1,7 +1,8 @@
-"use client";
+// "use client";
 import styled from "styled-components";
 import PreviewCard from "../../atoms/preview-card/previewCard";
-import { CheeseDataType } from "../../organism/cheese-view-container/useCheeseData";
+import { CheeseDataType } from "../../organism/shop-view-container/useCheeseData";
+import { useRouter } from "next/navigation";
 
 type PreviewCardContainerProps = {
   activeProducts: CheeseDataType[];
@@ -10,7 +11,15 @@ type PreviewCardContainerProps = {
 export default function PreviewCardContainer({
   activeProducts,
 }: PreviewCardContainerProps) {
-  console.log(activeProducts, "test");
+  const router = useRouter();
+
+  const handleCardClick = (name: string) => {
+    const url = name
+      .split(" ")
+      .map((word) => word[0].toUpperCase() + word.slice(1))
+      .join("");
+    router.push(`/shop/${url}`);
+  };
 
   return (
     <div>
@@ -22,6 +31,8 @@ export default function PreviewCardContainer({
             name={name}
             animal={animal}
             pricePerKg={pricePerKg}
+            onClick={() => handleCardClick(name)}
+            onClick={() => handleCardClick(name)}
           />
         ))}
       </StyledProductCardContainer>

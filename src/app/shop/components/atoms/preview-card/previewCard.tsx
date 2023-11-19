@@ -13,6 +13,7 @@ type PreviewCardProps = {
     | "Cow/Sheep/Goat"
     | "Sheep/Cow/Goat/Buffalo";
   pricePerKg: number;
+  onClick: () => void;
 };
 
 export default function PreviewCard({
@@ -20,11 +21,12 @@ export default function PreviewCard({
   name,
   animal,
   pricePerKg,
+  onClick,
 }: PreviewCardProps) {
   const animalIcons = animalImages[animal];
 
   return (
-    <StyledProductCard>
+    <StyledProductCard onClick={onClick}>
       <a>
         <StyledImage src={image1} alt="cheese"></StyledImage>
       </a>

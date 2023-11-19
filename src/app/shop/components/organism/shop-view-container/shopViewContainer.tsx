@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { useState, useEffect } from "react";
 import { cheesesData } from "./useCheeseData";
-import SortFilterComponent from "../../molecules/cheese-sort-filter/cheeseSortFilter";
+import SortFilterComponent from "../../molecules/shop-sort-filter/shopSortFilter";
 import PreviewCardContainer from "../../molecules/preview-card-container/previewCardContainer";
 import useFilterAndSortEffect from "./useFilterAndSortEffect";
 import SearchBar from "../../atoms/search-bar/searchBar";
@@ -10,7 +10,7 @@ const defaultActiveProducts = cheesesData.sort(
   (a, b) => a.pricePerKg - b.pricePerKg
 );
 
-export default function CheeseViewContainer() {
+export default function ShopViewContainer() {
   const [activeProducts, setActiveProducts] = useState(defaultActiveProducts);
   const [selectedSortOption, setSelectedSortOption] = useState("");
   const [selectedFilterCountryOptions, setSelectedFilterCountryOptions] =
