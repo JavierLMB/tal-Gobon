@@ -4,6 +4,7 @@ import { FaAlignRight, FaCartShopping } from "react-icons/fa6";
 import { LiaCheeseSolid } from "react-icons/lia";
 import { useState } from "react";
 import NavbarModal from "@/components/atom/navbar-modal/navbarModal";
+import NavButton from "@/components/atom/nav-button/navButton";
 
 export default function Header() {
   const [navModalOpen, setNavModalOpen] = useState(false);
@@ -19,7 +20,10 @@ export default function Header() {
       </Link>
       <StyledIcon>
         <FaCartShopping />
-        <FaAlignRight onClick={() => setNavModalOpen(!navModalOpen)} />
+        <NavButton
+          navModalOpen={navModalOpen}
+          onClick={() => setNavModalOpen(!navModalOpen)}
+        />
       </StyledIcon>
     </StyledHeaderContainer>
   );

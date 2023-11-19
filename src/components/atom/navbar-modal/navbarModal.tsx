@@ -1,10 +1,10 @@
 import styled, { css } from "styled-components";
 
-type NavbarModaltype = {
+type NavbarModalType = {
   navModalOpen: boolean;
 };
 
-export default function NavbarModal({ navModalOpen }: NavbarModaltype) {
+export default function NavbarModal({ navModalOpen }: NavbarModalType) {
   return (
     <StyledNavbarModalContainer
       $navModalOpen={navModalOpen}
