@@ -1,10 +1,10 @@
 import styled from "styled-components";
 import { useState, useEffect } from "react";
 import { cheesesData } from "./useCheeseData";
-import SortFilterComponent from "../../molecules/shop-sort-filter/shopSortFilter";
-import PreviewCardContainer from "../../molecules/preview-card-container/previewCardContainer";
+import SortFilterComponent from "../../molecule/shop-sort-filter/shopSortFilter";
+import PreviewCardContainer from "../../molecule/preview-card-container/previewCardContainer";
 import useFilterAndSortEffect from "./useFilterAndSortEffect";
-import SearchBar from "../../atoms/search-bar/searchBar";
+import SearchBar from "../../atom/search-bar/searchBar";
 
 const defaultActiveProducts = cheesesData.sort(
   (a, b) => a.pricePerKg - b.pricePerKg

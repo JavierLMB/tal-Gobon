@@ -33,7 +33,9 @@ export default function PreviewCard({
           <StyledName>
             {name.length > 11 ? `${name.slice(0, 11)}...` : name}
           </StyledName>
-          <StyledPrice>€ {pricePerKg}</StyledPrice>
+          <StyledPrice>
+            € {pricePerKg} <StyledPriceKg>/ Kg</StyledPriceKg>
+          </StyledPrice>
         </StyledProductContainer>
         <StyledAnimalIconsContainer>
           {animalIcons.map((Icon, index) => (
@@ -85,6 +87,10 @@ const StyledName = styled.h3`
 const StyledPrice = styled.div`
   color: ${({ theme }) => theme.colors.defaultFont};
   font-size: ${({ theme }) => theme.sizes.defaultFont};
+`;
+
+const StyledPriceKg = styled.span`
+  font-size: ${({ theme }) => theme.sizes.smallFont};
 `;
 
 const StyledAnimalIconsContainer = styled.div`

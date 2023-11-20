@@ -1,17 +1,25 @@
 import styled from "styled-components";
+import Link from "next/link";
 import { FaAlignRight, FaCartShopping } from "react-icons/fa6";
 import { LiaCheeseSolid } from "react-icons/lia";
+import { useState } from "react";
+import NavbarModal from "@/components/atom/navbar-modal/navbarModal";
 
 export default function Header() {
+  const [navModalOpen, setNavModalOpen] = useState(false);
+  console.log(navModalOpen);
   return (
     <StyledHeaderContainer>
-      <StyledLogoContainer>
-        <StyledGobonLogo />
-        <StyledLogoName>tal-Gobon</StyledLogoName>
-      </StyledLogoContainer>
+      <NavbarModal navModalOpen={navModalOpen} />
+      <Link href="/" style={{ textDecoration: "none" }}>
+        <StyledLogoContainer>
+          <StyledGobonLogo />
+          <StyledLogoName>tal-Gobon</StyledLogoName>
+        </StyledLogoContainer>
+      </Link>
       <StyledIcon>
         <FaCartShopping />
-        <FaAlignRight />
+        <FaAlignRight onClick={() => setNavModalOpen(!navModalOpen)} />
       </StyledIcon>
     </StyledHeaderContainer>
   );

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import SortFilterButton from "../../atoms/sort-filter-button/sortFilterButton";
+import SortFilterButton from "../../atom/sort-filter-button/sortFilterButton";
 import { options } from "./useShopSortFlterOptions";
 
 type SortFilterComponentProps = {

@@ -1,6 +1,6 @@
 "use client";
 import styled from "styled-components";
-import Header from "@/components/atom/header/header";
+import Header from "@/components/molecule/header/header";
 import { cheesesData } from "../components/organism/shop-view-container/useCheeseData";
 
 type cheesePageProps = {
@@ -35,18 +35,24 @@ export default function CheesePage({ params }: cheesePageProps) {
             {cheeseObject?.desc}
           </StyledCheeeseDescription>
           <StyledAdditionalInfoContainer>
-            <StyledAdditionalInfoTitle>
-              Country:{" "}
-              <StyledAdditionalInfoValue>
-                {cheeseObject?.country}
-              </StyledAdditionalInfoValue>
-            </StyledAdditionalInfoTitle>
-            <StyledAdditionalInfoTitle>
-              Animal:{" "}
-              <StyledAdditionalInfoValue>
-                {cheeseObject?.animal}
-              </StyledAdditionalInfoValue>
-            </StyledAdditionalInfoTitle>
+            <div>
+              <StyledAdditionalInfoTitle>
+                Country:{" "}
+                <StyledAdditionalInfoValue>
+                  {cheeseObject?.country}
+                </StyledAdditionalInfoValue>
+              </StyledAdditionalInfoTitle>
+              <StyledAdditionalInfoTitle>
+                Animal:{" "}
+                <StyledAdditionalInfoValue>
+                  {cheeseObject?.animal}
+                </StyledAdditionalInfoValue>
+              </StyledAdditionalInfoTitle>
+            </div>
+            <StyledAdditionalInfoPrice>
+              {cheeseObject?.pricePerKg}
+              <StyledAdditionalInfoPriceKg>/Kg</StyledAdditionalInfoPriceKg>
+            </StyledAdditionalInfoPrice>
           </StyledAdditionalInfoContainer>
         </StyledCheeeseDetails>
       </StyledCheeseViewContainer>
@@ -86,13 +92,15 @@ const StyledCheeeseDetails = styled.div`
 `;
 
 const StyledCheeeseDescription = styled.div`
-  padding: 1rem 2rem;
+  padding: 1rem 2rem 0.5rem 2rem;
   font-style: italic;
   font-size: ${({ theme }) => theme.sizes.defaultFont};
   background-color: ${({ theme }) => theme.colors.accentGoldLighter};
 `;
 
 const StyledAdditionalInfoContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
   padding: 1rem 2rem;
   background-color: ${({ theme }) => theme.colors.accentGoldLighter};
 `;
@@ -102,8 +110,16 @@ const StyledAdditionalInfoTitle = styled.div`
   font-weight: 200;
 `;
 
-const StyledAdditionalInfoValue = styled.div`
-  display: inline-block;
+const StyledAdditionalInfoValue = styled.span`
   font-size: ${({ theme }) => theme.sizes.defaultFont};
   font-weight: 700;
+`;
+
+const StyledAdditionalInfoPrice = styled.h3`
+  align-self: flex-end;
+  font-size: ${({ theme }) => theme.sizes.header3Font};
+`;
+const StyledAdditionalInfoPriceKg = styled.span`
+  align-self: flex-end;
+  font-size: ${({ theme }) => theme.sizes.smallFont};
 `;

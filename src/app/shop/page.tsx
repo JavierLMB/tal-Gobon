@@ -1,7 +1,7 @@
 "use client";
 import styled from "styled-components";
 import ShopViewContainer from "./components/organism/shop-view-container/shopViewContainer";
-import Header from "@/components/atom/header/header";
+import Header from "@/components/molecule/header/header";
 
 export default function ShopPage() {
   return (

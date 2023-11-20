@@ -9,6 +9,7 @@ export const theme = {
     headerFont: "#d5b481",
   },
   sizes: {
+    smallFont: "1.2rem",
     defaultFont: "1.6rem",
     header1Font: "2.8rem",
     header2Font: "2.4rem",
