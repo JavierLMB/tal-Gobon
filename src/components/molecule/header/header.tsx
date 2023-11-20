@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Link from "next/link";
-import { FaAlignRight, FaCartShopping } from "react-icons/fa6";
+import { FaCartShopping } from "react-icons/fa6";
 import { LiaCheeseSolid } from "react-icons/lia";
 import { useState } from "react";
 import NavbarModal from "@/components/atom/navbar-modal/navbarModal";
