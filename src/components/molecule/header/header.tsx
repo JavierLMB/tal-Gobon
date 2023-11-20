@@ -36,6 +36,11 @@ const StyledHeaderContainer = styled.div`
   padding: 1rem;
   margin-bottom: 1rem;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  overflow-x: hidden;
+  position: sticky;
+  top: 0;
+  z-index: 4;
+
   background: linear-gradient(
     45deg,
     ${({ theme }) => theme.colors.primaryDark},
