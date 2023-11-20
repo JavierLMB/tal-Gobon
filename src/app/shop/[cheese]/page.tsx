@@ -1,4 +1,5 @@
 "use client";
+import styled from "styled-components";
 import Header from "@/components/atom/header/header";
 import { cheesesData } from "../components/organism/shop-view-container/useCheeseData";
 
@@ -17,7 +18,92 @@ export default function CheesePage({ params }: cheesePageProps) {
   return (
     <div>
       <Header />
-      <h1>{cheeseObject?.name}</h1>
+      <StyledCheeseViewContainer>
+        <StyledTitle>{cheeseObject?.name}</StyledTitle>
+        <StyledImagesContainer>
+          {cheeseObject &&
+            Object.entries(cheeseObject.images).map(([key, image]) => (
+              <StyledImage
+                key={key}
+                src={image}
+                alt={cheeseObject?.name}
+              ></StyledImage>
+            ))}
+        </StyledImagesContainer>
+        <StyledCheeeseDetails>
+          <StyledCheeeseDescription>
+            {cheeseObject?.desc}
+          </StyledCheeeseDescription>
+          <StyledAdditionalInfoContainer>
+            <StyledAdditionalInfoTitle>
+              Country:{" "}
+              <StyledAdditionalInfoValue>
+                {cheeseObject?.country}
+              </StyledAdditionalInfoValue>
+            </StyledAdditionalInfoTitle>
+            <StyledAdditionalInfoTitle>
+              Animal:{" "}
+              <StyledAdditionalInfoValue>
+                {cheeseObject?.animal}
+              </StyledAdditionalInfoValue>
+            </StyledAdditionalInfoTitle>
+          </StyledAdditionalInfoContainer>
+        </StyledCheeeseDetails>
+      </StyledCheeseViewContainer>
     </div>
   );
 }
+
+const StyledCheeseViewContainer = styled.div`
+  margin-top: 1.5rem;
+`;
+
+const StyledTitle = styled.h2`
+  padding: 0rem 1rem;
+  font-size: ${({ theme }) => theme.sizes.header2Font};
+  text-decoration: underline;
+`;
+
+const StyledImagesContainer = styled.div`
+  display: flex;
+  padding: 0rem 1rem 1rem 1rem;
+  gap: 0.5rem;
+  overflow-x: auto;
+`;
+
+const StyledImage = styled.img`
+  display: block;
+  width: 100%;
+  height: 22rem;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+`;
+
+const StyledCheeeseDetails = styled.div`
+  padding: 1rem 0rem;
+  line-height: 1.2;
+`;
+
+const StyledCheeeseDescription = styled.div`
+  padding: 1rem 2rem;
+  font-style: italic;
+  font-size: ${({ theme }) => theme.sizes.defaultFont};
+  background-color: ${({ theme }) => theme.colors.accentGoldLighter};
+`;
+
+const StyledAdditionalInfoContainer = styled.div`
+  padding: 1rem 2rem;
+  background-color: ${({ theme }) => theme.colors.accentGoldLighter};
+`;
+
+const StyledAdditionalInfoTitle = styled.div`
+  font-size: ${({ theme }) => theme.sizes.defaultFont};
+  font-weight: 200;
+`;
+
+const StyledAdditionalInfoValue = styled.div`
+  display: inline-block;
+  font-size: ${({ theme }) => theme.sizes.defaultFont};
+  font-weight: 700;
+`;

@@ -27,9 +27,7 @@ export default function PreviewCard({
 
   return (
     <StyledProductCard onClick={onClick}>
-      <a>
-        <StyledImage src={image1} alt="cheese"></StyledImage>
-      </a>
+      <StyledImage src={image1} alt="cheese"></StyledImage>
       <StyledContent>
         <StyledProductContainer>
           <StyledName>
