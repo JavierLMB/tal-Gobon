@@ -31,10 +31,11 @@ export default function RootLayout({
 }
 
 const StyledBody = styled.body`
-  background: linear-gradient(
+  /* background: linear-gradient(
     45deg,
     ${({ theme }) => theme.colors.accentGoldLight},
     ${({ theme }) => theme.colors.accentGoldLighter}
   );
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
+  background-color: #fff2db;
 `;

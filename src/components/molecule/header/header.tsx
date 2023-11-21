@@ -11,7 +11,10 @@ export default function Header() {
   console.log(navModalOpen);
   return (
     <StyledHeaderContainer>
-      <NavbarModal navModalOpen={navModalOpen} />
+      <NavbarModal
+        navModalOpen={navModalOpen}
+        onClick={() => setNavModalOpen(!navModalOpen)}
+      />
       <StyledLink href="/">
         <StyledLogoContainer>
           <StyledGobonLogo />

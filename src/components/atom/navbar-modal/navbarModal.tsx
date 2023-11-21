@@ -8,35 +8,47 @@ import Link from "next/link";
 
 type NavbarModalType = {
   navModalOpen: boolean;
+  onClick: () => void;
 };
 
-export default function NavbarModal({ navModalOpen }: NavbarModalType) {
+export default function NavbarModal({
+  navModalOpen,
+  onClick,
+}: NavbarModalType) {
   return (
-    <StyledNavbarModalContainer $navModalOpen={navModalOpen}>
-      <StyledOuterLogoContainer>
-        <StyledLogoContainer>
-          <StyledGobonLogo />
-        </StyledLogoContainer>
-      </StyledOuterLogoContainer>
-      <StyledContentContainer>
-        <StyledLink href="/">
-          <StyledHomeIcon />
-          <StyledNavOptions>Home</StyledNavOptions>
-        </StyledLink>
-        <StyledLink href="/shop">
-          <StyledShopIcon />
-          <StyledNavOptions>Shop</StyledNavOptions>
-        </StyledLink>
-        <StyledLink href="/about">
-          <StyledAboutIcon />
-          <StyledNavOptions>About</StyledNavOptions>
-        </StyledLink>
-        <StyledLink href="/cart">
-          <StyledCartIcon />
-          <StyledNavOptions>Cart</StyledNavOptions>
-        </StyledLink>
-      </StyledContentContainer>
-    </StyledNavbarModalContainer>
+    <>
+      <StyledNavbarModalBackground
+        onClick={onClick}
+        $navModalOpen={navModalOpen}
+      ></StyledNavbarModalBackground>
+      <StyledNavbarModalContainer $navModalOpen={navModalOpen}>
+        <StyledOuterLogoContainer>
+          <StyledLogoContainer>
+            <StyledLink href="/">
+              <StyledGobonLogo />
+            </StyledLink>
+          </StyledLogoContainer>
+        </StyledOuterLogoContainer>
+        <StyledContentContainer>
+          <StyledLink href="/">
+            <StyledHomeIcon />
+            <StyledNavOptions>Home</StyledNavOptions>
+          </StyledLink>
+          <StyledLink href="/shop">
+            <StyledShopIcon />
+            <StyledNavOptions>Shop</StyledNavOptions>
+          </StyledLink>
+          <StyledLink href="/about">
+            <StyledAboutIcon />
+            <StyledNavOptions>About</StyledNavOptions>
+          </StyledLink>
+          <StyledLink href="/cart">
+            <StyledCartIcon />
+            <StyledNavOptions>Cart</StyledNavOptions>
+          </StyledLink>
+        </StyledContentContainer>
+      </StyledNavbarModalContainer>
+    </>
   );
 }
 
@@ -45,9 +57,9 @@ const StyledNavbarModalContainer = styled.div<{
 }>`
   position: fixed;
   top: 0;
-  z-index: 2;
+  z-index: 4;
   width: 27rem;
-  padding: 7rem 2rem 1rem 3rem;
+  padding: 3rem 2rem 1rem 3rem;
   height: 100vh;
   line-height: 0;
   transition: left 0.4s cubic-bezier(0.01, -0.02, 0.51, 1.6);
@@ -61,10 +73,24 @@ const StyledNavbarModalContainer = styled.div<{
   `};
 `;
 
+const StyledNavbarModalBackground = styled.div<{ $navModalOpen: boolean }>`
+  position: fixed;
+  top: 6.7rem;
+  right: -1rem;
+  z-index: 3;
+  width: 100%;
+  height: 100vh;
+  background-color: #00000033;
+  ${({ $navModalOpen }) =>
+    css`
+      transform: translateX(${$navModalOpen ? "0%" : "100%"});
+    `};
+`;
+
 const StyledOuterLogoContainer = styled.div`
   display: flex;
   justify-content: center;
-  padding-bottom: 7rem;
+  padding-bottom: 3rem;
   border-bottom: 1px solid ${({ theme }) => theme.colors.accentGoldLighter};
 `;
 
@@ -76,7 +102,7 @@ const StyledLogoContainer = styled.div`
 
 const StyledGobonLogo = styled(LiaCheeseSolid)`
   padding: 0.5rem;
-  font-size: 8rem;
+  font-size: 7rem;
   color: ${({ theme }) => theme.colors.primaryDark};
   background-color: ${({ theme }) => theme.colors.accentGoldLighter};
   border-radius: 50%;
@@ -88,18 +114,16 @@ const StyledContentContainer = styled.div`
   gap: 5rem;
   display: flex;
   flex-direction: column;
-  padding-bottom: 4rem;
-  border-bottom: 1px solid ${({ theme }) => theme.colors.accentGoldLighter};
 `;
 
 const StyledNavOptions = styled.div`
   font-size: 3rem;
   color: ${({ theme }) => theme.colors.accentGoldLighter};
+  margin-top: 1rem;
 `;
 
 const StyledLink = styled(Link)`
   display: flex;
-  /* justify-content: center; */
   gap: 2rem;
   align-items: center;
   text-decoration: none;

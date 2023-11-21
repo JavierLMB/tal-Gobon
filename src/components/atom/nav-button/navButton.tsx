@@ -28,7 +28,7 @@ const StyledNavButtonContainer = styled.div<{
   transform: scale(0.9);
 
   ${({ $navModalOpen }) => css`
-    /* left: ${$navModalOpen ? "0rem" : "-27rem"}; */ //////
+    left: ${$navModalOpen ? "0rem" : "-27rem"};
   `};
 `;
 
