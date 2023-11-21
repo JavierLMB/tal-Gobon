@@ -76,7 +76,7 @@ const StyledNavbarModalContainer = styled.div<{
 const StyledNavbarModalBackground = styled.div<{ $navModalOpen: boolean }>`
   position: fixed;
   top: 6.7rem;
-  right: -1rem;
+  right: 0rem;
   z-index: 3;
   width: 100%;
   height: 100vh;
