@@ -12,12 +12,12 @@ export default function Header() {
   return (
     <StyledHeaderContainer>
       <NavbarModal navModalOpen={navModalOpen} />
-      <Link href="/" style={{ textDecoration: "none" }}>
+      <StyledLink href="/">
         <StyledLogoContainer>
           <StyledGobonLogo />
           <StyledLogoName>tal-Gobon</StyledLogoName>
         </StyledLogoContainer>
-      </Link>
+      </StyledLink>
       <StyledIcon>
         <FaCartShopping />
         <NavButton
@@ -38,7 +38,7 @@ const StyledHeaderContainer = styled.div`
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
   overflow-x: hidden;
   position: sticky;
-  top: 0;
+  top: 0rem;
   z-index: 4;
 
   background: linear-gradient(
@@ -73,4 +73,8 @@ const StyledGobonLogo = styled(LiaCheeseSolid)`
   background-color: ${({ theme }) => theme.colors.accentGoldLighter};
   border-radius: 50%;
   transform: rotate(10deg);
+`;
+
+const StyledLink = styled(Link)`
+  text-decoration: none;
 `;

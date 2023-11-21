@@ -1,4 +1,10 @@
 import styled, { css } from "styled-components";
+import { LiaCheeseSolid } from "react-icons/lia";
+import { FaHome } from "react-icons/fa";
+import { FaBasketShopping, FaCartShopping } from "react-icons/fa6";
+import { GiChefToque } from "react-icons/gi";
+
+import Link from "next/link";
 
 type NavbarModalType = {
   navModalOpen: boolean;
@@ -6,9 +12,31 @@ type NavbarModalType = {
 
 export default function NavbarModal({ navModalOpen }: NavbarModalType) {
   return (
-    <StyledNavbarModalContainer
-      $navModalOpen={navModalOpen}
-    ></StyledNavbarModalContainer>
+    <StyledNavbarModalContainer $navModalOpen={navModalOpen}>
+      <StyledOuterLogoContainer>
+        <StyledLogoContainer>
+          <StyledGobonLogo />
+        </StyledLogoContainer>
+      </StyledOuterLogoContainer>
+      <StyledContentContainer>
+        <StyledLink href="/">
+          <StyledHomeIcon />
+          <StyledNavOptions>Home</StyledNavOptions>
+        </StyledLink>
+        <StyledLink href="/shop">
+          <StyledShopIcon />
+          <StyledNavOptions>Shop</StyledNavOptions>
+        </StyledLink>
+        <StyledLink href="/about">
+          <StyledAboutIcon />
+          <StyledNavOptions>About</StyledNavOptions>
+        </StyledLink>
+        <StyledLink href="/cart">
+          <StyledCartIcon />
+          <StyledNavOptions>Cart</StyledNavOptions>
+        </StyledLink>
+      </StyledContentContainer>
+    </StyledNavbarModalContainer>
   );
 }
 
@@ -19,6 +47,7 @@ const StyledNavbarModalContainer = styled.div<{
   top: 0;
   z-index: 2;
   width: 27rem;
+  padding: 2rem 2rem 1rem 3rem;
   height: 100vh;
   transition: left 0.4s cubic-bezier(0.01, -0.02, 0.51, 1.6);
   background: linear-gradient(
@@ -29,4 +58,70 @@ const StyledNavbarModalContainer = styled.div<{
   ${({ $navModalOpen }) => css`
     left: ${$navModalOpen ? "-1rem" : "-27rem"};
   `};
+`;
+
+const StyledOuterLogoContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid ${({ theme }) => theme.colors.accentGoldLighter};
+`;
+
+const StyledLogoContainer = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+`;
+
+const StyledGobonLogo = styled(LiaCheeseSolid)`
+  padding: 0.5rem;
+  font-size: 4rem;
+  color: ${({ theme }) => theme.colors.primaryDark};
+  background-color: ${({ theme }) => theme.colors.accentGoldLighter};
+  border-radius: 50%;
+  transform: rotate(10deg);
+`;
+
+const StyledContentContainer = styled.div`
+  margin-top: 4rem;
+  gap: 3rem;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid ${({ theme }) => theme.colors.accentGoldLighter};
+`;
+
+const StyledNavOptions = styled.div`
+  font-size: ${({ theme }) => theme.sizes.header2Font};
+  color: ${({ theme }) => theme.colors.accentGoldLighter};
+`;
+
+const StyledLink = styled(Link)`
+  display: flex;
+  /* justify-content: center; */
+  gap: 2rem;
+  align-items: center;
+  text-decoration: none;
+`;
+
+const commonIconStyles = css`
+  padding: 0.5rem;
+  font-size: 4rem;
+  font-size: ${({ theme }) => theme.sizes.header1Font};
+  color: ${({ theme }) => theme.colors.accentGoldLighter};
+`;
+
+const StyledHomeIcon = styled(FaHome)`
+  ${commonIconStyles}
+`;
+
+const StyledShopIcon = styled(FaBasketShopping)`
+  ${commonIconStyles}
+`;
+
+const StyledAboutIcon = styled(GiChefToque)`
+  ${commonIconStyles}
+`;
+const StyledCartIcon = styled(FaCartShopping)`
+  ${commonIconStyles}
 `;
