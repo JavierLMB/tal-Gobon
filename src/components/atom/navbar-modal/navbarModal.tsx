@@ -47,8 +47,9 @@ const StyledNavbarModalContainer = styled.div<{
   top: 0;
   z-index: 2;
   width: 27rem;
-  padding: 2rem 2rem 1rem 3rem;
+  padding: 7rem 2rem 1rem 3rem;
   height: 100vh;
+  line-height: 0;
   transition: left 0.4s cubic-bezier(0.01, -0.02, 0.51, 1.6);
   background: linear-gradient(
     45deg,
@@ -63,7 +64,7 @@ const StyledNavbarModalContainer = styled.div<{
 const StyledOuterLogoContainer = styled.div`
   display: flex;
   justify-content: center;
-  padding-bottom: 2rem;
+  padding-bottom: 7rem;
   border-bottom: 1px solid ${({ theme }) => theme.colors.accentGoldLighter};
 `;
 
@@ -75,7 +76,7 @@ const StyledLogoContainer = styled.div`
 
 const StyledGobonLogo = styled(LiaCheeseSolid)`
   padding: 0.5rem;
-  font-size: 4rem;
+  font-size: 8rem;
   color: ${({ theme }) => theme.colors.primaryDark};
   background-color: ${({ theme }) => theme.colors.accentGoldLighter};
   border-radius: 50%;
@@ -84,15 +85,15 @@ const StyledGobonLogo = styled(LiaCheeseSolid)`
 
 const StyledContentContainer = styled.div`
   margin-top: 4rem;
-  gap: 3rem;
+  gap: 5rem;
   display: flex;
   flex-direction: column;
-  padding-bottom: 2rem;
+  padding-bottom: 4rem;
   border-bottom: 1px solid ${({ theme }) => theme.colors.accentGoldLighter};
 `;
 
 const StyledNavOptions = styled.div`
-  font-size: ${({ theme }) => theme.sizes.header2Font};
+  font-size: 3rem;
   color: ${({ theme }) => theme.colors.accentGoldLighter};
 `;
 
@@ -106,8 +107,7 @@ const StyledLink = styled(Link)`
 
 const commonIconStyles = css`
   padding: 0.5rem;
-  font-size: 4rem;
-  font-size: ${({ theme }) => theme.sizes.header1Font};
+  font-size: 5rem;
   color: ${({ theme }) => theme.colors.accentGoldLighter};
 `;
 
