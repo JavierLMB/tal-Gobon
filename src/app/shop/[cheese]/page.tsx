@@ -1,6 +1,6 @@
 "use client";
 import styled from "styled-components";
-import Header from "@/components/header/molecule/header/header";
+import Header from "@/components/header/template/header/header";
 import { cheesesData } from "../components/organism/shop-view-container/useCheeseData";
 import ImageSlider from "./components/atom/image-slider/imageSlider";
 import CheeseDescription from "./components/atom/cheese-description/cheeseDescription";

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { FaCartShopping } from "react-icons/fa6";
 import { LiaCheeseSolid } from "react-icons/lia";
 import { useState } from "react";
-import NavbarModal from "@/components/header/atom/navbar-modal/navbarModal";
+import NavbarModal from "@/components/header/organsim/navbar-modal/navbarModal";
 import NavButton from "@/components/header/atom/nav-button/navButton";
 
 export default function Header() {

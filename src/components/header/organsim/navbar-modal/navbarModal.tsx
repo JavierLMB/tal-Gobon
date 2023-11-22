@@ -1,9 +1,6 @@
 import styled, { css } from "styled-components";
 import { LiaCheeseSolid } from "react-icons/lia";
-import { FaHome } from "react-icons/fa";
-import { FaBasketShopping, FaCartShopping } from "react-icons/fa6";
-import { GiChefToque } from "react-icons/gi";
-
+import NavLinksContainer from "../../molecule/nav-links-container/navLinksContainer";
 import Link from "next/link";
 
 type NavbarModalType = {
@@ -29,24 +26,7 @@ export default function NavbarModal({
             </StyledLink>
           </StyledLogoContainer>
         </StyledOuterLogoContainer>
-        <StyledContentContainer>
-          <StyledLink href="/">
-            <StyledHomeIcon />
-            <StyledNavOptions>Home</StyledNavOptions>
-          </StyledLink>
-          <StyledLink href="/shop">
-            <StyledShopIcon />
-            <StyledNavOptions>Shop</StyledNavOptions>
-          </StyledLink>
-          <StyledLink href="/about">
-            <StyledAboutIcon />
-            <StyledNavOptions>About</StyledNavOptions>
-          </StyledLink>
-          <StyledLink href="/cart">
-            <StyledCartIcon />
-            <StyledNavOptions>Cart</StyledNavOptions>
-          </StyledLink>
-        </StyledContentContainer>
+        <NavLinksContainer />
       </StyledNavbarModalContainer>
     </>
   );
@@ -62,6 +42,7 @@ const StyledNavbarModalContainer = styled.div<{
   padding: 3rem 2rem 1rem 3rem;
   height: 100vh;
   line-height: 0;
+  box-shadow: 2px 0 2px rgba(0, 0, 0, 0.25);
   transition: left 0.4s cubic-bezier(0.01, -0.02, 0.51, 1.6);
   background: linear-gradient(
     45deg,
@@ -127,25 +108,4 @@ const StyledLink = styled(Link)`
   gap: 2rem;
   align-items: center;
   text-decoration: none;
-`;
-
-const commonIconStyles = css`
-  padding: 0.5rem;
-  font-size: 5rem;
-  color: ${({ theme }) => theme.colors.accentGoldLighter};
-`;
-
-const StyledHomeIcon = styled(FaHome)`
-  ${commonIconStyles}
-`;
-
-const StyledShopIcon = styled(FaBasketShopping)`
-  ${commonIconStyles}
-`;
-
-const StyledAboutIcon = styled(GiChefToque)`
-  ${commonIconStyles}
-`;
-const StyledCartIcon = styled(FaCartShopping)`
-  ${commonIconStyles}
 `;
