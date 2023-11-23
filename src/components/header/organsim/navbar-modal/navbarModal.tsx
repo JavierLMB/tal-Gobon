@@ -51,6 +51,7 @@ const StyledNavbarModalContainer = styled.div<{
   );
   ${({ $navModalOpen }) => css`
     left: ${$navModalOpen ? "-1rem" : "-27rem"};
+    box-shadow: ${$navModalOpen ? "2px 0 2px rgba(0, 0, 0, 0.25)" : "none"};
   `};
 `;
 

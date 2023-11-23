@@ -40,6 +40,6 @@ const StyledLine2 = styled(StyledLine)<{ $expanderOpen: boolean }>`
   top: 1rem;
 
   ${({ $expanderOpen }) => css`
-    right: ${$expanderOpen ? "-3rem" : "0rem"};
+    right: ${$expanderOpen ? "-5rem" : "0rem"};
   `};
 `;
