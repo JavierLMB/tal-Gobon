@@ -18,6 +18,7 @@ export default function Footer() {
 const StyledFooterMainContainer = styled.div`
   margin-top: 1rem;
   padding: 5rem 2rem;
+  overflow-x: hidden;
   background: linear-gradient(
     45deg,
     ${({ theme }) => theme.colors.primaryDark},
