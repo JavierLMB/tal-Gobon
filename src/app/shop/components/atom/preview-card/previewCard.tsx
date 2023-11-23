@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { animalImages } from "./usePreviewCardAnimalIcons";
+import Image from "next/image";
 
 type PreviewCardProps = {
   image1: string;
@@ -27,7 +28,13 @@ export default function PreviewCard({
 
   return (
     <StyledProductCard onClick={onClick}>
-      <StyledImage src={image1} alt="cheese"></StyledImage>
+      <StyledImage
+        src={image1}
+        alt="cheese"
+        width={570}
+        height={660}
+        loading="lazy"
+      />
       <StyledContent>
         <StyledProductContainer>
           <StyledName>
@@ -58,11 +65,9 @@ const StyledProductCard = styled.div`
   );
 `;
 
-const StyledImage = styled.img`
-  display: block;
+const StyledImage = styled(Image)`
   width: 100%;
   height: 22rem;
-  object-fit: cover;
   border-radius: 0.5rem 0.5rem 0rem 0rem;
 `;
 

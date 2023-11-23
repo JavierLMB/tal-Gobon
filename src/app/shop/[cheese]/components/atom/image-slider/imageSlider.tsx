@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Image from "next/image";
 
 type CheeseObjectProps = {
   cheeseObject?: {
@@ -16,7 +17,9 @@ export default function ImageSlider({ cheeseObject }: CheeseObjectProps) {
             key={key}
             src={image}
             alt={cheeseObject?.name}
-          ></StyledImage>
+            width={570}
+            height={660}
+          />
         ))}
     </StyledImagesContainer>
   );
@@ -29,7 +32,7 @@ const StyledImagesContainer = styled.div`
   overflow-x: auto;
 `;
 
-const StyledImage = styled.img`
+const StyledImage = styled(Image)`
   display: block;
   width: 100%;
   height: 22rem;
