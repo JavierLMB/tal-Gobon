@@ -1,6 +1,7 @@
 "use client";
 import styled from "styled-components";
 import Header from "@/components/header/template/header/header";
+import Footer from "@/components/footer/template/footer/footer";
 import { cheesesData } from "../components/organism/shop-view-container/useCheeseData";
 import ImageSlider from "./components/atom/image-slider/imageSlider";
 import CheeseDescription from "./components/atom/cheese-description/cheeseDescription";
@@ -32,6 +33,7 @@ export default function CheesePage({ params }: CheesePageProps) {
         <ImageSlider cheeseObject={cheeseObject} />
         <CheeseDescription cheeseObject={cheeseObject} />
       </StyledCheeseViewContainer>
+      <Footer />
     </div>
   );
 }
