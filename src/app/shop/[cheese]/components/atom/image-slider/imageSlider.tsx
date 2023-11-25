@@ -19,6 +19,7 @@ export default function ImageSlider({ cheeseObject }: CheeseObjectProps) {
             alt={cheeseObject?.name}
             width={570}
             height={660}
+            priority
           />
         ))}
     </StyledImagesContainer>

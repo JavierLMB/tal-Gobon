@@ -8,7 +8,6 @@ import NavButton from "@/components/header/atom/nav-button/navButton";
 
 export default function Header() {
   const [navModalOpen, setNavModalOpen] = useState(false);
-  console.log(navModalOpen);
   return (
     <StyledHeaderContainer>
       <NavbarModal
