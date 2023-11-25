@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { weightOptions } from "./useCheeseWeightOptions";
 
 type CheeseWeightPortionPriceProps = {
@@ -48,7 +48,7 @@ export default function CheeseWeightPortionPrice({
         </StyledSelect>
       </StyledWeightContainer>
 
-      <StyledPriceContainer>
+      <StyledPriceContainer $selectedWeight={selectedWeight}>
         <StyledTotalPrice>Total Price: </StyledTotalPrice>
         <StyledPriceAmount>
           € {updateTotalPrice(selectedWeight, portionQuantity)}
@@ -60,11 +60,13 @@ export default function CheeseWeightPortionPrice({
 
 const StyledWeightMainContainer = styled.div`
   padding: 0rem 2rem;
+  margin: 0rem 2rem;
+  border-bottom: 1px solid ${({ theme }) => theme.colors.primaryLight};
 `;
 
 const StyledWeightContainer = styled.div`
   display: flex;
-  padding: 2rem;
+  padding: 2rem 0rem;
   justify-content: space-between;
 `;
 
@@ -87,14 +89,18 @@ const StyledOption = styled.option`
   color: ${({ theme }) => theme.colors.primaryLight};
 `;
 
-const StyledPriceContainer = styled.div`
-  color: ${({ theme }) => theme.colors.primaryLight};
-  padding: 1rem 2rem 2rem 2rem;
-  border-bottom: 1px solid ${({ theme }) => theme.colors.primaryLight};
+const StyledPriceContainer = styled.div<{ $selectedWeight: string }>`
   display: flex;
   justify-content: space-between;
-  font-size: ${({ theme }) => theme.sizes.header3Font};
   line-height: 1;
+  transition: all 0.5s ease;
+  color: ${({ theme }) => theme.colors.primaryLight};
+  font-size: ${({ theme }) => theme.sizes.header3Font};
+  ${({ $selectedWeight }) => css`
+    padding: ${$selectedWeight ? "1rem 0rem 2rem 0rem" : "0rem"};
+    max-height: ${$selectedWeight ? "10rem" : "0"};
+    overflow: ${$selectedWeight ? "visible" : "hidden"};
+  `};
 `;
 
 const StyledTotalPrice = styled.h2`
