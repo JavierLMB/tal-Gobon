@@ -5,6 +5,7 @@ import Footer from "@/components/footer/template/footer/footer";
 import { cheesesData } from "../components/organism/shop-view-container/useCheeseData";
 import ImageSlider from "./components/atom/image-slider/imageSlider";
 import CheeseDescription from "./components/atom/cheese-description/cheeseDescription";
+import CheeseWeightPortionPrice from "./components/atom/cheese-weight-portion--price/cheeseWeightPortionPrice";
 
 type CheeseObjectType = {
   name: string;
@@ -32,6 +33,7 @@ export default function CheesePage({ params }: CheesePageProps) {
         <StyledTitle>{cheeseObject?.name}</StyledTitle>
         <ImageSlider cheeseObject={cheeseObject} />
         <CheeseDescription cheeseObject={cheeseObject} />
+        <CheeseWeightPortionPrice cheeseObject={cheeseObject} />
       </StyledCheeseViewContainer>
       <Footer />
     </div>

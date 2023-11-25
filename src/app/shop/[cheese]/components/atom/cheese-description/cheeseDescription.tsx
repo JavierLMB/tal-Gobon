@@ -48,7 +48,7 @@ const StyledCheeeseDetails = styled.div`
 const StyledCheeeseDescription = styled.div`
   font-style: italic;
   font-size: ${({ theme }) => theme.sizes.defaultFont};
-  padding: 1.5rem 2rem;
+  padding: 2rem;
   margin-top: 2rem;
   border-top: 1px solid ${({ theme }) => theme.colors.primaryLight};
   border-bottom: 1px solid ${({ theme }) => theme.colors.primaryLight};
@@ -57,8 +57,8 @@ const StyledCheeeseDescription = styled.div`
 const StyledAdditionalInfoContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  padding: 1.5rem 2rem;
-  margin-top: 1rem;
+  padding: 2rem;
+  border-bottom: 1px solid ${({ theme }) => theme.colors.primaryLight};
 `;
 
 const StyledAdditionalInfoTitle = styled.div`
