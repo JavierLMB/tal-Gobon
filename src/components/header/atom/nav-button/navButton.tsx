@@ -56,7 +56,7 @@ const StyledLineBig1 = styled(StyledLine)<{
   $navModalOpen: boolean;
 }>`
   ${({ $navModalOpen }) => css`
-    top: ${$navModalOpen ? "1.1rem" : "0.8rem"};
+    top: ${$navModalOpen ? "1.3rem" : "0.8rem"};
     transform: rotate(${$navModalOpen ? "120deg" : "0deg"});
   `};
 `;
