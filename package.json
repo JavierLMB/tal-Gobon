@@ -15,6 +15,7 @@
     "next": "13.4.3",
     "react": "latest",
     "react-dom": "latest",
+    "react-hook-inview": "^4.5.0",
     "react-icons": "^4.11.0",
     "styled-components": "^6.0.8"
   },
@@ -28,7 +29,6 @@
     "@storybook/react": "^7.4.5",
     "@storybook/react-vite": "^7.4.5",
     "@storybook/testing-library": "^0.2.2",
-    "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
@@ -37,6 +37,7 @@
     "eslint-config-next": "14.0.0",
     "eslint-plugin-storybook": "^0.6.14",
     "storybook": "^7.4.5",
-    "storybook-addon-theme-provider": "^0.1.10"
+    "storybook-addon-theme-provider": "^0.1.10",
+    "typescript": "^5"
   }
 }

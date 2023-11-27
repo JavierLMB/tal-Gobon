@@ -2,13 +2,13 @@ import Link from "next/link";
 import { ReactNode } from "react";
 import styled from "styled-components";
 
-type NavLinksTypes = {
+type NavLinksProps = {
   link: string;
   children: ReactNode;
   name: string;
 };
 
-export default function NavLinks({ link, children, name }: NavLinksTypes) {
+export default function NavLinks({ link, children, name }: NavLinksProps) {
   return (
     <StyledLink href={link}>
       {children}
