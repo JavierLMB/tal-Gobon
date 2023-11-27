@@ -43,7 +43,7 @@ export default function FeatureContainer() {
 }
 
 const StyledFeatureContainer = styled.div`
-  margin-top: 5rem;
+  margin-top: 2rem;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;

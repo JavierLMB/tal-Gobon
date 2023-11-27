@@ -28,6 +28,7 @@ const StyledFeatureContainer = styled.div<{ $inView: boolean }>`
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+
   width: 45%;
   padding: 1.5rem 0rem;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
@@ -42,9 +43,11 @@ const StyledFeatureContainer = styled.div<{ $inView: boolean }>`
 `;
 
 const StyledFeatureTitle = styled.h2`
+  line-height: 1.2;
+  padding: 1rem 0.2rem;
+  text-align: center;
   font-size: ${({ theme }) => theme.sizes.header2Font};
   color: ${({ theme }) => theme.colors.accentGoldLighter};
-  text-align: center;
   border-top: 2px solid ${({ theme }) => theme.colors.accentGoldLighter};
   border-bottom: 2px solid ${({ theme }) => theme.colors.accentGoldLighter};
 `;
