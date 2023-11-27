@@ -4,37 +4,30 @@ export default function Hero() {
   return (
     <StyledHeroBackground>
       <StyledTitle>Artisanal Delights Await</StyledTitle>
-      <StyledSubtitle>
-        Unveiling a Symphony of Flavors in Every Bite
-      </StyledSubtitle>
     </StyledHeroBackground>
   );
 }
 
 const StyledHeroBackground = styled.div`
   height: 90vh;
-  background-image: url("cheeseBackgrounds/hero-background.jpg");
+  margin: 0rem 1rem;
+  background-image: url("cheeseBackgrounds/hero-background1.jpg");
   background-size: cover;
   background-position: center;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   text-align: center;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-    1px 1px 0 #000;
+  text-shadow: -4px -4px 0 #000, 4px -4px 0 #000, -4px 4px 0 #000,
+    4px 4px 0 #000;
   padding: 2rem;
   color: ${({ theme }) => theme.colors.accentGoldLighter};
 `;
 
 const StyledTitle = styled.h1`
-  margin-top: 10rem;
-  margin-bottom: 1rem;
-  font-size: 3rem;
+  line-height: 1.7;
+  font-size: 8rem;
+  padding: 0rem 1rem;
   color: ${({ theme }) => theme.colors.accentGoldLighter};
-`;
-
-const StyledSubtitle = styled.p`
-  max-width: 600px;
-  font-size: ${({ theme }) => theme.sizes.header3Font};
-  color: ${({ theme }) => theme.colors.defaultFont};
 `;
