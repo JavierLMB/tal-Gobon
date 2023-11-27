@@ -1,7 +1,5 @@
-"use client";
 import React, { useEffect, useState } from "react";
 import styled, { css } from "styled-components";
-import dynamic from "next/dynamic";
 
 type AnimatedTitleProp = {
   title: string;
@@ -39,4 +37,4 @@ const AnimatedLetter = styled.span<{ $delay: number; $loaded: boolean }>`
   `};
 `;
 
-export default dynamic(() => Promise.resolve(AnimatedTitle), { ssr: false });
+export default AnimatedTitle;
