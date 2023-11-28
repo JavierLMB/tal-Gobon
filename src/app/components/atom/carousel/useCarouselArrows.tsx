@@ -27,19 +27,19 @@ export function SampleNextArrow({ onClick }: SampleArrowProps) {
 const StyledArrowContainer = styled.div<{ $direction: string }>`
   display: block;
   position: absolute;
-  top: 20rem;
+  top: 20.5rem;
   z-index: 2;
   ${({ $direction }) => css`
-    left: ${$direction === "left" ? "7rem" : ""};
-    right: ${$direction === "right" ? "7rem" : ""};
+    left: ${$direction === "left" ? "10rem" : ""};
+    right: ${$direction === "right" ? "10rem" : ""};
   `};
 `;
 
 const commonIconStyles = css`
   font-size: 5rem;
   display: block;
-  width: 3rem;
-  height: 3rem;
+  width: 2rem;
+  height: 2rem;
   color: ${({ theme }) => theme.colors.primaryLight};
 `;
 

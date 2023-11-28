@@ -19,9 +19,9 @@ export default function Carousel() {
   return (
     <StyledCarouselContainer>
       <Slider {...sliderSettings}>
-        {carouselImages.map(({ id, image }) => (
+        {carouselImages.map(({ id, image, content }) => (
           <StyledHeroBackground key={id} $background={image}>
-            <h3>Hello</h3>
+            <StyledPromotionContainer>{content}</StyledPromotionContainer>
           </StyledHeroBackground>
         ))}
       </Slider>
@@ -33,20 +33,30 @@ const StyledCarouselContainer = styled.div`
   margin: 2rem 1rem 4rem 1rem;
   color: ${({ theme }) => theme.colors.primaryDark};
   background-color: ${({ theme }) => theme.colors.primaryDark};
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
 `;
 
 const StyledHeroBackground = styled.div<{ $background: string }>`
   height: 20rem;
   background-size: cover;
   background-position: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   text-align: center;
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
-  color: ${({ theme }) => theme.colors.accentGoldLighter};
+  font-size: ${({ theme }) => theme.sizes.defaultFont};
+  color: ${({ theme }) => theme.colors.primaryLight};
   ${({ $background }) => css`
     background-image: url(${$background});
   `};
+`;
+
+const StyledPromotionContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  transform: translateY(2.5rem);
+  height: 15rem;
+  width: 30rem;
+  padding: 0rem 2rem;
+  background-color: rgba(250, 250, 255, 0.85);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
 `;
