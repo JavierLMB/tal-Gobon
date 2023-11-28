@@ -36,6 +36,8 @@ const StyledHeroBackground = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
+  overflow-x: hidden;
+
   text-shadow: -4px -4px 0 #000, 4px -4px 0 #000, -4px 4px 0 #000,
     4px 4px 0 #000;
   padding: 2rem;

@@ -12,7 +12,7 @@ export default function Feature({ title, content, children }: FeatureProps) {
   const [ref, inView] = useInView({
     threshold: 0,
     unobserveOnEnter: true,
-    rootMargin: "-25% 10%",
+    rootMargin: "-20% 10%",
   });
 
   console.log(inView, "Feature");
