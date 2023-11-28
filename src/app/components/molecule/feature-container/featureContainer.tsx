@@ -43,10 +43,10 @@ export default function FeatureContainer() {
 }
 
 const StyledFeatureContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   margin-top: 2rem;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  padding: 0rem 1rem;
   gap: 1rem;
 `;
 
