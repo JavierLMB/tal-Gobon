@@ -26,6 +26,7 @@ const StyledPromotionMainContainer = styled.div`
   margin: 1rem;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
   color: ${({ theme }) => theme.colors.primaryDark};
+  overflow: hidden;
 `;
 
 const StyledHeroBackground = styled.div<{

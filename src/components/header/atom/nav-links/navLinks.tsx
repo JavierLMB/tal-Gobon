@@ -20,12 +20,14 @@ export default function NavLinks({ link, children, name }: NavLinksProps) {
 const StyledLink = styled(Link)`
   display: flex;
   gap: 2rem;
-  align-items: center;
+  align-items: flex-end;
   text-decoration: none;
+  overflow: hidden;
 `;
 
 const StyledNavOptions = styled.div`
+  display: flex;
   font-size: 3rem;
-  margin-top: 1rem;
+  height: 2rem;
   color: ${({ theme }) => theme.colors.accentGoldLighter};
 `;
