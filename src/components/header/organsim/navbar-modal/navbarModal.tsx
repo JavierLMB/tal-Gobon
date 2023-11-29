@@ -36,13 +36,13 @@ const StyledNavbarModalContainer = styled.div<{
   $navModalOpen: boolean;
 }>`
   position: fixed;
-  top: 0;
+  top: 15rem;
   z-index: 4;
-  width: 27rem;
-  padding: 3rem 2rem 1rem 3rem;
-  height: 100vh;
+  border-top-right-radius: 5rem;
+  border-bottom-right-radius: 5rem;
+  width: 25rem;
+  padding: 3rem 2rem 3rem 3rem;
   line-height: 0;
-  box-shadow: 2px 0 2px rgba(0, 0, 0, 0.25);
   transition: left 0.4s cubic-bezier(0.01, -0.02, 0.51, 1.6);
   background: linear-gradient(
     45deg,
@@ -51,7 +51,7 @@ const StyledNavbarModalContainer = styled.div<{
   );
   ${({ $navModalOpen }) => css`
     left: ${$navModalOpen ? "-1rem" : "-27rem"};
-    box-shadow: ${$navModalOpen ? "2px 0 2px rgba(0, 0, 0, 0.25)" : "none"};
+    box-shadow: ${$navModalOpen ? "2px 0 10px rgba(0, 0, 0, 0.5)" : "none"};
   `};
 `;
 
@@ -61,8 +61,9 @@ const StyledNavbarModalBackground = styled.div<{ $navModalOpen: boolean }>`
   right: 0rem;
   z-index: 3;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-color: #00000033;
+  backdrop-filter: blur(5px);
   ${({ $navModalOpen }) =>
     css`
       transform: translateX(${$navModalOpen ? "0%" : "100%"});
@@ -89,19 +90,6 @@ const StyledGobonLogo = styled(LiaCheeseSolid)`
   background-color: ${({ theme }) => theme.colors.accentGoldLighter};
   border-radius: 50%;
   transform: rotate(10deg);
-`;
-
-const StyledContentContainer = styled.div`
-  margin-top: 4rem;
-  gap: 5rem;
-  display: flex;
-  flex-direction: column;
-`;
-
-const StyledNavOptions = styled.div`
-  font-size: 3rem;
-  color: ${({ theme }) => theme.colors.accentGoldLighter};
-  margin-top: 1rem;
 `;
 
 const StyledLink = styled(Link)`

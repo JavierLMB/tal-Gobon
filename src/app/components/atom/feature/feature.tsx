@@ -33,10 +33,10 @@ const StyledFeatureContainer = styled.div<{ $inView: boolean }>`
   gap: 1rem;
   width: 100%;
   padding: 1.5rem 0rem;
+  border-radius: 0.5rem;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
   transition: opacity 0.8s ease,
     transform 0.6s cubic-bezier(0.01, -0.02, 0.51, 1.6);
-
   background-color: ${({ theme }) => theme.colors.primaryLight};
   ${({ $inView }) => css`
     opacity: ${$inView ? "1" : "0"};

@@ -12,7 +12,7 @@ export default function Expander({ children, title }: ExpanderProps) {
   return (
     <StyledFooterExpanderContainer>
       <StyledExpanderHeader>
-        <div>{title}</div>
+        <div onClick={() => setExpanderOpen(!expanderOpen)}>{title}</div>
         <ExpanderButton
           expanderOpen={expanderOpen}
           onClick={() => setExpanderOpen(!expanderOpen)}

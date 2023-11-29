@@ -28,6 +28,7 @@ export default function Hero() {
 const StyledHeroBackground = styled.div`
   height: 92vh;
   margin: 0rem 1rem;
+  border-radius: 0.5rem;
   background-image: url("cheeseBackgrounds/hero-background1.jpg");
   background-size: cover;
   background-position: center;

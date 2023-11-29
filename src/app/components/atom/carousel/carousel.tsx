@@ -33,7 +33,8 @@ export default function Carousel() {
 }
 
 const StyledCarouselContainer = styled.div`
-  margin: 2rem 1rem 4rem 1rem;
+  margin: 2rem 1rem 5rem 1rem;
+  border-radius: 0.5rem;
   color: ${({ theme }) => theme.colors.primaryDark};
   background-color: ${({ theme }) => theme.colors.primaryDark};
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
@@ -41,6 +42,7 @@ const StyledCarouselContainer = styled.div`
 
 const StyledHeroBackground = styled.div<{ $background: string }>`
   height: 20rem;
+  border-radius: 0.5rem;
   background-size: cover;
   background-position: center;
   text-align: center;
