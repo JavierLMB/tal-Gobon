@@ -28,7 +28,6 @@ const StyledContentContainer = styled.div`
   gap: 5rem;
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
 `;
 
 const commonIconStyles = css`
