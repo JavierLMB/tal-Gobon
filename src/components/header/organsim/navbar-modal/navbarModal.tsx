@@ -61,7 +61,7 @@ const StyledNavbarModalBackground = styled.div<{ $navModalOpen: boolean }>`
   right: 0rem;
   z-index: 3;
   width: 100%;
-  height: 100dvh;
+  height: 150rem;
   background-color: #00000033;
   backdrop-filter: blur(5px);
   ${({ $navModalOpen }) =>
