@@ -63,5 +63,9 @@ const StyledPromotionContainer = styled.div`
   width: 45rem;
   padding: 0rem 6rem 0rem 5rem;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
-  background-color: ${({ theme }) => theme.colors.primaryLight};
+  background: linear-gradient(
+    45deg,
+    ${({ theme }) => theme.colors.primaryDark},
+    ${({ theme }) => theme.colors.primaryLight}
+  );
 `;
