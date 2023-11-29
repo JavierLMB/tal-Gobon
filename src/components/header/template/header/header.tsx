@@ -16,13 +16,13 @@ export default function Header() {
       />
       <StyledLink href="/">
         <StyledLogoContainer>
-          {/* <StyledImage
-            src={"/../public/GobonLogo.png"}
+          <StyledLogoImage
+            src={"/GobonLogo/small/GobonLogo.png"}
             alt={"tal Gobon Logo"}
-            width={270}
-            height={260}
+            width={50}
+            height={50}
             priority
-          /> */}
+          />
           <StyledLogoName>tal-Gobon</StyledLogoName>
         </StyledLogoContainer>
       </StyledLink>
@@ -78,7 +78,7 @@ const StyledLink = styled(Link)`
   text-decoration: none;
 `;
 
-const StyledImage = styled(Image)`
+const StyledLogoImage = styled(Image)`
   display: block;
   width: 5rem;
   height: 5rem;

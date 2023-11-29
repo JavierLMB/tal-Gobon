@@ -13,10 +13,10 @@ export default function Hero() {
   return (
     <StyledHeroBackground ref={ref}>
       <StyledLogoImage
-        src={"/../public/GobonLogo.png"}
+        src={"/GobonLogo/small/GobonLogo.png"}
         alt={"tal Gobon Logo"}
-        width={270}
-        height={260}
+        width={300}
+        height={300}
         priority
       />
       <StyledTitle>
@@ -66,8 +66,9 @@ const StyledLogoImage = styled(Image)`
 
 const StyledTitle = styled.h1`
   line-height: 1;
-  font-size: 8rem;
+  font-size: 7rem;
   padding: 0rem 1rem;
+  font-family: Georgia, serif;
   color: ${({ theme }) => theme.colors.accentGoldLighter};
 `;
 

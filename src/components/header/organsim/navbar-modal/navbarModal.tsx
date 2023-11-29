@@ -23,10 +23,10 @@ export default function NavbarModal({
           <StyledLogoContainer>
             <StyledLink href="/">
               <StyledLogoImage
-                src={"/../public/GobonLogo.png"}
+                src={"/GobonLogo/small/GobonLogo.png"}
                 alt={"tal Gobon Logo"}
-                width={270}
-                height={260}
+                width={80}
+                height={80}
                 priority
               />
             </StyledLink>
