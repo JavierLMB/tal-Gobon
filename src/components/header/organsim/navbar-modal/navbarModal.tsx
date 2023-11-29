@@ -36,11 +36,11 @@ const StyledNavbarModalContainer = styled.div<{
   $navModalOpen: boolean;
 }>`
   position: fixed;
-  top: 15rem;
+  top: 8rem;
   z-index: 4;
   border-top-right-radius: 5rem;
   border-bottom-right-radius: 5rem;
-  width: 25rem;
+  width: 21rem;
   padding: 3rem 2rem 3rem 3rem;
   line-height: 0;
   transition: left 0.4s cubic-bezier(0.01, -0.02, 0.51, 1.6);

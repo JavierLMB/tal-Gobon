@@ -4,16 +4,20 @@ import { useInView } from "react-hook-inview";
 
 export default function Promotion() {
   const [ref, inView] = useInView({
-    threshold: 0.5,
+    threshold: 0.4,
     unobserveOnEnter: true,
   });
   console.log(inView, "promo");
   return (
     <StyledPromotionMainContainer ref={ref}>
       {promotionImages.map(({ id, image, content }) => (
-        <StyledHeroBackground key={id} $background={image} $inView={inView}>
+        <StyledPromotionBackground
+          key={id}
+          $background={image}
+          $inView={inView}
+        >
           <StyledPromotionContainer>{content}</StyledPromotionContainer>
-        </StyledHeroBackground>
+        </StyledPromotionBackground>
       ))}
     </StyledPromotionMainContainer>
   );
@@ -24,12 +28,11 @@ const StyledPromotionMainContainer = styled.div`
   flex-direction: column;
   gap: 1rem;
   margin: 1rem;
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
   color: ${({ theme }) => theme.colors.primaryDark};
   overflow: hidden;
 `;
 
-const StyledHeroBackground = styled.div<{
+const StyledPromotionBackground = styled.div<{
   $background: string;
   $inView: boolean;
 }>`
@@ -41,6 +44,7 @@ const StyledHeroBackground = styled.div<{
   text-align: center;
   font-size: ${({ theme }) => theme.sizes.defaultFont};
   color: ${({ theme }) => theme.colors.accentGoldLighter};
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
   transition: all 0.5s cubic-bezier(0.01, -0.02, 0.51, 1.6);
   ${({ $background, $inView }) => css`
     transform: translateY(${$inView ? "0rem" : "10rem"})
