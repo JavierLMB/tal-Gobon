@@ -28,7 +28,7 @@ export default function SearchBar({
 }
 
 const SearchContainer = styled.div`
-  padding: 1rem;
+  padding: 0rem 1rem 1rem 1rem;
 `;
 
 const SearchBarInput = styled.input`

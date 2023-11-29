@@ -46,4 +46,6 @@ export default function ShopViewContainer() {
   );
 }
 
-const StyledCheeseViewContainer = styled.div``;
+const StyledCheeseViewContainer = styled.div`
+  margin-bottom: 1rem;
+`;

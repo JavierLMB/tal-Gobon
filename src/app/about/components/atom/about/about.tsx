@@ -42,7 +42,7 @@ export default function About() {
 }
 
 const StyledAboutContainer = styled.div`
-  margin: 0rem 1rem;
+  margin: 0rem 1rem 1rem 1rem;
 `;
 
 const StyledHeroBackground = styled.div`
@@ -58,8 +58,6 @@ const StyledHeroBackground = styled.div`
   text-align: center;
   overflow-x: hidden;
   margin-bottom: 1rem;
-  text-shadow: -4px -4px 0 #000, 4px -4px 0 #000, -4px 4px 0 #000,
-    4px 4px 0 #000;
   padding: 2rem;
   color: ${({ theme }) => theme.colors.accentGoldLighter};
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
@@ -67,8 +65,10 @@ const StyledHeroBackground = styled.div`
 
 const StyledTitle = styled.h1`
   line-height: 1;
-  font-size: 8rem;
+  font-size: 7rem;
   padding: 0rem 1rem;
+  font-family: Georgia, serif;
+  text-shadow: 5px 0px 0px rgba(0, 0, 0, 1);
   color: ${({ theme }) => theme.colors.accentGoldLighter};
 `;
 

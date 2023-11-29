@@ -27,7 +27,7 @@ const StyledPromotionMainContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  margin: 1rem;
+  padding: 1rem 1rem;
   color: ${({ theme }) => theme.colors.primaryDark};
   overflow: hidden;
 `;

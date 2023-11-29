@@ -15,7 +15,6 @@ export default function Feature({ title, content, children }: FeatureProps) {
     rootMargin: "-20% 10%",
   });
 
-  console.log(inView, "Feature");
   return (
     <StyledFeatureContainer ref={ref} $inView={inView}>
       {children}

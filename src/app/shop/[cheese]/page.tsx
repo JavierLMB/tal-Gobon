@@ -41,7 +41,7 @@ export default function CheesePage({ params }: CheesePageProps) {
 }
 
 const StyledCheeseViewContainer = styled.div`
-  margin-top: 1rem;
+  margin-bottom: 1rem;
 `;
 
 const StyledTitle = styled.h2`

@@ -33,7 +33,7 @@ export default function Carousel() {
 }
 
 const StyledCarouselContainer = styled.div`
-  margin: 2rem 1rem 5rem 1rem;
+  margin: 2rem 1rem 4rem 1rem;
   border-radius: 0.5rem;
   color: ${({ theme }) => theme.colors.primaryDark};
   background-color: ${({ theme }) => theme.colors.primaryDark};
