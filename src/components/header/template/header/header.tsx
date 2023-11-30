@@ -15,7 +15,7 @@ export default function Header() {
         onClick={() => setNavModalOpen(!navModalOpen)}
       />
       <StyledLink href="/">
-        <StyledLogoContainer>
+        <StyledLogoContainer onClick={() => setNavModalOpen(false)}>
           <StyledLogoImage
             src={"/GobonLogo/small/GobonLogo.png"}
             alt={"tal Gobon Logo"}

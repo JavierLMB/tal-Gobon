@@ -57,7 +57,7 @@ const commonCheeseImageStyles = css<{ $loaded: boolean }>`
   width: 5rem;
   height: 5rem;
   top: 34rem;
-  animation: ${shakeAnimation} 3s ease-out 2s forwards;
+  animation: ${shakeAnimation} 3s ease-out forwards;
 `;
 
 const StyledCheeseImage1 = styled(Image)<{ $loaded: boolean }>`

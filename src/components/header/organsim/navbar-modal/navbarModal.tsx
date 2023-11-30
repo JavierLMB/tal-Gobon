@@ -3,7 +3,7 @@ import NavLinksContainer from "../../molecule/nav-links-container/navLinksContai
 import Link from "next/link";
 import Image from "next/image";
 
-type NavbarModalType = {
+type NavbarModalProps = {
   navModalOpen: boolean;
   onClick: () => void;
 };
@@ -11,7 +11,7 @@ type NavbarModalType = {
 export default function NavbarModal({
   navModalOpen,
   onClick,
-}: NavbarModalType) {
+}: NavbarModalProps) {
   return (
     <>
       <StyledNavbarModalBackground
@@ -28,11 +28,12 @@ export default function NavbarModal({
                 width={80}
                 height={80}
                 priority
+                onClick={onClick}
               />
             </StyledLink>
           </StyledLogoContainer>
         </StyledOuterLogoContainer>
-        <NavLinksContainer />
+        <NavLinksContainer onClick={onClick} />
       </StyledNavbarModalContainer>
     </>
   );

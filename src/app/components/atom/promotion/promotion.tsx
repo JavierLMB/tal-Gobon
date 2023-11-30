@@ -3,18 +3,23 @@ import { promotionImages } from "./usePromotionImages";
 import { useInView } from "react-hook-inview";
 
 export default function Promotion() {
-  const [ref, inView] = useInView({
+  const [ref1, inView1] = useInView({
     threshold: 0.2,
     unobserveOnEnter: true,
   });
-  console.log(inView, "promo");
+  const [ref2, inView2] = useInView({
+    threshold: 0.2,
+    unobserveOnEnter: true,
+  });
+
   return (
-    <StyledPromotionMainContainer ref={ref}>
+    <StyledPromotionMainContainer>
       {promotionImages.map(({ id, image, content }) => (
         <StyledPromotionBackground
           key={id}
           $background={image}
-          $inView={inView}
+          $inView={id === 1 ? inView1 : inView2}
+          ref={id === 1 ? ref1 : ref2}
         >
           <StyledPromotionContainer>{content}</StyledPromotionContainer>
         </StyledPromotionBackground>

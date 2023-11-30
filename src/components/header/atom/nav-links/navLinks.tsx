@@ -6,11 +6,17 @@ type NavLinksProps = {
   link: string;
   children: ReactNode;
   name: string;
+  onClick: () => void;
 };
 
-export default function NavLinks({ link, children, name }: NavLinksProps) {
+export default function NavLinks({
+  link,
+  children,
+  name,
+  onClick,
+}: NavLinksProps) {
   return (
-    <StyledLink href={link}>
+    <StyledLink href={link} onClick={onClick}>
       {children}
       <StyledNavOptions>{name}</StyledNavOptions>
     </StyledLink>

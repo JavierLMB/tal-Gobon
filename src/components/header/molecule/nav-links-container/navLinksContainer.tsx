@@ -4,19 +4,23 @@ import { FaHome } from "react-icons/fa";
 import { FaBasketShopping, FaCartShopping } from "react-icons/fa6";
 import { GiChefToque } from "react-icons/gi";
 
-export default function NavLinksContainer() {
+type NavLinksContainerProps = {
+  onClick: () => void;
+};
+
+export default function NavLinksContainer({ onClick }: NavLinksContainerProps) {
   return (
     <StyledContentContainer>
-      <NavLinks link={"/"} name={"Home"}>
+      <NavLinks link={"/"} name={"Home"} onClick={onClick}>
         <StyledHomeIcon />
       </NavLinks>
-      <NavLinks link={"/shop"} name={"Shop"}>
+      <NavLinks link={"/shop"} name={"Shop"} onClick={onClick}>
         <StyledShopIcon />
       </NavLinks>
-      <NavLinks link={"/about"} name={"About"}>
+      <NavLinks link={"/about"} name={"About"} onClick={onClick}>
         <StyledAboutIcon />
       </NavLinks>
-      <NavLinks link={"/cart"} name={"Cart"}>
+      <NavLinks link={"/cart"} name={"Cart"} onClick={onClick}>
         <StyledCartIcon />
       </NavLinks>
     </StyledContentContainer>
