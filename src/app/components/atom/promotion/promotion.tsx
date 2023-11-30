@@ -4,7 +4,7 @@ import { useInView } from "react-hook-inview";
 
 export default function Promotion() {
   const [ref, inView] = useInView({
-    threshold: 0.3,
+    threshold: 0.2,
     unobserveOnEnter: true,
   });
   console.log(inView, "promo");

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { useInView } from "react-hook-inview";
 import AnimatedTitle from "@/app/components/atom/hero/useAnimatedTitle";
+import CheeseRocket from "../cheeseRocket/cheeseRocket";
 
 export default function About() {
   const [ref, inView] = useInView({
@@ -14,6 +15,7 @@ export default function About() {
           <AnimatedTitle title="About Us" inView={inView} />
         </StyledTitle>
       </StyledHeroBackground>
+      <CheeseRocket />
       <StyledContent>
         <StyledSubContent>
           Welcome to Tal-Ġobon, your premier destination for exquisite cheese
@@ -46,6 +48,7 @@ const StyledAboutContainer = styled.div`
 `;
 
 const StyledHeroBackground = styled.div`
+  position: relative;
   height: 30rem;
   border-radius: 0.5rem;
   background-image: url("cheeseAbout/small/aboutImage.jpg");
