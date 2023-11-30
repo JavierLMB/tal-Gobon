@@ -23,7 +23,7 @@ export default function Header() {
             height={50}
             priority
           />
-          <StyledLogoName>tal-Gobon</StyledLogoName>
+          <StyledLogoName>tal-Ġobon</StyledLogoName>
         </StyledLogoContainer>
       </StyledLink>
       <StyledIcon>

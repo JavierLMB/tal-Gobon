@@ -16,12 +16,12 @@ export default function About() {
       </StyledHeroBackground>
       <StyledContent>
         <StyledSubContent>
-          Welcome to Tal-Gobon, your premier destination for exquisite cheese
+          Welcome to Tal-Ġobon, your premier destination for exquisite cheese
           experiences since 2015. We&apos;re on a mission to bring the
           world&apos;s finest artisanal cheeses directly to your table.
         </StyledSubContent>
         <StyledSubContent>
-          At Tal-Gobon, we&apos;ve curated a collection of premium cheeses that
+          At Tal-Ġobon, we&apos;ve curated a collection of premium cheeses that
           redefine your culinary experience. From velvety Camembert to bold Blue
           Cheese, each piece is a testament to our commitment to quality.
         </StyledSubContent>
@@ -32,7 +32,7 @@ export default function About() {
           not only delicious but also responsible.
         </StyledSubContent>
         <StyledSubContent>
-          Thank you for choosing Tal-Gobon for your cheese cravings since 2015.
+          Thank you for choosing Tal-Ġobon for your cheese cravings since 2015.
           Explore our selection and savor the extraordinary. Your satisfaction
           is our passion.
         </StyledSubContent>

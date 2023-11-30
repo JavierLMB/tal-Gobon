@@ -12,7 +12,7 @@ export default function CopyrightYear() {
     return () => clearInterval(intervalId);
   }, []);
 
-  return <StyledYearr>© {currentYear} tal-Gobon</StyledYearr>;
+  return <StyledYearr>© {currentYear} tal-Ġobon</StyledYearr>;
 }
 
 const StyledYearr = styled.div`

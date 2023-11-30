@@ -55,6 +55,7 @@ const StyledNavbarModalContainer = styled.div<{
     ${({ theme }) => theme.colors.primaryDark},
     ${({ theme }) => theme.colors.primaryLight}
   );
+
   ${({ $navModalOpen }) => css`
     left: ${$navModalOpen ? "-1rem" : "-27rem"};
     box-shadow: ${$navModalOpen ? "2px 0 10px rgba(0, 0, 0, 0.5)" : "none"};

@@ -34,10 +34,10 @@ export default function Hero() {
 }
 
 const StyledHeroBackground = styled.div`
-  height: 92vh;
+  height: 100%;
   margin: 0rem 1rem;
   border-radius: 0.5rem;
-  background-image: url("cheeseBackgrounds/hero-background1.jpg");
+  background-image: url("cheeseBackgrounds/small/hero-background5.jpg");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -47,7 +47,6 @@ const StyledHeroBackground = styled.div`
   text-align: center;
   gap: 2rem;
   overflow-x: hidden;
-
   padding: 2rem;
   color: ${({ theme }) => theme.colors.accentGoldLighter};
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);

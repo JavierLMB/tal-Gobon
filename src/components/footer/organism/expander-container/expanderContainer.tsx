@@ -32,15 +32,15 @@ export default function ExpanderContainer() {
       <Expander title="Follow us on social">
         <StyledChildrenContainer>
           <StyledSocialContainer>
-            <StyledFacebookIcon /> /talgobon
+            <StyledFacebookIcon /> /talĠobon
           </StyledSocialContainer>
           <StyledSocialContainer>
             <StyledInsagramIcon />
-            @talgobon
+            @talĠobon
           </StyledSocialContainer>
           <StyledSocialContainer>
             <StyledYoutubeIcon />
-            Gobon Malta
+            Ġobon Malta
           </StyledSocialContainer>
         </StyledChildrenContainer>
       </Expander>
