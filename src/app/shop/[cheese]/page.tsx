@@ -25,7 +25,6 @@ export default function CheesePage({ params }: CheesePageProps) {
     (cheese) =>
       params.cheese.replace(/([a-z])([A-Z])/g, "$1 $2") === cheese.name
   );
-
   return (
     <div>
       <Header />

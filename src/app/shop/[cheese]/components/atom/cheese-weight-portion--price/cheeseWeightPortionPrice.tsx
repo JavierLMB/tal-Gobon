@@ -1,10 +1,14 @@
 import React, { useState } from "react";
 import styled, { css } from "styled-components";
 import { weightOptions } from "./useCheeseWeightOptions";
+import { useCart } from "react-use-cart";
 
 type CheeseWeightPortionPriceProps = {
   cheeseObject?: {
-    pricePerKg: number;
+    id?: number;
+    name?: string;
+    pricePerKg?: number;
+    images?: { image1?: string };
   };
 };
 
@@ -13,16 +17,41 @@ export default function CheeseWeightPortionPrice({
 }: CheeseWeightPortionPriceProps) {
   const [selectedWeight, setSelectedWeight] = useState("");
   const [portionQuantity, setPortionQuantity] = useState(1);
+  const [weightError, setWeightError] = useState("");
+  const { addItem } = useCart();
 
-  const updateTotalPrice = (weight: string, portion: number) => {
+  const updateTotalPrice = (
+    weight: string,
+    portion: number,
+    cart?: boolean
+  ) => {
     const weightInGrams = weight ? parseFloat(weight) / 1000 : 0;
     const priceInKg = cheeseObject?.pricePerKg ?? 0;
+
+    if (cart) return Math.floor(priceInKg * weightInGrams * 100) / 100;
     return Math.floor(priceInKg * weightInGrams * portion * 100) / 100;
   };
+
+  function handleCartData() {
+    if (!selectedWeight) return setWeightError("Please select a weight");
+    if (selectedWeight) setWeightError("");
+
+    const newProduct: any = {
+      id: crypto.randomUUID(),
+      name: cheeseObject?.name,
+      price: updateTotalPrice(selectedWeight, portionQuantity, true),
+      weight: selectedWeight,
+      quantity: portionQuantity,
+      image: cheeseObject?.images?.image1,
+    };
+
+    addItem(newProduct, portionQuantity);
+  }
 
   return (
     <StyledWeightMainContainer>
       <StyledWeightContainer>
+        {weightError && <StyledWeightError>{weightError}</StyledWeightError>}
         <StyledSelect
           value={selectedWeight}
           onChange={(e) => setSelectedWeight(e.target.value)}
@@ -54,6 +83,9 @@ export default function CheeseWeightPortionPrice({
           € {updateTotalPrice(selectedWeight, portionQuantity)}
         </StyledPriceAmount>
       </StyledPriceContainer>
+      <StyledAddToCartButton onClick={handleCartData}>
+        Add To Cart
+      </StyledAddToCartButton>
     </StyledWeightMainContainer>
   );
 }
@@ -68,6 +100,13 @@ const StyledWeightContainer = styled.div`
   display: flex;
   padding: 2rem 0rem;
   justify-content: space-between;
+  position: relative;
+`;
+
+const StyledWeightError = styled.div`
+  font-size: inherit;
+  position: absolute;
+  top: 0.5rem;
 `;
 
 const StyledSelect = styled.select`
@@ -96,6 +135,7 @@ const StyledPriceContainer = styled.div<{ $selectedWeight: string }>`
   transition: all 0.5s ease;
   color: ${({ theme }) => theme.colors.primaryLight};
   font-size: ${({ theme }) => theme.sizes.header3Font};
+
   ${({ $selectedWeight }) => css`
     padding: ${$selectedWeight ? "1rem 0rem 2rem 0rem" : "0rem"};
     max-height: ${$selectedWeight ? "10rem" : "0"};
@@ -109,4 +149,17 @@ const StyledTotalPrice = styled.h2`
 
 const StyledPriceAmount = styled.h2`
   color: ${({ theme }) => theme.colors.primaryLight};
+`;
+
+const StyledAddToCartButton = styled.button`
+  margin-bottom: 2rem;
+  padding: 0.5rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  width: 100%;
+  border: 1px solid ${({ theme }) => theme.colors.primaryLight};
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  font-size: ${({ theme }) => theme.sizes.defaultFont};
+  color: ${({ theme }) => theme.colors.primaryLight};
+  background-color: ${({ theme }) => theme.colors.accentGoldLighter};
 `;
