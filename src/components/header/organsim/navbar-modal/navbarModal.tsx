@@ -17,7 +17,7 @@ export default function NavbarModal({
       <StyledNavbarModalBackground
         onClick={onClick}
         $navModalOpen={navModalOpen}
-      ></StyledNavbarModalBackground>
+      />
       <StyledNavbarModalContainer $navModalOpen={navModalOpen}>
         <StyledOuterLogoContainer>
           <StyledLogoContainer>
@@ -38,6 +38,21 @@ export default function NavbarModal({
     </>
   );
 }
+
+const StyledNavbarModalBackground = styled.div<{ $navModalOpen: boolean }>`
+  position: fixed;
+  top: 6.7rem;
+  right: 0rem;
+  z-index: 3;
+  width: 100%;
+  height: 150rem;
+  background-color: #00000033;
+  backdrop-filter: blur(5px);
+  ${({ $navModalOpen }) =>
+    css`
+      transform: translateX(${$navModalOpen ? "0%" : "100%"});
+    `};
+`;
 
 const StyledNavbarModalContainer = styled.div<{
   $navModalOpen: boolean;
@@ -61,21 +76,6 @@ const StyledNavbarModalContainer = styled.div<{
     left: ${$navModalOpen ? "-1rem" : "-27rem"};
     box-shadow: ${$navModalOpen ? "2px 0 10px rgba(0, 0, 0, 0.5)" : "none"};
   `};
-`;
-
-const StyledNavbarModalBackground = styled.div<{ $navModalOpen: boolean }>`
-  position: fixed;
-  top: 6.7rem;
-  right: 0rem;
-  z-index: 3;
-  width: 100%;
-  height: 150rem;
-  background-color: #00000033;
-  backdrop-filter: blur(5px);
-  ${({ $navModalOpen }) =>
-    css`
-      transform: translateX(${$navModalOpen ? "0%" : "100%"});
-    `};
 `;
 
 const StyledOuterLogoContainer = styled.div`

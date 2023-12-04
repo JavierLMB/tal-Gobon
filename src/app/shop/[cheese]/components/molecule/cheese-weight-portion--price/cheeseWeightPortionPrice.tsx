@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled, { css } from "styled-components";
 import { weightOptions } from "./useCheeseWeightOptions";
 import { useCart } from "react-use-cart";
+import AddedToCartModal from "../../atom/added-to-cart-modal/addedToCartModal";
 
 type CheeseWeightPortionPriceProps = {
   cheeseObject?: {
@@ -18,6 +19,7 @@ export default function CheeseWeightPortionPrice({
   const [selectedWeight, setSelectedWeight] = useState("");
   const [portionQuantity, setPortionQuantity] = useState(1);
   const [weightError, setWeightError] = useState("");
+  const [addedModalVisible, setAddedModalVisible] = useState(false);
   const { addItem } = useCart();
 
   const updateTotalPrice = (
@@ -32,9 +34,13 @@ export default function CheeseWeightPortionPrice({
     return Math.floor(priceInKg * weightInGrams * portion * 100) / 100;
   };
 
-  function handleCartData() {
-    if (!selectedWeight) return setWeightError("Please select a weight");
+  function handleCartButton() {
+    if (!selectedWeight) return setWeightError("Please select weight");
     if (selectedWeight) setWeightError("");
+    setAddedModalVisible(true);
+    setTimeout(() => {
+      setAddedModalVisible(false);
+    }, 3000);
 
     const newProduct: any = {
       id: crypto.randomUUID(),
@@ -83,9 +89,10 @@ export default function CheeseWeightPortionPrice({
           € {updateTotalPrice(selectedWeight, portionQuantity)}
         </StyledPriceAmount>
       </StyledPriceContainer>
-      <StyledAddToCartButton onClick={handleCartData}>
+      <StyledAddToCartButton onClick={handleCartButton}>
         Add To Cart
       </StyledAddToCartButton>
+      <AddedToCartModal addedModalVisible={addedModalVisible} />
     </StyledWeightMainContainer>
   );
 }

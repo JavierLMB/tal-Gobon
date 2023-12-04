@@ -5,7 +5,13 @@ import CartItemList from "../../atom/cart-item-list/cartItemList";
 import { useEffect, useState } from "react";
 import { useCart } from "react-use-cart";
 
-export default function CartItemListContainer() {
+type CartItemListContainerProps = {
+  onClick: () => void;
+};
+
+export default function CartItemListContainer({
+  onClick,
+}: CartItemListContainerProps) {
   const [totalCartPrice, setTotalCartPrice] = useState(0);
   const { items, emptyCart } = useCart();
 
@@ -23,13 +29,13 @@ export default function CartItemListContainer() {
         <StyledCartItem>
           <StyledLink href="/shop">
             <StyledContinueBrowsingCointainer>
-              <div>&larr;</div>
+              <StyledContinueBrowsingArrrow>
+                &larr;
+              </StyledContinueBrowsingArrrow>
               <div>Continue Browsing</div>
             </StyledContinueBrowsingCointainer>
           </StyledLink>
-
           <div />
-          <StyledCartTitleSection>Price</StyledCartTitleSection>
           <StyledCartTitleSection>Total</StyledCartTitleSection>
           <StyledClearButton onClick={emptyCart}>Clear</StyledClearButton>
         </StyledCartItem>
@@ -39,7 +45,9 @@ export default function CartItemListContainer() {
           <StyledSubtotalPrice>{totalCartPrice}</StyledSubtotalPrice>
         </StyledSubtotalContainer>
         <StyledCheckOutButtonContainer>
-          <StyledCheckOutButton>Check Out</StyledCheckOutButton>
+          <StyledCheckOutButton onClick={onClick}>
+            Check Out
+          </StyledCheckOutButton>
         </StyledCheckOutButtonContainer>
       </StyledCartItemListContainer>
     </div>
@@ -52,7 +60,7 @@ const StyledCartItemListContainer = styled.div`
 
 const StyledCartItem = styled.div`
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   align-items: center;
   text-align: center;
   justify-items: center;
@@ -102,6 +110,12 @@ const StyledContinueBrowsingCointainer = styled.div`
   align-items: center;
   padding: 0rem 0.5rem;
   color: ${({ theme }) => theme.colors.primaryLight};
+  font-size: ${({ theme }) => theme.sizes.smallFont};
+  line-height: 1.2;
+`;
+
+const StyledContinueBrowsingArrrow = styled.div`
+  font-size: ${({ theme }) => theme.sizes.header3Font};
 `;
 
 const StyledCartTitleSection = styled.h3`

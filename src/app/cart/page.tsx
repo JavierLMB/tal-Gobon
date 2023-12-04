@@ -2,18 +2,14 @@
 import styled from "styled-components";
 import Header from "@/components/header/template/header/header";
 import Footer from "@/components/footer/template/footer/footer";
-import CartItemListContainer from "./components/molecule/cart-item-list-container/cartItemListcontainer";
+import Cart from "./components/organism/cart/cart";
 
 export default function CartPage() {
   return (
     <div>
       <Header />
-      <StyledCartViewContainer>
-        <CartItemListContainer />
-      </StyledCartViewContainer>
+      <Cart />
       <Footer />
     </div>
   );
 }
-
-const StyledCartViewContainer = styled.div``;
