@@ -1,13 +1,15 @@
-import styled from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 import Link from "next/link";
 import Image from "next/image";
 import { FaCartShopping } from "react-icons/fa6";
 import { useState } from "react";
 import NavbarModal from "@/components/header/organsim/navbar-modal/navbarModal";
 import NavButton from "@/components/header/atom/nav-button/navButton";
+import CartCounter from "../../atom/cart-counter/cartCounter";
 
 export default function Header() {
   const [navModalOpen, setNavModalOpen] = useState(false);
+
   return (
     <StyledHeaderContainer>
       <NavbarModal
@@ -30,6 +32,7 @@ export default function Header() {
         <StyledLink href="/cart">
           <StyledCartIcon />
         </StyledLink>
+        <CartCounter />
         <NavButton
           navModalOpen={navModalOpen}
           onClick={() => setNavModalOpen(!navModalOpen)}
