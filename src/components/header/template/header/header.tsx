@@ -27,7 +27,9 @@ export default function Header() {
         </StyledLogoContainer>
       </StyledLink>
       <StyledIcon>
-        <FaCartShopping />
+        <StyledLink href="/cart">
+          <StyledCartIcon />
+        </StyledLink>
         <NavButton
           navModalOpen={navModalOpen}
           onClick={() => setNavModalOpen(!navModalOpen)}
@@ -85,4 +87,9 @@ const StyledLogoImage = styled(Image)`
   object-fit: cover;
   border-radius: 50%;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
+`;
+
+const StyledCartIcon = styled(FaCartShopping)`
+  display: block;
+  color: ${({ theme }) => theme.colors.accentGoldLighter};
 `;
