@@ -8,8 +8,6 @@ import Image from "next/image";
 const CartitemList = () => {
   const { items, updateItemQuantity, removeItem } = useCart();
 
-  console.log(items);
-
   function handleQuantity(quantity: any, calc: any) {
     if (calc === "subtract") {
       if (quantity === 1) return quantity;

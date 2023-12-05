@@ -1,4 +1,6 @@
-import styled, { css, keyframes } from "styled-components";
+"use client";
+
+import styled from "styled-components";
 import Link from "next/link";
 import Image from "next/image";
 import { FaCartShopping } from "react-icons/fa6";
