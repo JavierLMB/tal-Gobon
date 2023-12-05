@@ -31,11 +31,12 @@ export default function PreviewCardContainer({
             <PreviewCard
               key={id}
               id={id}
-              image1={
-                (isBigScreen && imagesBig.image1Big) ||
-                (isSmallScreen && imagesSmall.image1Small) ||
-                imagesSmall.image1Small
-              }
+              image1={imagesBig.image1Big}
+              // image1={
+              //   (isBigScreen && imagesBig.image1Big) ||
+              //   (isSmallScreen && imagesSmall.image1Small) ||
+              //   imagesSmall.image1Small
+              // }
               name={name}
               animal={animal}
               pricePerKg={pricePerKg}
