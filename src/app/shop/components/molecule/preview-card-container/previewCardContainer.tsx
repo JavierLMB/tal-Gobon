@@ -23,6 +23,8 @@ export default function PreviewCardContainer({
     router.push(`/shop/${url}`);
   };
 
+  console.log(activeProducts);
+
   return (
     <div>
       <StyledProductCardContainer>
@@ -31,7 +33,7 @@ export default function PreviewCardContainer({
             <PreviewCard
               key={id}
               id={id}
-              image1={imagesSmall.image1Small}
+              image1={imagesBig.image1Big}
               // image1={
               //   (isBigScreen && imagesBig.image1Big) ||
               //   (isSmallScreen && imagesSmall.image1Small) ||
