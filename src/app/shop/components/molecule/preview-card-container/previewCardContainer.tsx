@@ -23,27 +23,27 @@ export default function PreviewCardContainer({
     router.push(`/shop/${url}`);
   };
 
-  console.log(activeProducts);
-
   return (
     <div>
       <StyledProductCardContainer>
         {activeProducts.map(
           ({ id, imagesSmall, imagesBig, name, animal, pricePerKg }) => (
-            <PreviewCard
-              key={id}
-              id={id}
-              image1={imagesBig.image1Big}
-              // image1={
-              //   (isBigScreen && imagesBig.image1Big) ||
-              //   (isSmallScreen && imagesSmall.image1Small) ||
-              //   imagesSmall.image1Small
-              // }
-              name={name}
-              animal={animal}
-              pricePerKg={pricePerKg}
-              onClick={() => handleCardClick(name)}
-            />
+            console.log(imagesBig.image1Big),
+            (
+              <PreviewCard
+                key={id}
+                id={id}
+                image1={
+                  (isBigScreen && imagesBig.image1Big) ||
+                  (isSmallScreen && imagesSmall.image1Small) ||
+                  imagesSmall.image1Small
+                }
+                name={name}
+                animal={animal}
+                pricePerKg={pricePerKg}
+                onClick={() => handleCardClick(name)}
+              />
+            )
           )
         )}
       </StyledProductCardContainer>
