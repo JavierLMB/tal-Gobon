@@ -45,8 +45,7 @@ export default function PreviewCard({
         alt="cheese"
         width={570}
         height={660}
-        loading={id < 9 ? "eager" : "lazy"}
-        priority={id < 9 ? true : undefined}
+        loading="lazy"
         style={{ objectFit: "cover", objectPosition: "center" }}
       />
       <StyledContent>
