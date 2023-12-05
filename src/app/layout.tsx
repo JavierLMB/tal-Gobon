@@ -26,7 +26,9 @@ export default function RootLayout({
       <CartProvider>
         <html lang="en">
           <StyledComponentsRegistry>
-            <StyledBody className={alkatra.className}>{children}</StyledBody>
+            <StyledBody className={alkatra.className}>
+              <StyledContainer>{children}</StyledContainer>
+            </StyledBody>
           </StyledComponentsRegistry>
         </html>
       </CartProvider>
@@ -41,5 +43,11 @@ const StyledBody = styled.body`
     ${({ theme }) => theme.colors.accentGoldLighter}
   );
   background-repeat: no-repeat; */
+  background-color: #fff2db;
+`;
+
+const StyledContainer = styled.div`
+  max-width: 180rem;
+  margin: 0rem auto;
   background-color: #fff2db;
 `;

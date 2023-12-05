@@ -34,4 +34,17 @@ export const theme = {
     header2Font: "2.4rem",
     header3Font: "2rem",
   },
+  shadows: {
+    v1Shadow: "0px 2px 2px rgba(0, 0, 0, 0.25)",
+  },
+  breakpoints: {
+    bpLargest: "111rem",
+    bpLarge: "96em",
+    bpPadding: "76em",
+    bpNormal: "69em",
+    bpNormals: "60em",
+    bpSmall: "45em",
+    bpSmaller: "33em",
+    bpSmallest: "23.6em",
+  },
 };

@@ -27,7 +27,7 @@ export default function Hero() {
         <AnimatedTitle title="Await" inView={inView} />
       </StyledTitle>
       <StyledLink $inView={inView} href="/shop">
-        <StyledHeroButton>Shop Now</StyledHeroButton>
+        <button>Shop Now</button>
       </StyledLink>
     </StyledHeroBackground>
   );
@@ -49,7 +49,10 @@ const StyledHeroBackground = styled.div`
   overflow-x: hidden;
   padding: 2rem;
   color: ${({ theme }) => theme.colors.accentGoldLighter};
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  box-shadow: ${({ theme }) => theme.shadows.v1Shadow};
+  @media (min-width: ${({ theme }) => theme.breakpoints.bpLargest}) {
+    height: 91vh;
+  }
 `;
 
 const StyledLogoImage = styled(Image)`
@@ -60,6 +63,11 @@ const StyledLogoImage = styled(Image)`
   border-radius: 50%;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
   margin-bottom: 5rem;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.bpLargest}) {
+    width: 50rem;
+    height: 50rem;
+  }
 `;
 
 const StyledTitle = styled.h1`
@@ -69,9 +77,11 @@ const StyledTitle = styled.h1`
   font-family: Georgia, serif;
   text-shadow: 5px 0px 0px rgba(0, 0, 0, 1);
   color: ${({ theme }) => theme.colors.accentGoldLighter};
-`;
 
-const StyledHeroButton = styled.button``;
+  @media (min-width: ${({ theme }) => theme.breakpoints.bpLargest}) {
+    font-size: 12rem;
+  }
+`;
 
 const StyledLink = styled(Link)<{ $inView: boolean }>`
   padding: 0.5rem;
@@ -88,4 +98,10 @@ const StyledLink = styled(Link)<{ $inView: boolean }>`
     opacity: ${$inView ? "1" : 0};
     transform: translateX(${$inView ? "0rem" : "20rem"});
   `};
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.bpLargest}) {
+    font-size: ${({ theme }) => theme.fonts.header3Font};
+    font-size: 4rem;
+    width: 20%;
+  }
 `;
