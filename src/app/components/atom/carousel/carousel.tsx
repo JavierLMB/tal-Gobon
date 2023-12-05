@@ -46,7 +46,7 @@ const StyledHeroBackground = styled.div<{ $background: string }>`
   background-size: cover;
   background-position: center;
   text-align: center;
-  font-size: ${({ theme }) => theme.sizes.defaultFont};
+  font-size: ${({ theme }) => theme.fonts.defaultFont};
   color: ${({ theme }) => theme.colors.primaryLight};
   ${({ $background }) => css`
     background-image: url(${$background});
@@ -57,7 +57,7 @@ const StyledPromotionContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
+  margin: auto;
   transform: translateY(2.5rem);
   height: 15rem;
   width: 30rem;

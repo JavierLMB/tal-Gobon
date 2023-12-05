@@ -114,7 +114,7 @@ const StyledQuantityContainer = styled.div`
   margin: 0 auto;
   gap: 1rem;
   width: 7rem;
-  font-size: ${({ theme }) => theme.sizes.header3Font};
+  font-size: ${({ theme }) => theme.fonts.header3Font};
   border: 1px solid ${({ theme }) => theme.colors.primaryLight};
 `;
 
@@ -140,7 +140,7 @@ const StyledProductCartInfo = styled.div`
   padding: 0.5rem 1rem;
   margin-bottom: 0.5rem;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
-  font-size: ${({ theme }) => theme.sizes.smallFont};
+  font-size: ${({ theme }) => theme.fonts.smallFont};
   color: ${({ theme }) => theme.colors.defaultFont};
   background: linear-gradient(
     45deg,
@@ -154,6 +154,6 @@ const StyledProductTotal = styled.div`
   place-content: center;
   border-radius: 0.3rem;
   line-height: 1;
-  font-size: ${({ theme }) => theme.sizes.header3Font};
+  font-size: ${({ theme }) => theme.fonts.header3Font};
   color: ${({ theme }) => theme.colors.primaryLight};
 `;

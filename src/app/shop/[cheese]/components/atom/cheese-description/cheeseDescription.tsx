@@ -47,7 +47,7 @@ const StyledCheeeseDetails = styled.div`
 
 const StyledCheeeseDescription = styled.div`
   font-style: italic;
-  font-size: ${({ theme }) => theme.sizes.defaultFont};
+  font-size: ${({ theme }) => theme.fonts.defaultFont};
   padding: 2rem;
   margin-top: 2rem;
   border-top: 1px solid ${({ theme }) => theme.colors.primaryLight};
@@ -63,19 +63,19 @@ const StyledAdditionalInfoContainer = styled.div`
 
 const StyledAdditionalInfoTitle = styled.div`
   font-weight: 200;
-  font-size: ${({ theme }) => theme.sizes.defaultFont};
+  font-size: ${({ theme }) => theme.fonts.defaultFont};
 `;
 
 const StyledAdditionalInfoValue = styled.span`
   font-weight: 700;
-  font-size: ${({ theme }) => theme.sizes.defaultFont};
+  font-size: ${({ theme }) => theme.fonts.defaultFont};
 `;
 
 const StyledAdditionalInfoPrice = styled.h3`
   align-self: flex-end;
-  font-size: ${({ theme }) => theme.sizes.header3Font};
+  font-size: ${({ theme }) => theme.fonts.header3Font};
 `;
 const StyledAdditionalInfoPriceKg = styled.span`
   align-self: flex-end;
-  font-size: ${({ theme }) => theme.sizes.smallFont};
+  font-size: ${({ theme }) => theme.fonts.smallFont};
 `;

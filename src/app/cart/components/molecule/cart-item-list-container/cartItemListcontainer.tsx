@@ -75,13 +75,13 @@ const StyledSubtotalContainer = styled.div`
   justify-content: flex-end;
   align-items: center;
   gap: 1rem;
-  font-size: ${({ theme }) => theme.sizes.defaultFont};
+  font-size: ${({ theme }) => theme.fonts.defaultFont};
   color: ${({ theme }) => theme.colors.primaryLight};
   margin: 3rem 3rem 0rem 1rem;
 `;
 
 const StyledSubtotalPrice = styled.h2`
-  font-size: ${({ theme }) => theme.sizes.header1Font};
+  font-size: ${({ theme }) => theme.fonts.header1Font};
   color: ${({ theme }) => theme.colors.primaryLight};
 `;
 
@@ -100,7 +100,7 @@ const StyledCheckOutButton = styled.button`
   width: 70%;
   border: 1px solid ${({ theme }) => theme.colors.primaryLight};
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
-  font-size: ${({ theme }) => theme.sizes.defaultFont};
+  font-size: ${({ theme }) => theme.fonts.defaultFont};
   color: ${({ theme }) => theme.colors.primaryLight};
   background-color: ${({ theme }) => theme.colors.accentGoldLighter};
 `;
@@ -110,22 +110,22 @@ const StyledContinueBrowsingCointainer = styled.div`
   align-items: center;
   padding: 0rem 0.5rem;
   color: ${({ theme }) => theme.colors.primaryLight};
-  font-size: ${({ theme }) => theme.sizes.smallFont};
+  font-size: ${({ theme }) => theme.fonts.smallFont};
   line-height: 1.2;
 `;
 
 const StyledContinueBrowsingArrrow = styled.div`
-  font-size: ${({ theme }) => theme.sizes.header3Font};
+  font-size: ${({ theme }) => theme.fonts.header3Font};
 `;
 
 const StyledCartTitleSection = styled.h3`
-  font-size: ${({ theme }) => theme.sizes.header3Font};
+  font-size: ${({ theme }) => theme.fonts.header3Font};
 `;
 
 const StyledClearButton = styled.button`
   padding: 0.5rem 1rem;
   border-radius: 0.3rem;
-  font-size: ${({ theme }) => theme.sizes.smallFont};
+  font-size: ${({ theme }) => theme.fonts.smallFont};
   color: ${({ theme }) => theme.colors.defaultFont};
   background: linear-gradient(
     45deg,

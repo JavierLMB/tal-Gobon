@@ -129,7 +129,7 @@ const StyledSortFilterContainer = styled.div`
 
 const StyledLabel = styled.label`
   display: flex;
-  font-size: ${({ theme }) => theme.sizes.defaultFont};
+  font-size: ${({ theme }) => theme.fonts.defaultFont};
   color: ${({ theme }) => theme.colors.accentGoldLighter};
   font-weight: 400;
   position: relative;

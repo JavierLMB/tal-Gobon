@@ -23,7 +23,7 @@ const StyledAddedToCartModalContainer = styled.div<{
   padding: 1rem;
   border-top-left-radius: 1rem;
   border-bottom-left-radius: 1rem;
-  font-size: ${({ theme }) => theme.sizes.header3Font};
+  font-size: ${({ theme }) => theme.fonts.defaultFont};
   color: ${({ theme }) => theme.colors.defaultFont};
   transition: all 0.4s cubic-bezier(0.01, -0.02, 0.51, 1.6);
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);

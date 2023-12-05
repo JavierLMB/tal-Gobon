@@ -51,7 +51,7 @@ const StyledFeatureTitle = styled.h2`
   line-height: 1.2;
   padding: 1rem 0.5rem;
   text-align: center;
-  font-size: ${({ theme }) => theme.sizes.header2Font};
+  font-size: ${({ theme }) => theme.fonts.header2Font};
   color: ${({ theme }) => theme.colors.accentGoldLighter};
   border-top: 2px solid ${({ theme }) => theme.colors.accentGoldLighter};
   border-bottom: 2px solid ${({ theme }) => theme.colors.accentGoldLighter};
@@ -61,6 +61,6 @@ const StyledFeatureContent = styled.div`
   margin: auto 0;
   padding: 0rem 1.2rem;
   text-align: center;
-  font-size: ${({ theme }) => theme.sizes.defaultFont};
+  font-size: ${({ theme }) => theme.fonts.defaultFont};
   color: ${({ theme }) => theme.colors.defaultFont};
 `;

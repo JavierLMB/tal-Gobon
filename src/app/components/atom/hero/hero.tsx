@@ -81,7 +81,7 @@ const StyledLink = styled(Link)<{ $inView: boolean }>`
   border: 2px solid #000;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
   transition: all 0.5s cubic-bezier(0.01, -0.02, 0.51, 1.6);
-  font-size: ${({ theme }) => theme.sizes.header3Font};
+  font-size: ${({ theme }) => theme.fonts.header3Font};
   color: ${({ theme }) => theme.colors.primaryLight};
   background-color: ${({ theme }) => theme.colors.accentGoldLighter};
   ${({ $inView }) => css`

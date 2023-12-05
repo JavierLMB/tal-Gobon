@@ -28,12 +28,12 @@ const StyledFooterShortcutInnerContainer = styled.div`
   align-items: center;
   gap: 0.4rem;
   color: ${({ theme }) => theme.colors.defaultFont};
-  font-size: ${({ theme }) => theme.sizes.smallFont};
+  font-size: ${({ theme }) => theme.fonts.smallFont};
 `;
 
 const commonIconStyles = css`
   padding: 0.5rem;
-  font-size: ${({ theme }) => theme.sizes.header1Font};
+  font-size: ${({ theme }) => theme.fonts.header1Font};
   color: ${({ theme }) => theme.colors.defaultFont};
 `;
 

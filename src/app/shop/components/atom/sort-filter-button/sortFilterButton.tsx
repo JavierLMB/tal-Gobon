@@ -47,8 +47,8 @@ const StyledSortFilterButton = styled.button<{ $variant: string }>`
 
   ${({ theme, $variant }) => css`
     font-size: ${$variant === "inner"
-      ? theme.sizes.defaultFont
-      : theme.sizes.header3Font};
+      ? theme.fonts.defaultFont
+      : theme.fonts.header3Font};
     font-weight: ${$variant === "inner" ? 400 : 600};
     background: ${$variant === "inner"
       ? "none"
@@ -61,7 +61,7 @@ const StyledSortFilterButton = styled.button<{ $variant: string }>`
 `;
 
 const StyledTitle = styled.div`
-  font-size: ${({ theme }) => theme.sizes.header3Font};
+  font-size: ${({ theme }) => theme.fonts.header3Font};
   font-weight: 600;
   color: ${({ theme }) => theme.colors.accentGoldLighter};
 `;

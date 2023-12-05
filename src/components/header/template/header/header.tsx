@@ -70,14 +70,14 @@ const StyledLogoContainer = styled.div`
 `;
 
 const StyledLogoName = styled.div`
-  font-size: ${({ theme }) => theme.sizes.header1Font};
+  font-size: ${({ theme }) => theme.fonts.header1Font};
   color: ${({ theme }) => theme.colors.accentGoldLighter};
 `;
 
 const StyledIcon = styled.div`
   display: flex;
   gap: 2rem;
-  font-size: ${({ theme }) => theme.sizes.header1Font};
+  font-size: ${({ theme }) => theme.fonts.header1Font};
   color: ${({ theme }) => theme.colors.accentGoldLighter};
 `;
 

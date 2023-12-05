@@ -37,14 +37,14 @@ const StyledExpanderHeader = styled.div`
   justify-content: space-between;
   font-weight: 500;
   margin-bottom: 1.1rem;
-  font-size: ${({ theme }) => theme.sizes.defaultFont};
+  font-size: ${({ theme }) => theme.fonts.defaultFont};
   color: ${({ theme }) => theme.colors.defaultFont};
 `;
 
 const StyledExpanderChildren = styled.div<{ $expanderOpen: boolean }>`
   overflow: hidden;
   transition: all 0.5s ease;
-  font-size: ${({ theme }) => theme.sizes.smallFont};
+  font-size: ${({ theme }) => theme.fonts.smallFont};
   color: ${({ theme }) => theme.colors.defaultFont};
   ${({ $expanderOpen }) => css`
     max-height: ${$expanderOpen ? "10rem" : "0"};

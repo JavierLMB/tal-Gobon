@@ -68,7 +68,7 @@ const StyledSocialContainer = styled.div`
 
 const commonIconStyles = css`
   padding: 0.5rem;
-  font-size: ${({ theme }) => theme.sizes.header1Font};
+  font-size: ${({ theme }) => theme.fonts.header1Font};
   color: ${({ theme }) => theme.colors.defaultFont};
 `;
 

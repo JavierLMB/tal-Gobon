@@ -121,7 +121,7 @@ const StyledSelect = styled.select`
   padding: 0.5rem;
   border-radius: 4px;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
-  font-size: ${({ theme }) => theme.sizes.defaultFont};
+  font-size: ${({ theme }) => theme.fonts.defaultFont};
   color: ${({ theme }) => theme.colors.primaryLight};
   border: 1px solid ${({ theme }) => theme.colors.primaryLight};
   background-color: ${({ theme }) => theme.colors.accentGoldLighter};
@@ -141,7 +141,7 @@ const StyledPriceContainer = styled.div<{ $selectedWeight: string }>`
   line-height: 1;
   transition: all 0.5s ease;
   color: ${({ theme }) => theme.colors.primaryLight};
-  font-size: ${({ theme }) => theme.sizes.header3Font};
+  font-size: ${({ theme }) => theme.fonts.header3Font};
 
   ${({ $selectedWeight }) => css`
     padding: ${$selectedWeight ? "1rem 0rem 2rem 0rem" : "0rem"};
@@ -166,7 +166,7 @@ const StyledAddToCartButton = styled.button`
   width: 100%;
   border: 1px solid ${({ theme }) => theme.colors.primaryLight};
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
-  font-size: ${({ theme }) => theme.sizes.defaultFont};
+  font-size: ${({ theme }) => theme.fonts.defaultFont};
   color: ${({ theme }) => theme.colors.primaryLight};
   background-color: ${({ theme }) => theme.colors.accentGoldLighter};
 `;

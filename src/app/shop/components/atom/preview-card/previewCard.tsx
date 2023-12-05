@@ -85,17 +85,17 @@ const StyledProductContainer = styled.div`
 
 const StyledName = styled.h3`
   color: ${({ theme }) => theme.colors.accentGoldLighter};
-  font-size: ${({ theme }) => theme.sizes.header3Font};
+  font-size: ${({ theme }) => theme.fonts.header3Font};
   margin-bottom: -1rem;
 `;
 
 const StyledPrice = styled.div`
   color: ${({ theme }) => theme.colors.defaultFont};
-  font-size: ${({ theme }) => theme.sizes.defaultFont};
+  font-size: ${({ theme }) => theme.fonts.defaultFont};
 `;
 
 const StyledPriceKg = styled.span`
-  font-size: ${({ theme }) => theme.sizes.smallFont};
+  font-size: ${({ theme }) => theme.fonts.smallFont};
 `;
 
 const StyledAnimalIconsContainer = styled.div`

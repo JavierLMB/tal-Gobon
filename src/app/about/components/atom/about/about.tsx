@@ -79,7 +79,7 @@ const StyledContent = styled.div`
   border-radius: 0.5rem;
   padding: 1rem 2rem;
   text-align: center;
-  font-size: ${({ theme }) => theme.sizes.defaultFont};
+  font-size: ${({ theme }) => theme.fonts.defaultFont};
   color: ${({ theme }) => theme.colors.defaultFont};
   background: linear-gradient(
     45deg,

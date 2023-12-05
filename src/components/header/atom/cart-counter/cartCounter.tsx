@@ -22,7 +22,7 @@ const StyledCartAnimationCointainer = styled.div`
   height: 2rem;
   pointer-events: none;
   transform: translateY(0.1rem) translateX(0.6rem);
-  font-size: ${({ theme }) => theme.sizes.smallFont};
+  font-size: ${({ theme }) => theme.fonts.smallFont};
   color: ${({ theme }) => theme.colors.primaryLight};
 `;
 

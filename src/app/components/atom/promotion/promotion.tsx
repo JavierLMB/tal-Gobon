@@ -47,7 +47,7 @@ const StyledPromotionBackground = styled.div<{
   background-size: cover;
   background-position: center;
   text-align: center;
-  font-size: ${({ theme }) => theme.sizes.defaultFont};
+  font-size: ${({ theme }) => theme.fonts.defaultFont};
   color: ${({ theme }) => theme.colors.accentGoldLighter};
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
   transition: all 0.5s cubic-bezier(0.01, -0.02, 0.51, 1.6);

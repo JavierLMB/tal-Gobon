@@ -41,6 +41,5 @@ const StyledBody = styled.body`
     ${({ theme }) => theme.colors.accentGoldLighter}
   );
   background-repeat: no-repeat; */
-
   background-color: #fff2db;
 `;

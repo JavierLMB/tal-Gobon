@@ -18,6 +18,6 @@ export default function CopyrightYear() {
 const StyledYearr = styled.div`
   margin-top: 3rem;
   text-align: center;
-  font-size: ${({ theme }) => theme.sizes.smallFont};
+  font-size: ${({ theme }) => theme.fonts.smallFont};
   color: ${({ theme }) => theme.colors.defaultFont};
 `;

@@ -91,7 +91,7 @@ const StyledNewsletterButton = styled.button`
   border-radius: 0.5rem;
   width: 100%;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
-  font-size: ${({ theme }) => theme.sizes.defaultFont};
+  font-size: ${({ theme }) => theme.fonts.defaultFont};
   color: ${({ theme }) => theme.colors.primaryLight};
   background-color: ${({ theme }) => theme.colors.accentGoldLighter};
 `;

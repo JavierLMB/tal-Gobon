@@ -67,13 +67,13 @@ const StyledCheckOutModalContainer = styled.div<{
 
 const StyledCheckOutText = styled.h1`
   text-align: center;
-  font-size: ${({ theme }) => theme.sizes.header2Font};
+  font-size: ${({ theme }) => theme.fonts.header2Font};
   color: ${({ theme }) => theme.colors.accentGoldLighter};
 `;
 const StyledCloseButtonText = styled.div`
   position: absolute;
   top: 0.5rem;
   right: 1.5rem;
-  font-size: ${({ theme }) => theme.sizes.header2Font};
+  font-size: ${({ theme }) => theme.fonts.header2Font};
   color: ${({ theme }) => theme.colors.accentGoldLighter};
 `;
