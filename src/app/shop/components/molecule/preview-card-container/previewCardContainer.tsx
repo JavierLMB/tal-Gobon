@@ -31,7 +31,7 @@ export default function PreviewCardContainer({
             <PreviewCard
               key={id}
               id={id}
-              image1={imagesBig.image1Big}
+              image1={imagesSmall.image1Small}
               // image1={
               //   (isBigScreen && imagesBig.image1Big) ||
               //   (isSmallScreen && imagesSmall.image1Small) ||
