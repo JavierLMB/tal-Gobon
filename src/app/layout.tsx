@@ -44,6 +44,12 @@ const StyledBody = styled.body`
   );
   background-repeat: no-repeat; */
   background-color: #fff2db;
+
+  background: linear-gradient(
+    90deg,
+    ${({ theme }) => theme.colors.primaryDark},
+    ${({ theme }) => theme.colors.primaryLight}
+  );
 `;
 
 const StyledContainer = styled.div`

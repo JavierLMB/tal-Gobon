@@ -33,6 +33,9 @@ const StyledArrowContainer = styled.div<{ $direction: string }>`
     left: ${$direction === "left" ? "clamp(10rem, 29vw, 50rem)" : ""};
     right: ${$direction === "right" ? "clamp(10rem, 29vw, 50rem)" : ""};
   `};
+  @media (min-width: ${({ theme }) => theme.breakpoints.bpSmaller}) {
+    display: none;
+  }
 `;
 
 const commonIconStyles = css`

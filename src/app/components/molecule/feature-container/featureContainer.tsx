@@ -44,10 +44,13 @@ export default function FeatureContainer() {
 
 const StyledFeatureContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   margin-top: 2rem;
   padding: 0rem 1rem;
   gap: 1rem;
+  @media (min-width: ${({ theme }) => theme.breakpoints.bpLarge}) {
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  }
 `;
 
 const commonIconStyles = css`

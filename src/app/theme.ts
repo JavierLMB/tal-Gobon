@@ -36,11 +36,16 @@ export const theme = {
     headerFont: "#d5b481",
   },
   fonts: {
-    smallFont: "clamp(1.2rem, 2vw, 2.4rem)",
-    defaultFont: "clamp(1.6rem, 2vw, 3.2rem)",
+    // smallFont: "clamp(1.2rem, 2vw, 2.4rem)",
+    // defaultFont: "clamp(1.6rem, 2vw, 3.2rem)",
+    // header1Font: "2.8rem",
+    // header2Font: "clamp(2.4rem, 1rem + 2vw, 4.8rem)",
+    // header3Font: "clamp(2rem, 1rem + 2vw, 4rem)",
+    smallFont: "1.2rem",
+    defaultFont: "1.6rem",
     header1Font: "2.8rem",
-    header2Font: "clamp(2.4rem, 1rem + 2vw, 4.8rem)",
-    header3Font: "clamp(2rem, 1rem + 2vw, 4rem)",
+    header2Font: "2.4rem",
+    header3Font: "2rem",
   },
   bigScreenFonts: {
     smallFont: "1.2rem",
@@ -51,6 +56,8 @@ export const theme = {
   },
   shadows: {
     v1Shadow: "0px 2px 2px rgba(0, 0, 0, 0.25)",
+    v2Shadow: "0px 2px 2px rgba(0, 0, 0, 0.5)",
+    v3Shadow: "0px 0px 3px rgba(0, 0, 0, 0.5)",
   },
   breakpoints: {
     bpLargest: "111rem", // 1776
@@ -58,7 +65,6 @@ export const theme = {
     bpNormal: "85rem", // 1360
     bpNormals: "63em", // 1008
     bpSmall: "45em",
-    bpSmaller: "33em",
-    bpSmallest: "23.6em",
+    bpSmaller: "33em", // 528
   },
 };

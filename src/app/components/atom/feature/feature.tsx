@@ -33,7 +33,7 @@ const StyledFeatureContainer = styled.div<{ $inView: boolean }>`
   width: 100%;
   padding: 1.5rem 0rem;
   border-radius: 0.5rem;
-  box-shadow: ${({ theme }) => theme.shadows.v1Shadow};
+  box-shadow: ${({ theme }) => theme.shadows.v3Shadow};
   transition: opacity 0.8s ease,
     transform 0.6s cubic-bezier(0.01, -0.02, 0.51, 1.6);
   background: linear-gradient(

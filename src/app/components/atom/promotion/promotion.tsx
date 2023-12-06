@@ -35,7 +35,6 @@ const StyledPromotionMainContainer = styled.div`
   padding: 1rem 1rem;
   color: ${({ theme }) => theme.colors.primaryDark};
   overflow: hidden;
-
   @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
     flex-direction: row;
   }
@@ -53,7 +52,7 @@ const StyledPromotionBackground = styled.div<{
   text-align: center;
   font-size: ${({ theme }) => theme.fonts.defaultFont};
   color: ${({ theme }) => theme.colors.accentGoldLighter};
-  box-shadow: ${({ theme }) => theme.shadows.v1Shadow};
+  box-shadow: ${({ theme }) => theme.shadows.v3Shadow};
   transition: all 0.5s cubic-bezier(0.01, -0.02, 0.51, 1.6);
   ${({ $background, $inView }) => css`
     transform: translateY(${$inView ? "0rem" : "10rem"})
@@ -73,10 +72,9 @@ const StyledPromotionContainer = styled.div`
   margin: 0 auto;
   transform: translateY(15rem) translateX(-3rem) rotate(10deg);
   height: clamp(10rem, 5rem + 20vw, 20rem);
-  width: clamp(45rem, 5rem + 25vw, 70rem);
   width: 110%;
   padding: 0rem clamp(6rem, 20vw, 12rem);
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  box-shadow: ${({ theme }) => theme.shadows.v3Shadow};
   background: linear-gradient(
     45deg,
     ${({ theme }) => theme.colors.primaryDark},

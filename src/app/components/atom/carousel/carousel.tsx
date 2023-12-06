@@ -37,7 +37,12 @@ const StyledCarouselContainer = styled.div`
   border-radius: 0.5rem;
   color: ${({ theme }) => theme.colors.primaryDark};
   background-color: ${({ theme }) => theme.colors.primaryDark};
-  box-shadow: ${({ theme }) => theme.shadows.v1Shadow};
+  box-shadow: ${({ theme }) => theme.shadows.v3Shadow};
+  @media (min-width: ${({ theme }) => theme.breakpoints.bpSmaller}) {
+    margin: 2rem 1rem 1rem 1rem;
+    border-radius: 1rem;
+    overflow: hidden;
+  }
 `;
 
 const StyledHeroBackground = styled.div<{ $background: string }>`
@@ -51,6 +56,10 @@ const StyledHeroBackground = styled.div<{ $background: string }>`
   ${({ $background }) => css`
     background-image: url(${$background});
   `}
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
+    border-radius: 1rem;
+  }
 `;
 
 const StyledPromotionContainer = styled.div`
@@ -63,5 +72,5 @@ const StyledPromotionContainer = styled.div`
   width: clamp(30rem, 5rem + 25vw, 70rem);
   padding: 0rem 2rem;
   background-color: rgba(250, 250, 255, 0.85);
-  box-shadow: ${({ theme }) => theme.shadows.v1Shadow};
+  box-shadow: ${({ theme }) => theme.shadows.v3Shadow};
 `;

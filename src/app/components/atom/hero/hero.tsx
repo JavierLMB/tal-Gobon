@@ -49,9 +49,8 @@ const StyledHeroBackground = styled.div`
   overflow-x: hidden;
   padding: 2rem;
   color: ${({ theme }) => theme.colors.accentGoldLighter};
-  box-shadow: ${({ theme }) => theme.shadows.v1Shadow};
+  box-shadow: ${({ theme }) => theme.shadows.v3Shadow};
   @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
-    height: 91vh;
     border-radius: 1rem;
   }
 `;
@@ -62,18 +61,17 @@ const StyledLogoImage = styled(Image)`
   height: 30rem;
   object-fit: cover;
   border-radius: 50%;
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: ${({ theme }) => theme.shadows.v2Shadow};
   margin-bottom: 5rem;
-
   @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
-    width: 50rem;
-    height: 50rem;
+    width: 45rem;
+    height: 45rem;
   }
 `;
 
 const StyledTitle = styled.h1`
   line-height: 1;
-  font-size: clamp(7rem, 2rem + 6vw, 12rem);
+  font-size: clamp(7rem, 2rem + 6vw, 9rem);
   padding: 0rem 1rem;
   font-family: Georgia, serif;
   text-shadow: 5px 0px 0px rgba(0, 0, 0, 1);
@@ -85,8 +83,8 @@ const StyledLink = styled(Link)<{ $inView: boolean }>`
   text-align: center;
   border-radius: 0.5rem;
   width: 80%;
-  border: 2px solid #000;
-  box-shadow: ${({ theme }) => theme.shadows.v1Shadow};
+  border: 2px solid ${({ theme }) => theme.colors.primaryDark};
+  box-shadow: ${({ theme }) => theme.shadows.v3Shadow};
   transition: all 0.5s cubic-bezier(0.01, -0.02, 0.51, 1.6);
   font-size: ${({ theme }) => theme.fonts.header3Font};
   color: ${({ theme }) => theme.colors.primaryLight};

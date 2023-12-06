@@ -63,8 +63,7 @@ const StyledHeroBackground = styled.div`
   margin-bottom: 1rem;
   padding: 2rem;
   color: ${({ theme }) => theme.colors.accentGoldLighter};
-  box-shadow: ${({ theme }) => theme.shadows.v1Shadow};
-
+  box-shadow: ${({ theme }) => theme.shadows.v3Shadow};
   @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
     border-radius: 1rem;
   }
@@ -72,7 +71,7 @@ const StyledHeroBackground = styled.div`
 
 const StyledTitle = styled.h1`
   line-height: 1;
-  font-size: clamp(7rem, 2rem + 6vw, 12rem);
+  font-size: clamp(7rem, 2rem + 6vw, 9rem);
   padding: 0rem 1rem;
   font-family: Georgia, serif;
   text-shadow: 5px 0px 0px rgba(0, 0, 0, 1);
