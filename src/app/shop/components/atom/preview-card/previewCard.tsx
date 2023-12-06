@@ -55,7 +55,7 @@ export default function PreviewCard({
 }
 
 const StyledProductCard = styled.div`
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  box-shadow: ${({ theme }) => theme.shadows.v1Shadow};
   width: 19rem;
   border-radius: 0.5rem;
   background: linear-gradient(

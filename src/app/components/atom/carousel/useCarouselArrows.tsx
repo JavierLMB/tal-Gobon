@@ -27,19 +27,19 @@ export function SampleNextArrow({ onClick }: SampleArrowProps) {
 const StyledArrowContainer = styled.div<{ $direction: string }>`
   display: block;
   position: absolute;
-  top: 20.5rem;
+  top: clamp(20.5rem, 40vw, 50rem);
   z-index: 2;
   ${({ $direction }) => css`
-    left: ${$direction === "left" ? "10rem" : ""};
-    right: ${$direction === "right" ? "10rem" : ""};
+    left: ${$direction === "left" ? "clamp(10rem, 29vw, 50rem)" : ""};
+    right: ${$direction === "right" ? "clamp(10rem, 29vw, 50rem)" : ""};
   `};
 `;
 
 const commonIconStyles = css`
-  font-size: 5rem;
   display: block;
-  width: 2rem;
-  height: 2rem;
+  font-size: 5rem;
+  width: clamp(2rem, 5vw, 5rem);
+  height: clamp(2rem, 5vw, 5rem);
   color: ${({ theme }) => theme.colors.primaryLight};
 `;
 

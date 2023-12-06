@@ -35,13 +35,17 @@ const StyledPromotionMainContainer = styled.div`
   padding: 1rem 1rem;
   color: ${({ theme }) => theme.colors.primaryDark};
   overflow: hidden;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
+    flex-direction: row;
+  }
 `;
 
 const StyledPromotionBackground = styled.div<{
   $background: string;
   $inView: boolean;
 }>`
-  height: 40rem;
+  height: clamp(40rem, 40vw, 75rem);
   border-radius: 0.5rem;
   overflow: hidden;
   background-size: cover;
@@ -49,13 +53,17 @@ const StyledPromotionBackground = styled.div<{
   text-align: center;
   font-size: ${({ theme }) => theme.fonts.defaultFont};
   color: ${({ theme }) => theme.colors.accentGoldLighter};
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  box-shadow: ${({ theme }) => theme.shadows.v1Shadow};
   transition: all 0.5s cubic-bezier(0.01, -0.02, 0.51, 1.6);
   ${({ $background, $inView }) => css`
     transform: translateY(${$inView ? "0rem" : "10rem"})
       rotate(${$inView ? "0deg" : "-15deg"});
     background-image: url(${$background});
   `}
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
+    border-radius: 1rem;
+  }
 `;
 
 const StyledPromotionContainer = styled.div`
@@ -63,14 +71,19 @@ const StyledPromotionContainer = styled.div`
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  transform: translateY(15rem) translateX(-2rem) rotate(10deg);
-  height: 10rem;
-  width: 45rem;
-  padding: 0rem 6rem 0rem 5rem;
+  transform: translateY(15rem) translateX(-3rem) rotate(10deg);
+  height: clamp(10rem, 5rem + 20vw, 20rem);
+  width: clamp(45rem, 5rem + 25vw, 70rem);
+  width: 110%;
+  padding: 0rem clamp(6rem, 20vw, 12rem);
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
   background: linear-gradient(
     45deg,
     ${({ theme }) => theme.colors.primaryDark},
     ${({ theme }) => theme.colors.primaryLight}
   );
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.bpLarge}) {
+    transform: translateY(25rem) translateX(-5rem) rotate(10deg);
+  }
 `;

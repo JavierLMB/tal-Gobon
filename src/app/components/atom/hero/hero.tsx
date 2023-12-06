@@ -50,8 +50,9 @@ const StyledHeroBackground = styled.div`
   padding: 2rem;
   color: ${({ theme }) => theme.colors.accentGoldLighter};
   box-shadow: ${({ theme }) => theme.shadows.v1Shadow};
-  @media (min-width: ${({ theme }) => theme.breakpoints.bpLargest}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
     height: 91vh;
+    border-radius: 1rem;
   }
 `;
 
@@ -64,7 +65,7 @@ const StyledLogoImage = styled(Image)`
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
   margin-bottom: 5rem;
 
-  @media (min-width: ${({ theme }) => theme.breakpoints.bpLargest}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
     width: 50rem;
     height: 50rem;
   }
@@ -72,15 +73,11 @@ const StyledLogoImage = styled(Image)`
 
 const StyledTitle = styled.h1`
   line-height: 1;
-  font-size: 7rem;
+  font-size: clamp(7rem, 2rem + 6vw, 12rem);
   padding: 0rem 1rem;
   font-family: Georgia, serif;
   text-shadow: 5px 0px 0px rgba(0, 0, 0, 1);
   color: ${({ theme }) => theme.colors.accentGoldLighter};
-
-  @media (min-width: ${({ theme }) => theme.breakpoints.bpLargest}) {
-    font-size: 12rem;
-  }
 `;
 
 const StyledLink = styled(Link)<{ $inView: boolean }>`
@@ -89,7 +86,7 @@ const StyledLink = styled(Link)<{ $inView: boolean }>`
   border-radius: 0.5rem;
   width: 80%;
   border: 2px solid #000;
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  box-shadow: ${({ theme }) => theme.shadows.v1Shadow};
   transition: all 0.5s cubic-bezier(0.01, -0.02, 0.51, 1.6);
   font-size: ${({ theme }) => theme.fonts.header3Font};
   color: ${({ theme }) => theme.colors.primaryLight};
@@ -99,9 +96,8 @@ const StyledLink = styled(Link)<{ $inView: boolean }>`
     transform: translateX(${$inView ? "0rem" : "20rem"});
   `};
 
-  @media (min-width: ${({ theme }) => theme.breakpoints.bpLargest}) {
-    font-size: ${({ theme }) => theme.fonts.header3Font};
-    font-size: 4rem;
+  @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
     width: 20%;
+    border-radius: 1rem;
   }
 `;

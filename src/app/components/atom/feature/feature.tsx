@@ -33,7 +33,7 @@ const StyledFeatureContainer = styled.div<{ $inView: boolean }>`
   width: 100%;
   padding: 1.5rem 0rem;
   border-radius: 0.5rem;
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  box-shadow: ${({ theme }) => theme.shadows.v1Shadow};
   transition: opacity 0.8s ease,
     transform 0.6s cubic-bezier(0.01, -0.02, 0.51, 1.6);
   background: linear-gradient(
@@ -45,6 +45,11 @@ const StyledFeatureContainer = styled.div<{ $inView: boolean }>`
     opacity: ${$inView ? "1" : "0"};
     transform: translateX(${$inView ? "0rem" : "-20rem"});
   `};
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
+    padding: 3rem 0rem;
+    border-radius: 1rem;
+  }
 `;
 
 const StyledFeatureTitle = styled.h2`
@@ -55,12 +60,20 @@ const StyledFeatureTitle = styled.h2`
   color: ${({ theme }) => theme.colors.accentGoldLighter};
   border-top: 2px solid ${({ theme }) => theme.colors.accentGoldLighter};
   border-bottom: 2px solid ${({ theme }) => theme.colors.accentGoldLighter};
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
+    padding: 2rem 4.5rem;
+  }
 `;
 
 const StyledFeatureContent = styled.div`
   margin: auto 0;
-  padding: 0rem 1.2rem;
+  padding: 0rem 2.5rem;
   text-align: center;
   font-size: ${({ theme }) => theme.fonts.defaultFont};
   color: ${({ theme }) => theme.colors.defaultFont};
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.bpLargest}) {
+    padding: 1rem 5rem;
+  }
 `;

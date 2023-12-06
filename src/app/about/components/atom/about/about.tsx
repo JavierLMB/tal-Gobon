@@ -49,7 +49,7 @@ const StyledAboutContainer = styled.div`
 
 const StyledHeroBackground = styled.div`
   position: relative;
-  height: 30rem;
+  height: clamp(30rem, 40vw, 50rem);
   border-radius: 0.5rem;
   background-image: url("cheeseAbout/small/aboutImage.jpg");
   background-size: cover;
@@ -63,12 +63,16 @@ const StyledHeroBackground = styled.div`
   margin-bottom: 1rem;
   padding: 2rem;
   color: ${({ theme }) => theme.colors.accentGoldLighter};
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  box-shadow: ${({ theme }) => theme.shadows.v1Shadow};
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
+    border-radius: 1rem;
+  }
 `;
 
 const StyledTitle = styled.h1`
   line-height: 1;
-  font-size: 7rem;
+  font-size: clamp(7rem, 2rem + 6vw, 12rem);
   padding: 0rem 1rem;
   font-family: Georgia, serif;
   text-shadow: 5px 0px 0px rgba(0, 0, 0, 1);
@@ -86,9 +90,16 @@ const StyledContent = styled.div`
     ${({ theme }) => theme.colors.primaryDark},
     ${({ theme }) => theme.colors.primaryLight}
   );
+  @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
+    border-radius: 1rem;
+    padding: 5rem 6rem 2rem 6rem;
+  }
 `;
 
 const StyledSubContent = styled.span`
   display: block;
   margin-bottom: 2rem;
+  @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
+    margin-bottom: 4rem;
+  }
 `;

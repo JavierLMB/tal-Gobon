@@ -44,7 +44,7 @@ export default function FeatureContainer() {
 
 const StyledFeatureContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   margin-top: 2rem;
   padding: 0rem 1rem;
   gap: 1rem;
@@ -52,7 +52,7 @@ const StyledFeatureContainer = styled.div`
 
 const commonIconStyles = css`
   padding: 0.5rem;
-  font-size: 5rem;
+  font-size: clamp(5rem, 1rem + 5vw, 9rem);
   color: ${({ theme }) => theme.colors.accentGoldLighter};
 `;
 

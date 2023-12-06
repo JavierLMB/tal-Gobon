@@ -37,11 +37,11 @@ const StyledCarouselContainer = styled.div`
   border-radius: 0.5rem;
   color: ${({ theme }) => theme.colors.primaryDark};
   background-color: ${({ theme }) => theme.colors.primaryDark};
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  box-shadow: ${({ theme }) => theme.shadows.v1Shadow};
 `;
 
 const StyledHeroBackground = styled.div<{ $background: string }>`
-  height: 20rem;
+  height: clamp(20rem, 40vw, 50rem);
   border-radius: 0.5rem;
   background-size: cover;
   background-position: center;
@@ -50,7 +50,7 @@ const StyledHeroBackground = styled.div<{ $background: string }>`
   color: ${({ theme }) => theme.colors.primaryLight};
   ${({ $background }) => css`
     background-image: url(${$background});
-  `};
+  `}
 `;
 
 const StyledPromotionContainer = styled.div`
@@ -58,10 +58,10 @@ const StyledPromotionContainer = styled.div`
   justify-content: center;
   align-items: center;
   margin: auto;
-  transform: translateY(2.5rem);
-  height: 15rem;
-  width: 30rem;
+  transform: translateY(clamp(2.4rem, 6vw, 8rem));
+  height: clamp(15rem, 5rem + 20vw, 30rem);
+  width: clamp(30rem, 5rem + 25vw, 70rem);
   padding: 0rem 2rem;
   background-color: rgba(250, 250, 255, 0.85);
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  box-shadow: ${({ theme }) => theme.shadows.v1Shadow};
 `;
