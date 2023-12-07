@@ -28,16 +28,21 @@ export default function ImageSlider({ cheeseObject }: CheeseObjectProps) {
 
 const StyledImagesContainer = styled.div`
   display: flex;
-  padding: 0rem 1rem 1rem 1rem;
   gap: 0.5rem;
+  padding: 0rem 1rem 1rem 1rem;
   overflow-x: auto;
 `;
 
 const StyledImage = styled(Image)`
   display: block;
   width: 100%;
-  height: 22rem;
+  height: clamp(22rem, 30vw, 45rem);
   object-fit: cover;
+  object-position: center;
   border-radius: 0.5rem;
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  box-shadow: ${({ theme }) => theme.shadows.v3Shadow};
+  @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
+    border-radius: 1rem;
+    overflow: hidden;
+  }
 `;

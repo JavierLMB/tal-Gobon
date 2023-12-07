@@ -42,8 +42,8 @@ const StyledSortFilterButton = styled.button<{ $variant: string }>`
   display: flex;
   align-items: center;
   gap: 0.2rem;
-  color: ${({ theme }) => theme.colors.accentGoldLighter};
   width: 100%;
+  color: ${({ theme }) => theme.colors.accentGoldLighter};
 
   ${({ theme, $variant }) => css`
     font-size: ${$variant === "inner"
@@ -58,6 +58,10 @@ const StyledSortFilterButton = styled.button<{ $variant: string }>`
       : "0px 2px 2px rgba(0, 0, 0, 0.25)"};
     padding: ${$variant === "inner" ? "0rem" : "0.5rem"};
   `};
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
+    border-radius: 1rem;
+  }
 `;
 
 const StyledTitle = styled.div`

@@ -32,8 +32,10 @@ export default function CheesePage({ params }: CheesePageProps) {
       <StyledCheeseViewContainer>
         <CheeseHeader cheeseObject={cheeseObject} />
         <ImageSlider cheeseObject={cheeseObject} />
-        <CheeseDescription cheeseObject={cheeseObject} />
-        <CheeseWeightPortionPrice cheeseObject={cheeseObject} />
+        <StyledDescriptionWeightContainer>
+          <CheeseDescription cheeseObject={cheeseObject} />
+          <CheeseWeightPortionPrice cheeseObject={cheeseObject} />
+        </StyledDescriptionWeightContainer>
       </StyledCheeseViewContainer>
       <Footer />
     </div>
@@ -42,4 +44,12 @@ export default function CheesePage({ params }: CheesePageProps) {
 
 const StyledCheeseViewContainer = styled.div`
   margin-bottom: 1rem;
+`;
+
+const StyledDescriptionWeightContainer = styled.div`
+  @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem 0rem 4rem 0rem;
+  }
 `;

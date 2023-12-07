@@ -4,11 +4,11 @@ import { useInView } from "react-hook-inview";
 
 export default function Promotion() {
   const [ref1, inView1] = useInView({
-    threshold: 0.2,
+    threshold: 0.8,
     unobserveOnEnter: true,
   });
   const [ref2, inView2] = useInView({
-    threshold: 0.2,
+    threshold: 0.8,
     unobserveOnEnter: true,
   });
 
@@ -18,10 +18,11 @@ export default function Promotion() {
         <StyledPromotionBackground
           key={id}
           $background={image}
-          $inView={id === 1 ? inView1 : inView2}
           ref={id === 1 ? ref1 : ref2}
         >
-          <StyledPromotionContainer>{content}</StyledPromotionContainer>
+          <StyledPromotionContainer $inView={id === 1 ? inView1 : inView2}>
+            {content}
+          </StyledPromotionContainer>
         </StyledPromotionBackground>
       ))}
     </StyledPromotionMainContainer>
@@ -42,7 +43,6 @@ const StyledPromotionMainContainer = styled.div`
 
 const StyledPromotionBackground = styled.div<{
   $background: string;
-  $inView: boolean;
 }>`
   height: clamp(40rem, 40vw, 75rem);
   border-radius: 0.5rem;
@@ -54,9 +54,7 @@ const StyledPromotionBackground = styled.div<{
   color: ${({ theme }) => theme.colors.accentGoldLighter};
   box-shadow: ${({ theme }) => theme.shadows.v3Shadow};
   transition: all 0.5s cubic-bezier(0.01, -0.02, 0.51, 1.6);
-  ${({ $background, $inView }) => css`
-    transform: translateY(${$inView ? "0rem" : "10rem"})
-      rotate(${$inView ? "0deg" : "-15deg"});
+  ${({ $background }) => css`
     background-image: url(${$background});
   `}
 
@@ -65,14 +63,13 @@ const StyledPromotionBackground = styled.div<{
   }
 `;
 
-const StyledPromotionContainer = styled.div`
+const StyledPromotionContainer = styled.div<{ $inView: boolean }>`
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
   transform: translateY(15rem) translateX(-3rem) rotate(10deg);
   height: clamp(10rem, 5rem + 20vw, 20rem);
-  width: 110%;
   padding: 0rem clamp(6rem, 20vw, 12rem);
   box-shadow: ${({ theme }) => theme.shadows.v3Shadow};
   background: linear-gradient(
@@ -80,6 +77,13 @@ const StyledPromotionContainer = styled.div`
     ${({ theme }) => theme.colors.primaryDark},
     ${({ theme }) => theme.colors.primaryLight}
   );
+  transition: all 0.5s ease-out;
+  overflow: hidden;
+
+  ${({ $inView }) => css`
+    width: ${$inView ? "110%" : "1%"};
+    opacity: ${$inView ? "1" : "0"};
+  `}
 
   @media (min-width: ${({ theme }) => theme.breakpoints.bpLarge}) {
     transform: translateY(25rem) translateX(-5rem) rotate(10deg);

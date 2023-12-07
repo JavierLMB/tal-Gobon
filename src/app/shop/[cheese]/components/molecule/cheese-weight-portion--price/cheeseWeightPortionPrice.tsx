@@ -101,6 +101,12 @@ const StyledWeightMainContainer = styled.div`
   padding: 0rem 2rem;
   margin: 0rem 2rem;
   border-bottom: 1px solid ${({ theme }) => theme.colors.primaryLight};
+  @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
+    border: none;
+    box-shadow: ${({ theme }) => theme.shadows.v3Shadow};
+    height: 22rem;
+    width: 45rem;
+  }
 `;
 
 const StyledWeightContainer = styled.div`
@@ -114,6 +120,10 @@ const StyledWeightError = styled.div`
   font-size: inherit;
   position: absolute;
   top: 0.5rem;
+  @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
+    font-size: ${({ theme }) => theme.fonts.defaultFont};
+    top: 0rem;
+  }
 `;
 
 const StyledSelect = styled.select`
@@ -128,6 +138,9 @@ const StyledSelect = styled.select`
   &:focus {
     outline: none;
     border-color: ${({ theme }) => theme.colors.primaryDark};
+  }
+  @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
+    font-size: ${({ theme }) => theme.fonts.header2Font};
   }
 `;
 
@@ -148,6 +161,10 @@ const StyledPriceContainer = styled.div<{ $selectedWeight: string }>`
     max-height: ${$selectedWeight ? "10rem" : "0"};
     overflow: ${$selectedWeight ? "visible" : "hidden"};
   `};
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
+    font-size: ${({ theme }) => theme.fonts.header1Font};
+  }
 `;
 
 const StyledTotalPrice = styled.h2`
@@ -169,4 +186,7 @@ const StyledAddToCartButton = styled.button`
   font-size: ${({ theme }) => theme.fonts.defaultFont};
   color: ${({ theme }) => theme.colors.primaryLight};
   background-color: ${({ theme }) => theme.colors.accentGoldLighter};
+  @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
+    font-size: ${({ theme }) => theme.fonts.header3Font};
+  }
 `;

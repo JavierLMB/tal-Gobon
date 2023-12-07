@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { animalImages } from "./usePreviewCardAnimalIcons";
+import { useMediaQuery } from "react-responsive";
 import Image from "next/image";
 
 type PreviewCardProps = {
@@ -24,6 +25,7 @@ export default function PreviewCard({
   pricePerKg,
   onClick,
 }: PreviewCardProps) {
+  const isBigScreen = useMediaQuery({ query: "(min-width: 1008px)" });
   const animalIcons = animalImages[animal];
 
   return (
@@ -38,7 +40,11 @@ export default function PreviewCard({
       <StyledContent>
         <StyledProductContainer>
           <StyledName>
-            {name.length > 11 ? `${name.slice(0, 11)}...` : name}
+            {isBigScreen
+              ? name
+              : name.length > 11
+              ? `${name.slice(0, 11)}...`
+              : name}
           </StyledName>
           <StyledPrice>
             € {pricePerKg} <StyledPriceKg>/ Kg</StyledPriceKg>
@@ -55,20 +61,29 @@ export default function PreviewCard({
 }
 
 const StyledProductCard = styled.div`
-  box-shadow: ${({ theme }) => theme.shadows.v1Shadow};
-  width: 19rem;
+  box-shadow: ${({ theme }) => theme.shadows.v3Shadow};
+  width: 100%;
   border-radius: 0.5rem;
   background: linear-gradient(
     45deg,
     ${({ theme }) => theme.colors.primaryDark},
     ${({ theme }) => theme.colors.primaryLight}
   );
+  @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
+    border-radius: 1rem;
+  }
 `;
 
 const StyledImage = styled(Image)`
   width: 100%;
   height: 22rem;
+  height: clamp(22rem, 30vw, 45rem);
   border-radius: 0.5rem 0.5rem 0rem 0rem;
+  object-fit: center;
+  object-position: center;
+  @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
+    border-radius: 1rem 1rem 0rem 0rem;
+  }
 `;
 
 const StyledContent = styled.div`

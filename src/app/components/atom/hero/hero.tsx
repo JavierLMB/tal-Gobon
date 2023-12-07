@@ -97,5 +97,6 @@ const StyledLink = styled(Link)<{ $inView: boolean }>`
   @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
     width: 20%;
     border-radius: 1rem;
+    margin-bottom: 10rem;
   }
 `;

@@ -40,11 +40,13 @@ export default function PreviewCardContainer({
 }
 
 const StyledProductCardContainer = styled.div`
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   gap: 1rem;
   width: 100%;
   min-height: 30rem;
   padding: 0rem 1rem;
+  @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
+    grid-template-columns: repeat(4, 1fr);
+  }
 `;

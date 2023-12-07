@@ -112,6 +112,10 @@ const StyledSortFilterMainContainer = styled.div`
   justify-content: center;
   gap: 1rem;
   padding: 0rem 1rem 1rem 1rem;
+  @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
+    width: 50%;
+    padding: 0rem 1rem 1rem 0.5rem;
+  }
 `;
 
 const StyledSortFilterContainer = styled.div`
@@ -125,15 +129,18 @@ const StyledSortFilterContainer = styled.div`
     ${({ theme }) => theme.colors.primaryDark},
     ${({ theme }) => theme.colors.primaryLight}
   );
+  @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
+    border-radius: 0rem 0rem 1rem 1rem;
+  }
 `;
 
 const StyledLabel = styled.label`
   display: flex;
-  font-size: ${({ theme }) => theme.fonts.defaultFont};
-  color: ${({ theme }) => theme.colors.accentGoldLighter};
   font-weight: 400;
   position: relative;
   padding-left: 2.5rem;
+  font-size: ${({ theme }) => theme.fonts.defaultFont};
+  color: ${({ theme }) => theme.colors.accentGoldLighter};
 `;
 
 const StyledInput = styled.input`

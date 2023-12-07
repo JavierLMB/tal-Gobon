@@ -47,13 +47,6 @@ export const theme = {
     header2Font: "2.4rem",
     header3Font: "2rem",
   },
-  bigScreenFonts: {
-    smallFont: "1.2rem",
-    defaultFont: "3.2rem",
-    header1Font: "2.8rem",
-    header2Font: "4.8rem",
-    header3Font: "4rem",
-  },
   shadows: {
     v1Shadow: "0px 2px 2px rgba(0, 0, 0, 0.25)",
     v2Shadow: "0px 2px 2px rgba(0, 0, 0, 0.5)",

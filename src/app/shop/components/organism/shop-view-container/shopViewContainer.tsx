@@ -32,15 +32,17 @@ export default function ShopViewContainer() {
 
   return (
     <StyledCheeseViewContainer>
-      <SearchBar searchTerm={searchTerm} onSearchTerm={setSearchTerm} />
-      <SortFilterComponent
-        selectedSortOption={selectedSortOption}
-        onSelectedSortOption={setSelectedSortOption}
-        selectedFilterCountryOptions={selectedFilterCountryOptions}
-        onSelectedFilterCountryOptions={setSelectedFilterCountryOptions}
-        selectedFilterAnimalOptions={selectedFilterAnimalOptions}
-        onSelectedFilterAnimalOptions={setSelectedFilterAnimalOptions}
-      />
+      <StyledSearchFilterContainer>
+        <SearchBar searchTerm={searchTerm} onSearchTerm={setSearchTerm} />
+        <SortFilterComponent
+          selectedSortOption={selectedSortOption}
+          onSelectedSortOption={setSelectedSortOption}
+          selectedFilterCountryOptions={selectedFilterCountryOptions}
+          onSelectedFilterCountryOptions={setSelectedFilterCountryOptions}
+          selectedFilterAnimalOptions={selectedFilterAnimalOptions}
+          onSelectedFilterAnimalOptions={setSelectedFilterAnimalOptions}
+        />
+      </StyledSearchFilterContainer>
       <PreviewCardContainer activeProducts={activeProducts} />
     </StyledCheeseViewContainer>
   );
@@ -48,4 +50,11 @@ export default function ShopViewContainer() {
 
 const StyledCheeseViewContainer = styled.div`
   margin-bottom: 1rem;
+`;
+
+const StyledSearchFilterContainer = styled.div`
+  @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
+    display: flex;
+    justify-content: space-between;
+  }
 `;
