@@ -26,7 +26,7 @@ const StyledAddedToCartModalContainer = styled.div<{
   font-size: ${({ theme }) => theme.fonts.defaultFont};
   color: ${({ theme }) => theme.colors.defaultFont};
   transition: all 0.4s cubic-bezier(0.01, -0.02, 0.51, 1.6);
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: ${({ theme }) => theme.shadows.v2Shadow};
   background: linear-gradient(
     45deg,
     ${({ theme }) => theme.colors.primaryDark},
@@ -35,4 +35,8 @@ const StyledAddedToCartModalContainer = styled.div<{
   ${({ $addedModalVisible }) => css`
     right: ${$addedModalVisible ? "0ren" : "-25rem"};
   `};
+  @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
+    font-size: ${({ theme }) => theme.fonts.header3Font};
+    padding: 2rem 3rem;
+  }
 `;

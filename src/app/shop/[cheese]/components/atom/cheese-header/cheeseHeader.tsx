@@ -36,10 +36,14 @@ const StyledContinueBrowsingCointainer = styled.div`
   align-items: center;
   padding: 0rem 0.5rem;
   margin-right: 2rem;
-  color: ${({ theme }) => theme.colors.primaryLight};
-  font-size: ${({ theme }) => theme.fonts.smallFont};
   line-height: 1.2;
   gap: 0.5rem;
+  color: ${({ theme }) => theme.colors.primaryLight};
+  font-size: ${({ theme }) => theme.fonts.smallFont};
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
+    font-size: ${({ theme }) => theme.fonts.defaultFont};
+  }
 `;
 
 const StyledContinueBrowsingArrrow = styled.div`

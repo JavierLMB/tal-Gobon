@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Header from "@/components/header/template/header/header";
 import Footer from "@/components/footer/template/footer/footer";
 import { cheesesData } from "../components/organism/shop-view-container/useCheeseData";
-import CheeseHeader from "@/app/cart/components/atom/cheese-header/cheeseHeader";
+import CheeseHeader from "@/app/shop/[cheese]/components/atom/cheese-header/cheeseHeader";
 import ImageSlider from "./components/atom/image-slider/imageSlider";
 import CheeseDescription from "./components/atom/cheese-description/cheeseDescription";
 import CheeseWeightPortionPrice from "./components/molecule/cheese-weight-portion--price/cheeseWeightPortionPrice";

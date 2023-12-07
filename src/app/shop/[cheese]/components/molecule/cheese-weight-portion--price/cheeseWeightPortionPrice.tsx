@@ -130,7 +130,7 @@ const StyledSelect = styled.select`
   font-weight: 400;
   padding: 0.5rem;
   border-radius: 4px;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+  box-shadow: ${({ theme }) => theme.shadows.v3Shadow};
   font-size: ${({ theme }) => theme.fonts.defaultFont};
   color: ${({ theme }) => theme.colors.primaryLight};
   border: 1px solid ${({ theme }) => theme.colors.primaryLight};
