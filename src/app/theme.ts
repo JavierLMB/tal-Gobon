@@ -56,8 +56,8 @@ export const theme = {
     bpLargest: "111rem", // 1776
     bpLarge: "96rem",
     bpNormal: "85rem", // 1360
-    bpNormals: "63em", // 1008
-    bpSmall: "45em",
+    bpNormals: "63rem", // 1008
+    bpSmall: "45em", // 720
     bpSmaller: "33em", // 528
     bpSmallest: "26rem", // 416
   },

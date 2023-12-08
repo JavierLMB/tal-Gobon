@@ -1,22 +1,32 @@
 import { useState, ReactNode } from "react";
 import styled, { css } from "styled-components";
 import ExpanderButton from "../../atom/expander-button/expanderButton";
+import { useMediaQuery } from "react-responsive";
 
 type ExpanderProps = {
   children: ReactNode;
   title: string;
+  expanderState?: boolean;
 };
 
-export default function Expander({ children, title }: ExpanderProps) {
-  const [expanderOpen, setExpanderOpen] = useState(false);
+export default function Expander({
+  children,
+  title,
+  expanderState = false,
+}: ExpanderProps) {
+  const [expanderOpen, setExpanderOpen] = useState(expanderState);
+  const isSmallScreen = useMediaQuery({ query: "(max-width: 1008px)" });
+
   return (
     <StyledFooterExpanderContainer>
       <StyledExpanderHeader>
         <div onClick={() => setExpanderOpen(!expanderOpen)}>{title}</div>
-        <ExpanderButton
-          expanderOpen={expanderOpen}
-          onClick={() => setExpanderOpen(!expanderOpen)}
-        />
+        {isSmallScreen && (
+          <ExpanderButton
+            expanderOpen={expanderOpen}
+            onClick={() => setExpanderOpen(!expanderOpen)}
+          />
+        )}
       </StyledExpanderHeader>
       <StyledExpanderChildren $expanderOpen={expanderOpen}>
         {children}
@@ -30,6 +40,10 @@ const StyledFooterExpanderContainer = styled.div`
   line-height: 1;
   border-bottom: 1px solid ${({ theme }) => theme.colors.defaultFont};
   padding-bottom: 1.1rem;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
+    border-bottom: none;
+  }
 `;
 
 const StyledExpanderHeader = styled.div`
@@ -39,6 +53,9 @@ const StyledExpanderHeader = styled.div`
   margin-bottom: 1.1rem;
   font-size: ${({ theme }) => theme.fonts.defaultFont};
   color: ${({ theme }) => theme.colors.defaultFont};
+  @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
+    margin-bottom: 2rem;
+  }
 `;
 
 const StyledExpanderChildren = styled.div<{ $expanderOpen: boolean }>`
@@ -49,4 +66,7 @@ const StyledExpanderChildren = styled.div<{ $expanderOpen: boolean }>`
   ${({ $expanderOpen }) => css`
     max-height: ${$expanderOpen ? "10rem" : "0"};
   `};
+  @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
+    max-height: 20rem;
+  }
 `;

@@ -24,7 +24,7 @@ export default function Newsletter() {
         Subscribed
       </StyledSubscribedNotification>
       <StyledNewsletterTitle>Subscribe to Our Newsletter</StyledNewsletterTitle>
-      <form onSubmit={handleSubmit}>
+      <StyledForm onSubmit={handleSubmit}>
         <label>
           <StyledNewsletterInput
             type="email"
@@ -38,7 +38,7 @@ export default function Newsletter() {
         <br />
 
         <StyledNewsletterButton type="submit">Subscribe</StyledNewsletterButton>
-      </form>
+      </StyledForm>
     </StyledNewsletterContainer>
   );
 }
@@ -62,12 +62,29 @@ const StyledSubscribedNotification = styled.div<{ $subscribed: boolean }>`
   transition: all 0.3s cubic-bezier(0.01, -0.02, 0.51, 1.6);
 
   ${({ $subscribed }) => css`
-    right: ${$subscribed ? "0rem" : "-10rem"};
+    right: ${$subscribed ? "0rem" : "-14rem"};
   `};
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: ${({ theme }) => theme.fonts.header3Font};
+  }
 `;
 
 const StyledNewsletterTitle = styled.h2`
   color: ${({ theme }) => theme.colors.defaultFont};
+  @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
+    text-align: center;
+  }
+`;
+
+const StyledForm = styled.form`
+  @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+  }
 `;
 
 const StyledNewsletterInput = styled.input`
@@ -82,6 +99,10 @@ const StyledNewsletterInput = styled.input`
   &:focus {
     outline: 2px solid ${({ theme }) => theme.colors.accentGoldLighter};
   }
+  @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
+    width: 50rem;
+    border-radius: 1rem;
+  }
 `;
 
 const StyledNewsletterButton = styled.button`
@@ -94,4 +115,8 @@ const StyledNewsletterButton = styled.button`
   font-size: ${({ theme }) => theme.fonts.defaultFont};
   color: ${({ theme }) => theme.colors.primaryLight};
   background-color: ${({ theme }) => theme.colors.accentGoldLighter};
+  @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
+    width: 20rem;
+    border-radius: 1rem;
+  }
 `;

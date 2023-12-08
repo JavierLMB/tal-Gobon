@@ -3,8 +3,9 @@ import ExpanderContainer from "../../organism/expander-container/expanderContain
 import FooterShortcutContainer from "../../atom/footer-shortcut-container/footerShortcutContainer";
 import CopyrightYear from "../../atom/copyright-year/copyrightYear";
 import Newsletter from "../../atom/newsletter/newsletter";
+import dynamic from "next/dynamic";
 
-export default function Footer() {
+const Footer = () => {
   return (
     <StyledFooterMainContainer>
       <Newsletter />
@@ -13,7 +14,9 @@ export default function Footer() {
       <CopyrightYear />
     </StyledFooterMainContainer>
   );
-}
+};
+
+export default dynamic(() => Promise.resolve(Footer), { ssr: false });
 
 const StyledFooterMainContainer = styled.div`
   padding: 5rem 2rem;

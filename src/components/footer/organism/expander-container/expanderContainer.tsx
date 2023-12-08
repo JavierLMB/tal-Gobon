@@ -52,12 +52,20 @@ const StyledExpanderMainContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
 `;
 
 const StyledChildrenContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
+  @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
+    gap: 1.5rem;
+  }
 `;
 
 const StyledSocialContainer = styled.div`
