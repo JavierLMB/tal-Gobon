@@ -1,4 +1,3 @@
-"use client";
 import styled from "styled-components";
 import Link from "next/link";
 import Image from "next/image";
@@ -66,7 +65,6 @@ const StyledHeaderContainer = styled.div`
   position: sticky;
   top: 0rem;
   z-index: 4;
-  height: 7rem;
   box-shadow: ${({ theme }) => theme.shadows.v1Shadow};
   background: linear-gradient(
     45deg,
