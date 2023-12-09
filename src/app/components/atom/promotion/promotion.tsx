@@ -21,7 +21,7 @@ export default function Promotion() {
           ref={id === 1 ? ref1 : ref2}
         >
           <StyledPromotionContainer $inView={id === 1 ? inView1 : inView2}>
-            {content}
+            <h3>{content}</h3>
           </StyledPromotionContainer>
         </StyledPromotionBackground>
       ))}
@@ -58,6 +58,10 @@ const StyledPromotionBackground = styled.div<{
     background-image: url(${$background});
   `}
 
+  @media (max-width: ${({ theme }) => theme.breakpoints.bpSmallest}) {
+    line-height: 1;
+  }
+
   @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
     border-radius: 1rem;
   }
@@ -81,9 +85,13 @@ const StyledPromotionContainer = styled.div<{ $inView: boolean }>`
   overflow: hidden;
 
   ${({ $inView }) => css`
-    width: ${$inView ? "110%" : "1%"};
+    width: ${$inView ? "111%" : "1%"};
     opacity: ${$inView ? "1" : "0"};
   `}
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.bpSmallest}) {
+    transform: translateY(15rem) translateX(-2rem) rotate(10deg);
+  }
 
   @media (min-width: ${({ theme }) => theme.breakpoints.bpLarge}) {
     transform: translateY(25rem) translateX(-5rem) rotate(10deg);

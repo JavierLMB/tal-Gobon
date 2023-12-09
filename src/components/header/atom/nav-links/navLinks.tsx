@@ -6,7 +6,7 @@ type NavLinksProps = {
   link: string;
   children: ReactNode;
   name: string;
-  onClick: () => void;
+  onClick?: () => void;
 };
 
 export default function NavLinks({
@@ -29,6 +29,11 @@ const StyledLink = styled(Link)`
   align-items: flex-end;
   text-decoration: none;
   overflow: hidden;
+  @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
+    align-items: center;
+    line-height: 1;
+    gap: 1rem;
+  }
 `;
 
 const StyledNavOptions = styled.div`

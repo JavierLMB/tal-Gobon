@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import NavLinksContainer from "../../molecule/nav-links-container/navLinksContainer";
+import NavLinksContainerMobile from "../../molecule/nav-links-container/navLinksContainerMobile";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -33,7 +33,7 @@ export default function NavbarModal({
             </StyledLink>
           </StyledLogoContainer>
         </StyledOuterLogoContainer>
-        <NavLinksContainer onClick={onClick} />
+        <NavLinksContainerMobile onClick={onClick} />
       </StyledNavbarModalContainer>
     </>
   );

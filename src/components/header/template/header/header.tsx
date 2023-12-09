@@ -6,11 +6,16 @@ import Image from "next/image";
 import { FaCartShopping } from "react-icons/fa6";
 import { useState } from "react";
 import NavbarModal from "@/components/header/organsim/navbar-modal/navbarModal";
+import NavLinksContainerDesktop from "../../molecule/nav-links-container/navLinksContainerDesktop";
 import NavButton from "@/components/header/atom/nav-button/navButton";
 import CartCounter from "../../atom/cart-counter/cartCounter";
+import { useMediaQuery } from "react-responsive";
+import dynamic from "next/dynamic";
 
-export default function Header() {
+const Header = () => {
   const [navModalOpen, setNavModalOpen] = useState(false);
+  const isSmallScreen = useMediaQuery({ query: "(max-width: 1008px)" });
+  const isBigScreen = useMediaQuery({ query: "(min-width: 1008px)" });
 
   return (
     <StyledHeaderContainer>
@@ -30,19 +35,31 @@ export default function Header() {
           <StyledLogoName>tal-Ġobon</StyledLogoName>
         </StyledLogoContainer>
       </StyledLink>
-      <StyledIcon>
-        <StyledLink href="/cart">
-          <StyledCartIcon />
-        </StyledLink>
-        <CartCounter />
-        <NavButton
-          navModalOpen={navModalOpen}
-          onClick={() => setNavModalOpen(!navModalOpen)}
-        />
-      </StyledIcon>
+      <StyledDesktopNavContainer>
+        {isBigScreen && <NavLinksContainerDesktop />}
+        <StyledIcon>
+          <StyledLink href="/cart">
+            <StyledCartDesktopContainer>
+              <StyledCartIcon />
+              {isBigScreen && (
+                <StyledCartDesktopName>Cart</StyledCartDesktopName>
+              )}
+            </StyledCartDesktopContainer>
+          </StyledLink>
+          <CartCounter />
+          {isSmallScreen && (
+            <NavButton
+              navModalOpen={navModalOpen}
+              onClick={() => setNavModalOpen(!navModalOpen)}
+            />
+          )}
+        </StyledIcon>
+      </StyledDesktopNavContainer>
     </StyledHeaderContainer>
   );
-}
+};
+
+export default dynamic(() => Promise.resolve(Header), { ssr: false });
 
 const StyledHeaderContainer = styled.div`
   display: flex;
@@ -50,17 +67,35 @@ const StyledHeaderContainer = styled.div`
   align-items: center;
   padding: 1rem;
   margin-bottom: 1rem;
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
   overflow-x: hidden;
   position: sticky;
   top: 0rem;
   z-index: 4;
-
+  box-shadow: ${({ theme }) => theme.shadows.v1Shadow};
   background: linear-gradient(
     45deg,
     ${({ theme }) => theme.colors.primaryDark},
     ${({ theme }) => theme.colors.primaryLight}
   );
+`;
+
+const StyledDesktopNavContainer = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+`;
+
+const StyledCartDesktopContainer = styled.div`
+  display: flex;
+  align-items: center;
+  line-height: 1;
+  gap: 1.5rem;
+`;
+
+const StyledCartDesktopName = styled.div`
+  font-size: 3rem;
+  height: 2rem;
+  color: ${({ theme }) => theme.colors.accentGoldLighter};
 `;
 
 const StyledLogoContainer = styled.div`
@@ -91,7 +126,7 @@ const StyledLogoImage = styled(Image)`
   height: 5rem;
   object-fit: cover;
   border-radius: 50%;
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: ${({ theme }) => theme.shadows.v2Shadow};
 `;
 
 const StyledCartIcon = styled(FaCartShopping)`

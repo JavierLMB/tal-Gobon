@@ -8,7 +8,9 @@ type NavLinksContainerProps = {
   onClick: () => void;
 };
 
-export default function NavLinksContainer({ onClick }: NavLinksContainerProps) {
+export default function NavLinksContainerMobile({
+  onClick,
+}: NavLinksContainerProps) {
   return (
     <StyledContentContainer>
       <NavLinks link={"/"} name={"Home"} onClick={onClick}>

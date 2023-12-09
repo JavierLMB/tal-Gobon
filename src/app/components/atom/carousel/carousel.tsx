@@ -16,7 +16,7 @@ export default function Carousel() {
     prevArrow: <SamplePrevArrow />,
     autoplay: true,
     autoplaySpeed: 5000,
-    pauseOnHover: true,
+    pauseOnHover: false,
   };
 
   return (
@@ -24,7 +24,9 @@ export default function Carousel() {
       <Slider {...sliderSettings}>
         {carouselImages.map(({ id, image, content }) => (
           <StyledHeroBackground key={id} $background={image}>
-            <StyledPromotionContainer>{content}</StyledPromotionContainer>
+            <StyledPromotionContainer>
+              <h3>{content}</h3>
+            </StyledPromotionContainer>
           </StyledHeroBackground>
         ))}
       </Slider>
@@ -59,6 +61,7 @@ const StyledHeroBackground = styled.div<{ $background: string }>`
 
   @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
     border-radius: 1rem;
+    font-size: ${({ theme }) => theme.fonts.header3Font};
   }
 `;
 
