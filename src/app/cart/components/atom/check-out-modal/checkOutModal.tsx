@@ -52,7 +52,7 @@ const StyledCheckOutModalContainer = styled.div<{
   left: 50%;
   width: 70%;
   transform: translate(-50%, -50%);
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  box-shadow: ${({ theme }) => theme.shadows.v1Shadow};
   border: 5px solid ${({ theme }) => theme.colors.accentGoldLight};
   transition: all 0.4s cubic-bezier(0.01, -0.02, 0.51, 1.6);
   background: linear-gradient(
@@ -63,12 +63,18 @@ const StyledCheckOutModalContainer = styled.div<{
   ${({ $checkOutModalOpen }) => css`
     top: ${$checkOutModalOpen ? "40%" : "-30%"};
   `};
+  @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
+    padding: 4rem;
+  }
 `;
 
 const StyledCheckOutText = styled.h1`
   text-align: center;
   font-size: ${({ theme }) => theme.fonts.header2Font};
   color: ${({ theme }) => theme.colors.accentGoldLighter};
+  @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
+    font-size: ${({ theme }) => theme.fonts.header1Font};
+  }
 `;
 const StyledCloseButtonText = styled.div`
   position: absolute;

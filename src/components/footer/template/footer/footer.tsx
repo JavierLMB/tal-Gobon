@@ -27,4 +27,8 @@ const StyledFooterMainContainer = styled.div`
     ${({ theme }) => theme.colors.primaryLight}
   );
   border-bottom: 5px solid ${({ theme }) => theme.colors.accentGoldLighter};
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
+    padding-top: 8rem;
+  }
 `;

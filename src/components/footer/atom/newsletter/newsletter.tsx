@@ -93,7 +93,7 @@ const StyledNewsletterInput = styled.input`
   padding: 1rem;
   border: 1px solid #ccc;
   border-radius: 0.5rem;
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  box-shadow: ${({ theme }) => theme.shadows.v1Shadow};
   color: ${({ theme }) => theme.colors.primaryDark};
 
   &:focus {
@@ -111,7 +111,7 @@ const StyledNewsletterButton = styled.button`
   text-align: center;
   border-radius: 0.5rem;
   width: 100%;
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  box-shadow: ${({ theme }) => theme.shadows.v1Shadow};
   font-size: ${({ theme }) => theme.fonts.defaultFont};
   color: ${({ theme }) => theme.colors.primaryLight};
   background-color: ${({ theme }) => theme.colors.accentGoldLighter};

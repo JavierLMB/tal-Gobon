@@ -90,6 +90,10 @@ const StyledCartItem = styled.div`
   margin: 1rem 1rem 0rem 1rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid ${({ theme }) => theme.colors.primaryLight};
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
+    padding: 1rem 0rem 2rem 0rem;
+  }
 `;
 
 const StyledImage = styled(Image)`
@@ -98,12 +102,20 @@ const StyledImage = styled(Image)`
   height: 8rem;
   object-fit: cover;
   border-radius: 0.5rem;
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  box-shadow: ${({ theme }) => theme.shadows.v3Shadow};
+  @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 1rem;
+  }
 `;
 
 const StyledPricePc = styled.div`
   line-height: 1;
   margin-top: 0.5rem;
+  @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
+    font-size: ${({ theme }) => theme.fonts.defaultFont};
+  }
 `;
 
 const StyledQuantityContainer = styled.div`
@@ -116,6 +128,10 @@ const StyledQuantityContainer = styled.div`
   width: 7rem;
   font-size: ${({ theme }) => theme.fonts.header3Font};
   border: 1px solid ${({ theme }) => theme.colors.primaryLight};
+  @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
+    font-size: ${({ theme }) => theme.fonts.header2Font};
+    border-radius: 0.5rem;
+  }
 `;
 
 const StyledBinIcon = styled(IoTrashBin)`
@@ -123,13 +139,17 @@ const StyledBinIcon = styled(IoTrashBin)`
   padding: 0.8rem;
   font-size: 4.5rem;
   border-radius: 50%;
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  box-shadow: ${({ theme }) => theme.shadows.v1Shadow};
   color: ${({ theme }) => theme.colors.defaultFont};
   background: linear-gradient(
     45deg,
     ${({ theme }) => theme.colors.primaryDark},
     ${({ theme }) => theme.colors.primaryLight}
   );
+  @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
+    font-size: 7rem;
+    padding: 1rem;
+  }
 `;
 
 const StyledProductCartInfo = styled.div`
@@ -139,7 +159,7 @@ const StyledProductCartInfo = styled.div`
   line-height: 1.2;
   padding: 0.5rem 1rem;
   margin-bottom: 0.5rem;
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  box-shadow: ${({ theme }) => theme.shadows.v1Shadow};
   font-size: ${({ theme }) => theme.fonts.smallFont};
   color: ${({ theme }) => theme.colors.defaultFont};
   background: linear-gradient(
@@ -147,6 +167,10 @@ const StyledProductCartInfo = styled.div`
     ${({ theme }) => theme.colors.primaryDark},
     ${({ theme }) => theme.colors.primaryLight}
   );
+  @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
+    font-size: ${({ theme }) => theme.fonts.defaultFont};
+    border-radius: 0.5rem;
+  }
 `;
 
 const StyledProductTotal = styled.div`
@@ -156,4 +180,8 @@ const StyledProductTotal = styled.div`
   line-height: 1;
   font-size: ${({ theme }) => theme.fonts.header3Font};
   color: ${({ theme }) => theme.colors.primaryLight};
+  @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
+    font-size: ${({ theme }) => theme.fonts.header1Font};
+    border-radius: 0.5rem;
+  }
 `;

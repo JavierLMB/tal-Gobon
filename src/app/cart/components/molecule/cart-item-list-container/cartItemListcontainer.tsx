@@ -55,7 +55,12 @@ export default function CartItemListContainer({
 }
 
 const StyledCartItemListContainer = styled.div`
+  max-width: 170rem;
+  margin: 0 auto;
   margin-bottom: 1rem;
+  @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
+    padding: 2rem 0rem;
+  }
 `;
 
 const StyledCartItem = styled.div`
@@ -78,11 +83,17 @@ const StyledSubtotalContainer = styled.div`
   font-size: ${({ theme }) => theme.fonts.defaultFont};
   color: ${({ theme }) => theme.colors.primaryLight};
   margin: 3rem 3rem 0rem 1rem;
+  @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
+    font-size: ${({ theme }) => theme.fonts.header3Font};
+  }
 `;
 
 const StyledSubtotalPrice = styled.h2`
   font-size: ${({ theme }) => theme.fonts.header1Font};
   color: ${({ theme }) => theme.colors.primaryLight};
+  @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
+    font-size: 5rem;
+  }
 `;
 
 const StyledCheckOutButtonContainer = styled.div`
@@ -91,6 +102,9 @@ const StyledCheckOutButtonContainer = styled.div`
   width: 100%;
   margin-top: 2rem;
   margin-bottom: 3rem;
+  @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
+    justify-content: flex-end;
+  }
 `;
 
 const StyledCheckOutButton = styled.button`
@@ -103,6 +117,10 @@ const StyledCheckOutButton = styled.button`
   font-size: ${({ theme }) => theme.fonts.defaultFont};
   color: ${({ theme }) => theme.colors.primaryLight};
   background-color: ${({ theme }) => theme.colors.accentGoldLighter};
+  @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
+    font-size: ${({ theme }) => theme.fonts.header3Font};
+    width: 20%;
+  }
 `;
 
 const StyledContinueBrowsingCointainer = styled.div`
@@ -112,14 +130,24 @@ const StyledContinueBrowsingCointainer = styled.div`
   color: ${({ theme }) => theme.colors.primaryLight};
   font-size: ${({ theme }) => theme.fonts.smallFont};
   line-height: 1.2;
+  @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
+    font-size: ${({ theme }) => theme.fonts.defaultFont};
+    gap: 0.5rem;
+  }
 `;
 
 const StyledContinueBrowsingArrrow = styled.div`
   font-size: ${({ theme }) => theme.fonts.header3Font};
+  @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
+    font-size: ${({ theme }) => theme.fonts.header2Font};
+  }
 `;
 
 const StyledCartTitleSection = styled.h3`
   font-size: ${({ theme }) => theme.fonts.header3Font};
+  @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
+    font-size: ${({ theme }) => theme.fonts.header2Font};
+  }
 `;
 
 const StyledClearButton = styled.button`
@@ -132,6 +160,9 @@ const StyledClearButton = styled.button`
     ${({ theme }) => theme.colors.primaryDark},
     ${({ theme }) => theme.colors.primaryLight}
   );
+  @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
+    font-size: ${({ theme }) => theme.fonts.defaultFont};
+  }
 `;
 
 const StyledLink = styled(Link)`
