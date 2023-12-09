@@ -39,7 +39,7 @@ const CartitemList = () => {
             </StyledProductCartInfo>
             <div>
               <StyledQuantityContainer>
-                <div
+                <StyledQuantityManagers
                   onClick={() =>
                     updateItemQuantity(
                       item.id,
@@ -48,9 +48,9 @@ const CartitemList = () => {
                   }
                 >
                   -
-                </div>
+                </StyledQuantityManagers>
                 {item.quantity}
-                <div
+                <StyledQuantityManagers
                   onClick={() =>
                     updateItemQuantity(
                       item.id,
@@ -59,7 +59,7 @@ const CartitemList = () => {
                   }
                 >
                   +
-                </div>
+                </StyledQuantityManagers>
               </StyledQuantityContainer>
             </div>
           </div>
@@ -134,11 +134,16 @@ const StyledQuantityContainer = styled.div`
   }
 `;
 
+const StyledQuantityManagers = styled.div`
+  cursor: pointer;
+`;
+
 const StyledBinIcon = styled(IoTrashBin)`
   display: block;
   padding: 0.8rem;
   font-size: 4.5rem;
   border-radius: 50%;
+  cursor: pointer;
   box-shadow: ${({ theme }) => theme.shadows.v1Shadow};
   color: ${({ theme }) => theme.colors.defaultFont};
   background: linear-gradient(
