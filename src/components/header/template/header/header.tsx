@@ -1,5 +1,3 @@
-"use client";
-
 import styled from "styled-components";
 import Link from "next/link";
 import Image from "next/image";
@@ -9,13 +7,11 @@ import NavbarModal from "@/components/header/organsim/navbar-modal/navbarModal";
 import NavLinksContainerDesktop from "../../molecule/nav-links-container/navLinksContainerDesktop";
 import NavButton from "@/components/header/atom/nav-button/navButton";
 import CartCounter from "../../atom/cart-counter/cartCounter";
-import { useMediaQuery } from "react-responsive";
-import dynamic from "next/dynamic";
+import useWindowSize from "@/components/useWindowSize/useWindowSize";
 
-const Header = () => {
+export default function Header() {
   const [navModalOpen, setNavModalOpen] = useState(false);
-  const isSmallScreen = useMediaQuery({ query: "(max-width: 1008px)" });
-  const isBigScreen = useMediaQuery({ query: "(min-width: 1008px)" });
+  const isBigScreen = useWindowSize();
 
   return (
     <StyledHeaderContainer>
@@ -47,7 +43,7 @@ const Header = () => {
             </StyledCartDesktopContainer>
           </StyledLink>
           <CartCounter />
-          {isSmallScreen && (
+          {!isBigScreen && (
             <NavButton
               navModalOpen={navModalOpen}
               onClick={() => setNavModalOpen(!navModalOpen)}
@@ -57,9 +53,7 @@ const Header = () => {
       </StyledDesktopNavContainer>
     </StyledHeaderContainer>
   );
-};
-
-export default dynamic(() => Promise.resolve(Header), { ssr: false });
+}
 
 const StyledHeaderContainer = styled.div`
   display: flex;

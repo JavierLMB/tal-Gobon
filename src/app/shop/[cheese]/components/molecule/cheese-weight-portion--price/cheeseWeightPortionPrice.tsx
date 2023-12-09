@@ -77,7 +77,7 @@ export default function CheeseWeightPortionPrice({
         >
           {Array.from({ length: 5 }, (_, index) => (
             <StyledOption key={index + 1} value={index + 1}>
-              {index + 1}
+              {index + 1 > 1 ? `${index + 1} pcs` : `${index + 1} pc`}
             </StyledOption>
           ))}
         </StyledSelect>

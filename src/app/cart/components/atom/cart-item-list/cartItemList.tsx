@@ -1,11 +1,9 @@
-"use client";
 import styled from "styled-components";
 import { IoTrashBin } from "react-icons/io5";
 import { useCart } from "react-use-cart";
-import dynamic from "next/dynamic";
 import Image from "next/image";
 
-const CartitemList = () => {
+export default function CartitemList() {
   const { items, updateItemQuantity, removeItem } = useCart();
 
   function handleQuantity(quantity: any, calc: any) {
@@ -77,9 +75,7 @@ const CartitemList = () => {
       ))}
     </>
   );
-};
-
-export default dynamic(() => Promise.resolve(CartitemList), { ssr: false });
+}
 
 const StyledCartItem = styled.div`
   display: grid;

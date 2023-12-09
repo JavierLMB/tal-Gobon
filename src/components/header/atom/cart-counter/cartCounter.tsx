@@ -1,9 +1,7 @@
-"use client";
-import dynamic from "next/dynamic";
 import styled from "styled-components";
 import { useCart } from "react-use-cart";
 
-const CartCounter = () => {
+export default function CartCounter() {
   const { totalUniqueItems } = useCart();
 
   return (
@@ -11,7 +9,7 @@ const CartCounter = () => {
       <div>{totalUniqueItems ? totalUniqueItems : ""}</div>
     </StyledCartAnimationCointainer>
   );
-};
+}
 
 const StyledCartAnimationCointainer = styled.div`
   display: grid;
@@ -25,5 +23,3 @@ const StyledCartAnimationCointainer = styled.div`
   font-size: ${({ theme }) => theme.fonts.smallFont};
   color: ${({ theme }) => theme.colors.primaryLight};
 `;
-
-export default dynamic(() => Promise.resolve(CartCounter), { ssr: false });

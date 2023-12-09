@@ -1,4 +1,3 @@
-"use client";
 import Link from "next/link";
 import styled from "styled-components";
 import CartItemList from "../../atom/cart-item-list/cartItemList";

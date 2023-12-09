@@ -1,4 +1,3 @@
-// "use client";
 import styled from "styled-components";
 import PreviewCard from "../../atom/preview-card/previewCard";
 import { CheeseDataType } from "../../organism/shop-view-container/useCheeseData";

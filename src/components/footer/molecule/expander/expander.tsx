@@ -1,7 +1,7 @@
 import { useState, ReactNode } from "react";
 import styled, { css } from "styled-components";
 import ExpanderButton from "../../atom/expander-button/expanderButton";
-import { useMediaQuery } from "react-responsive";
+import useWindowSize from "@/components/useWindowSize/useWindowSize";
 
 type ExpanderProps = {
   children: ReactNode;
@@ -15,13 +15,13 @@ export default function Expander({
   expanderState = false,
 }: ExpanderProps) {
   const [expanderOpen, setExpanderOpen] = useState(expanderState);
-  const isSmallScreen = useMediaQuery({ query: "(max-width: 1008px)" });
+  const isBigScreen = useWindowSize();
 
   return (
     <StyledFooterExpanderContainer>
       <StyledExpanderHeader>
         <div onClick={() => setExpanderOpen(!expanderOpen)}>{title}</div>
-        {isSmallScreen && (
+        {!isBigScreen && (
           <ExpanderButton
             expanderOpen={expanderOpen}
             onClick={() => setExpanderOpen(!expanderOpen)}
