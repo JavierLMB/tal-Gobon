@@ -27,6 +27,7 @@ export default function PreviewCardContainer({
         {activeProducts.map(({ id, images, name, animal, pricePerKg }) => (
           <PreviewCard
             key={id}
+            id={id}
             image1={images.image1}
             name={name}
             animal={animal}
