@@ -65,6 +65,7 @@ const StyledHeaderContainer = styled.div`
   position: sticky;
   top: 0rem;
   z-index: 4;
+  height: 7rem;
   box-shadow: ${({ theme }) => theme.shadows.v1Shadow};
   background: linear-gradient(
     45deg,
