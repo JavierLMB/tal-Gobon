@@ -99,4 +99,14 @@ const StyledLink = styled(Link)<{ $inView: boolean }>`
     border-radius: 1rem;
     margin-bottom: 10rem;
   }
+
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.accentGoldLight};
+    box-shadow: ${({ theme }) => theme.shadows.v2Shadow};
+  }
+
+  &:active {
+    transform: translateY(3px);
+    box-shadow: none;
+  }
 `;

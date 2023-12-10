@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { animalImages } from "./usePreviewCardAnimalIcons";
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import { useMediaQuery } from "react-responsive";
 import useWindowSize from "@/components/useWindowSize/useWindowSize";
 
 type PreviewCardProps = {
@@ -29,7 +28,7 @@ export default function PreviewCard({
   onClick,
   id,
 }: PreviewCardProps) {
-  const isBigScreen = useWindowSize();
+  const [isBigScreen] = useWindowSize();
   const animalIcons = animalImages[animal];
   const [cheeseName, setCheeseName] = useState(name);
 

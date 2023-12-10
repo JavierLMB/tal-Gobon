@@ -111,6 +111,7 @@ const StyledNewsletterButton = styled.button`
   text-align: center;
   border-radius: 0.5rem;
   width: 100%;
+  transition: all 0.5s cubic-bezier(0.01, -0.02, 0.51, 1.6);
   box-shadow: ${({ theme }) => theme.shadows.v1Shadow};
   font-size: ${({ theme }) => theme.fonts.defaultFont};
   color: ${({ theme }) => theme.colors.primaryLight};
@@ -118,5 +119,15 @@ const StyledNewsletterButton = styled.button`
   @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
     width: 20rem;
     border-radius: 1rem;
+  }
+
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.accentGoldLight};
+    box-shadow: ${({ theme }) => theme.shadows.v2Shadow};
+  }
+
+  &:active {
+    transform: translateY(3px);
+    box-shadow: none;
   }
 `;

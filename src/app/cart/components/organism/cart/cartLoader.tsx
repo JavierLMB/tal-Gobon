@@ -9,8 +9,8 @@ export default function CartLoader() {
       </StyledCheeseContainer>
       <StyledDotsContainer>
         <StyledDot delay="0s" />
-        <StyledDot delay="0.3s" />
-        <StyledDot delay="0.6s" />
+        <StyledDot delay="0.2s" />
+        <StyledDot delay="0.4s" />
       </StyledDotsContainer>
     </StyledLoaderContainer>
   );
@@ -30,7 +30,7 @@ const spin = keyframes`
 const StyledCheeseContainer = styled.div`
   padding: 2rem;
   border-radius: 50%;
-  animation: ${spin} 2s infinite;
+  animation: ${spin} 0.9s linear infinite;
   background: linear-gradient(
     45deg,
     ${({ theme }) => theme.colors.primaryDark},
@@ -64,6 +64,6 @@ const StyledDot = styled.div<{ delay: string }>`
   height: 10px;
   border-radius: 50%;
   margin: 0 4px;
-  animation: ${dotFade} 2s infinite ${({ delay }) => delay || "0s"};
+  animation: ${dotFade} 0.9s infinite ${({ delay }) => delay || "0s"};
   background-color: ${({ theme }) => theme.colors.primaryDark};
 `;

@@ -11,7 +11,7 @@ import useWindowSize from "@/components/useWindowSize/useWindowSize";
 
 export default function Header() {
   const [navModalOpen, setNavModalOpen] = useState(false);
-  const isBigScreen = useWindowSize();
+  const [isBigScreen, isSmallScreen] = useWindowSize();
 
   return (
     <StyledHeaderContainer>
@@ -36,14 +36,14 @@ export default function Header() {
         <StyledIcon>
           <StyledLink href="/cart">
             <StyledCartDesktopContainer>
-              <StyledCartIcon />
+              {(isBigScreen || isSmallScreen) && <StyledCartIcon />}
               {isBigScreen && (
                 <StyledCartDesktopName>Cart</StyledCartDesktopName>
               )}
             </StyledCartDesktopContainer>
           </StyledLink>
           <CartCounter />
-          {!isBigScreen && (
+          {isSmallScreen && (
             <NavButton
               navModalOpen={navModalOpen}
               onClick={() => setNavModalOpen(!navModalOpen)}

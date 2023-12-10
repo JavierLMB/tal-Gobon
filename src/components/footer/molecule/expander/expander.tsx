@@ -15,7 +15,7 @@ export default function Expander({
   expanderState = false,
 }: ExpanderProps) {
   const [expanderOpen, setExpanderOpen] = useState(expanderState);
-  const isBigScreen = useWindowSize();
+  const [isBigScreen] = useWindowSize();
 
   return (
     <StyledFooterExpanderContainer>

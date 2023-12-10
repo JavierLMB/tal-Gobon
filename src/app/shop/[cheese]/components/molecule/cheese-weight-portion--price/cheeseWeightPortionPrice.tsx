@@ -3,6 +3,9 @@ import styled, { css } from "styled-components";
 import { weightOptions } from "./useCheeseWeightOptions";
 import { useCart } from "react-use-cart";
 import AddedToCartModal from "../../atom/added-to-cart-modal/addedToCartModal";
+import { Alkatra } from "next/font/google";
+
+const alkatra = Alkatra({ subsets: ["latin"] });
 
 type CheeseWeightPortionPriceProps = {
   cheeseObject?: {
@@ -100,6 +103,7 @@ export default function CheeseWeightPortionPrice({
 const StyledWeightMainContainer = styled.div`
   padding: 0rem 2rem;
   margin: 0rem 2rem;
+
   border-bottom: 1px solid ${({ theme }) => theme.colors.primaryLight};
   @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
     border: none;
@@ -130,6 +134,7 @@ const StyledSelect = styled.select`
   font-weight: 400;
   padding: 0.5rem;
   border-radius: 4px;
+  font-family: ${alkatra.style.fontFamily};
   box-shadow: ${({ theme }) => theme.shadows.v3Shadow};
   font-size: ${({ theme }) => theme.fonts.defaultFont};
   color: ${({ theme }) => theme.colors.primaryLight};
@@ -177,10 +182,11 @@ const StyledPriceAmount = styled.h2`
 
 const StyledAddToCartButton = styled.button`
   margin-bottom: 2rem;
-  padding: 0.5rem;
+  padding: 0.2rem;
   text-align: center;
   border-radius: 0.5rem;
   width: 100%;
+  transition: all 0.5s cubic-bezier(0.01, -0.02, 0.51, 1.6);
   border: 1px solid ${({ theme }) => theme.colors.primaryLight};
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
   font-size: ${({ theme }) => theme.fonts.defaultFont};
@@ -188,5 +194,15 @@ const StyledAddToCartButton = styled.button`
   background-color: ${({ theme }) => theme.colors.accentGoldLighter};
   @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
     font-size: ${({ theme }) => theme.fonts.header3Font};
+  }
+
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.accentGoldLight};
+    box-shadow: ${({ theme }) => theme.shadows.v2Shadow};
+  }
+
+  &:active {
+    transform: translateY(3px);
+    box-shadow: none;
   }
 `;

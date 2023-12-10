@@ -38,11 +38,19 @@ const StyledContinueBrowsingCointainer = styled.div`
   margin-right: 2rem;
   line-height: 1.2;
   gap: 0.5rem;
+  transition: all 0.5s cubic-bezier(0.01, -0.02, 0.51, 1.6);
   color: ${({ theme }) => theme.colors.primaryLight};
   font-size: ${({ theme }) => theme.fonts.smallFont};
-
   @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
     font-size: ${({ theme }) => theme.fonts.defaultFont};
+  }
+
+  &:hover {
+    transform: translateX(-3px);
+  }
+
+  &:active {
+    transform: translateX(-1px);
   }
 `;
 

@@ -132,6 +132,9 @@ const StyledQuantityContainer = styled.div`
 
 const StyledQuantityManagers = styled.div`
   cursor: pointer;
+  &:active {
+    transform: translateY(1px);
+  }
 `;
 
 const StyledBinIcon = styled(IoTrashBin)`
@@ -150,6 +153,17 @@ const StyledBinIcon = styled(IoTrashBin)`
   @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
     font-size: 7rem;
     padding: 1rem;
+  }
+
+  &:hover {
+    background: ${({ theme }) => theme.colors.primaryDark};
+    box-shadow: ${({ theme }) => theme.shadows.v2Shadow};
+  }
+
+  &:active {
+    transform: translateY(3px);
+    background: ${({ theme }) => theme.colors.primaryLight};
+    box-shadow: none;
   }
 `;
 

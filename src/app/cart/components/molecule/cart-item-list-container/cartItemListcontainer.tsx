@@ -118,6 +118,7 @@ const StyledCheckOutButton = styled.button`
   text-align: center;
   border-radius: 0.5rem;
   width: 70%;
+  transition: all 0.5s cubic-bezier(0.01, -0.02, 0.51, 1.6);
   border: 1px solid ${({ theme }) => theme.colors.primaryLight};
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
   font-size: ${({ theme }) => theme.fonts.defaultFont};
@@ -127,18 +128,35 @@ const StyledCheckOutButton = styled.button`
     font-size: ${({ theme }) => theme.fonts.header3Font};
     width: 20%;
   }
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.accentGoldLight};
+    box-shadow: ${({ theme }) => theme.shadows.v2Shadow};
+  }
+
+  &:active {
+    transform: translateY(3px);
+    box-shadow: none;
+  }
 `;
 
 const StyledContinueBrowsingCointainer = styled.div`
   display: flex;
   align-items: center;
   padding: 0rem 0.5rem;
+  line-height: 1.2;
+  transition: all 0.5s cubic-bezier(0.01, -0.02, 0.51, 1.6);
   color: ${({ theme }) => theme.colors.primaryLight};
   font-size: ${({ theme }) => theme.fonts.smallFont};
-  line-height: 1.2;
   @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
     font-size: ${({ theme }) => theme.fonts.defaultFont};
     gap: 0.5rem;
+  }
+  &:hover {
+    transform: translateX(-3px);
+  }
+
+  &:active {
+    transform: translateX(-1px);
   }
 `;
 
@@ -159,6 +177,7 @@ const StyledCartTitleSection = styled.h3`
 const StyledClearButton = styled.button`
   padding: 0.5rem 1rem;
   border-radius: 0.3rem;
+  transition: all 0.2s cubic-bezier(0.01, -0.02, 0.51, 1.6);
   font-size: ${({ theme }) => theme.fonts.smallFont};
   color: ${({ theme }) => theme.colors.defaultFont};
   background: linear-gradient(
@@ -168,6 +187,10 @@ const StyledClearButton = styled.button`
   );
   @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
     font-size: ${({ theme }) => theme.fonts.defaultFont};
+  }
+
+  &:active {
+    transform: translateY(2px);
   }
 `;
 

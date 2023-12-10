@@ -37,8 +37,6 @@ export default function RootLayout({
 }
 
 const StyledBody = styled.body`
-  /* background-color: #fff2db; */
-
   background: linear-gradient(
     90deg,
     ${({ theme }) => theme.colors.primaryDark},
