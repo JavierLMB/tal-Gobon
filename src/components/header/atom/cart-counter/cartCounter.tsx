@@ -1,12 +1,18 @@
 import styled from "styled-components";
 import { useCart } from "react-use-cart";
+import { useState, useEffect } from "react";
 
 export default function CartCounter() {
   const { totalUniqueItems } = useCart();
+  const [uniqueItems, setUniqueItems] = useState(0);
+
+  useEffect(() => {
+    setUniqueItems(totalUniqueItems);
+  }, [totalUniqueItems]);
 
   return (
     <StyledCartAnimationCointainer>
-      <div>{totalUniqueItems ? totalUniqueItems : ""}</div>
+      <div>{uniqueItems ? uniqueItems : ""}</div>
     </StyledCartAnimationCointainer>
   );
 }
