@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { animalImages } from "./usePreviewCardAnimalIcons";
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import { useMediaQuery } from "react-responsive";
 import useWindowSize from "@/components/useWindowSize/useWindowSize";
 
 type PreviewCardProps = {

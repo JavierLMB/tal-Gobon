@@ -3,14 +3,13 @@ import styled from "styled-components";
 import CartItemList from "../../atom/cart-item-list/cartItemList";
 import { useEffect, useState } from "react";
 import { useCart } from "react-use-cart";
+import dynamic from "next/dynamic";
 
 type CartItemListContainerProps = {
   onClick: () => void;
 };
 
-export default function CartItemListContainer({
-  onClick,
-}: CartItemListContainerProps) {
+function CartItemListContainer({ onClick }: CartItemListContainerProps) {
   const [totalCartPrice, setTotalCartPrice] = useState(0);
   const { items, emptyCart } = useCart();
 
@@ -24,34 +23,42 @@ export default function CartItemListContainer({
 
   return (
     <div>
-      <StyledCartItemListContainer>
-        <StyledCartItem>
-          <StyledLink href="/shop">
-            <StyledContinueBrowsingCointainer>
-              <StyledContinueBrowsingArrrow>
-                &larr;
-              </StyledContinueBrowsingArrrow>
-              <div>Continue Browsing</div>
-            </StyledContinueBrowsingCointainer>
-          </StyledLink>
-          <div />
-          <StyledCartTitleSection>Total</StyledCartTitleSection>
-          <StyledClearButton onClick={emptyCart}>Clear</StyledClearButton>
-        </StyledCartItem>
-        <CartItemList />
-        <StyledSubtotalContainer>
-          <div>SUBTOTAL</div>
-          <StyledSubtotalPrice>{totalCartPrice}</StyledSubtotalPrice>
-        </StyledSubtotalContainer>
-        <StyledCheckOutButtonContainer>
-          <StyledCheckOutButton onClick={onClick}>
-            Check Out
-          </StyledCheckOutButton>
-        </StyledCheckOutButtonContainer>
-      </StyledCartItemListContainer>
+      {items.length > 0 ? (
+        <StyledCartItemListContainer>
+          <StyledCartItem>
+            <StyledLink href="/shop">
+              <StyledContinueBrowsingCointainer>
+                <StyledContinueBrowsingArrrow>
+                  &larr;
+                </StyledContinueBrowsingArrrow>
+                <div>Continue Browsing</div>
+              </StyledContinueBrowsingCointainer>
+            </StyledLink>
+            <div />
+            <StyledCartTitleSection>Total</StyledCartTitleSection>
+            <StyledClearButton onClick={emptyCart}>Clear</StyledClearButton>
+          </StyledCartItem>
+          <CartItemList />
+          <StyledSubtotalContainer>
+            <div>SUBTOTAL</div>
+            <StyledSubtotalPrice>{totalCartPrice}</StyledSubtotalPrice>
+          </StyledSubtotalContainer>
+          <StyledCheckOutButtonContainer>
+            <StyledCheckOutButton onClick={onClick}>
+              Check Out
+            </StyledCheckOutButton>
+          </StyledCheckOutButtonContainer>
+        </StyledCartItemListContainer>
+      ) : (
+        <StyledEmptyCart>Your cart is empty...</StyledEmptyCart>
+      )}
     </div>
   );
 }
+
+export default dynamic(() => Promise.resolve(CartItemListContainer), {
+  ssr: false,
+});
 
 const StyledCartItemListContainer = styled.div`
   max-width: 170rem;
@@ -166,4 +173,21 @@ const StyledClearButton = styled.button`
 
 const StyledLink = styled(Link)`
   text-decoration: none;
+`;
+
+const StyledEmptyCart = styled.div`
+  display: inline-block;
+  padding: 3rem 5rem;
+  border-radius: 0.5rem;
+  font-size: ${({ theme }) => theme.fonts.header2Font};
+  color: ${({ theme }) => theme.colors.accentGoldLighter};
+  background: linear-gradient(
+    45deg,
+    ${({ theme }) => theme.colors.primaryDark},
+    ${({ theme }) => theme.colors.primaryLight}
+  );
+  @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
+    font-size: ${({ theme }) => theme.fonts.header1Font};
+    border-radius: 1rem;
+  }
 `;
