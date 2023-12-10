@@ -79,7 +79,7 @@ const StyledAdditionalInfoContainer = styled.div`
 `;
 
 const StyledAdditionalInfoTitle = styled.div`
-  font-weight: 200;
+  font-weight: 700;
   font-size: ${({ theme }) => theme.fonts.defaultFont};
   @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
     font-size: ${({ theme }) => theme.fonts.header2Font};
@@ -87,7 +87,7 @@ const StyledAdditionalInfoTitle = styled.div`
 `;
 
 const StyledAdditionalInfoValue = styled.span`
-  font-weight: 700;
+  font-weight: 200;
   font-size: ${({ theme }) => theme.fonts.defaultFont};
   @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
     font-size: ${({ theme }) => theme.fonts.header2Font};

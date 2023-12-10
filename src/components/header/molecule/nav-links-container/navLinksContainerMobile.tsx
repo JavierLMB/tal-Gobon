@@ -16,11 +16,11 @@ export default function NavLinksContainerMobile({
       <NavLinks link={"/"} name={"Home"} onClick={onClick}>
         <StyledHomeIcon />
       </NavLinks>
-      <NavLinks link={"/shop"} name={"Shop"} onClick={onClick}>
-        <StyledShopIcon />
-      </NavLinks>
       <NavLinks link={"/about"} name={"About"} onClick={onClick}>
         <StyledAboutIcon />
+      </NavLinks>
+      <NavLinks link={"/shop"} name={"Shop"} onClick={onClick}>
+        <StyledShopIcon />
       </NavLinks>
       <NavLinks link={"/cart"} name={"Cart"} onClick={onClick}>
         <StyledCartIcon />
@@ -39,7 +39,6 @@ const StyledContentContainer = styled.div`
 const commonIconStyles = css`
   padding: 0.5rem;
   font-size: 5rem;
-  color: ${({ theme }) => theme.colors.accentGoldLighter};
 `;
 
 const StyledHomeIcon = styled(FaHome)`

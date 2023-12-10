@@ -62,4 +62,7 @@ const StyledTitle = styled.h2`
   padding: 0rem 1rem;
   font-size: ${({ theme }) => theme.fonts.header2Font};
   text-decoration: underline;
+  @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
+    font-size: ${({ theme }) => theme.fonts.header1Font};
+  }
 `;

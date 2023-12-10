@@ -79,6 +79,9 @@ const StyledCartItem = styled.div`
   margin: 1rem 1rem 0rem 1rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid ${({ theme }) => theme.colors.primaryLight};
+  @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
+    gap: 15rem;
+  }
 `;
 
 const StyledSubtotalContainer = styled.div`

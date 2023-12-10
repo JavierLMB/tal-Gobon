@@ -168,7 +168,7 @@ const StyledPriceContainer = styled.div<{ $selectedWeight: string }>`
   `};
 
   @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
-    font-size: ${({ theme }) => theme.fonts.header1Font};
+    font-size: ${({ theme }) => theme.fonts.header2Font};
   }
 `;
 

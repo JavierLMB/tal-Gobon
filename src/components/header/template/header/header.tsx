@@ -15,10 +15,12 @@ export default function Header() {
 
   return (
     <StyledHeaderContainer>
-      <NavbarModal
-        navModalOpen={navModalOpen}
-        onClick={() => setNavModalOpen(!navModalOpen)}
-      />
+      {isSmallScreen && (
+        <NavbarModal
+          navModalOpen={navModalOpen}
+          onClick={() => setNavModalOpen(!navModalOpen)}
+        />
+      )}
       <StyledLink href="/">
         <StyledLogoContainer onClick={() => setNavModalOpen(false)}>
           <StyledLogoImage
@@ -84,12 +86,15 @@ const StyledCartDesktopContainer = styled.div`
   align-items: center;
   line-height: 1;
   gap: 1.5rem;
+  color: ${({ theme }) => theme.colors.accentGoldLighter};
+  &:hover {
+    color: ${({ theme }) => theme.colors.accentGoldLight};
+  }
 `;
 
 const StyledCartDesktopName = styled.div`
   font-size: 3rem;
   height: 2rem;
-  color: ${({ theme }) => theme.colors.accentGoldLighter};
 `;
 
 const StyledLogoContainer = styled.div`
@@ -101,6 +106,9 @@ const StyledLogoContainer = styled.div`
 const StyledLogoName = styled.div`
   font-size: ${({ theme }) => theme.fonts.header1Font};
   color: ${({ theme }) => theme.colors.accentGoldLighter};
+  &:hover {
+    color: ${({ theme }) => theme.colors.accentGoldLight};
+  }
 `;
 
 const StyledIcon = styled.div`
@@ -125,5 +133,4 @@ const StyledLogoImage = styled(Image)`
 
 const StyledCartIcon = styled(FaCartShopping)`
   display: block;
-  color: ${({ theme }) => theme.colors.accentGoldLighter};
 `;
