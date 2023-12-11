@@ -22,7 +22,7 @@ export const theme = {
   },
   breakpoints: {
     bpLargest: "111rem", // 1776
-    bpLarge: "96rem",
+    bpLarge: "96rem", // 1536
     bpNormal: "85rem", // 1360
     bpNormals: "63rem", // 1008
     bpSmall: "45rem", // 720

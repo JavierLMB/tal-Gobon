@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Tal-Ġobon
 
-## Getting Started
+Live link - https://tal-gobon.vercel.app/
 
-First, run the development server:
+## **Tal-Ġobon Site**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Welcome to tal-Ġobon, the ultimate destination for premium cheeses! 🧀
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This repository features a conceptual e-commerce website created for creative exploration and frontend development practice. Dive into the world of tal-Gobon, where an unparalleled selection of exquisite cheeses is curated for true connoisseurs.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## **Site Preview**
 
-## Learn More
+<img src="/public/Gobon Preview.png" alt="Website Preview">
 
-To learn more about Next.js, take a look at the following resources:
+## **Overview**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. **React and Next.js Integration:** Powered by React.js and Next.js, tal-Ġobon embraces modern practices for a dynamic user interface.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+2. **Responsive Design:** With a mobile-first approach, tal-Ġobon ensures flawless functionality on all devices.
 
-## Deploy on Vercel
+## **Features**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. **Dynamic Cart:** Effortlessly explore and shop with the React Cart Library, providing real-time updates.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+2. **Engaging Carousel:** Showcase the premium cheese collection with a visually appealing React Carousel Library.
+
+3. **Smooth Animations:** Craft a delightful user experience with subtle React animations within the viewport.
+
+4. **Data Manipulation:** Implement seamless data handling for accurate and efficient processing of premium cheese information.
+
+5. **Filter, Sort, and Search System:** Navigate the extensive cheese collection with an intuitive system. Filter by type, sort by preferences, and find your favorite cheese with powerful search functionality.
+
+## **Technologies Used**
+
+- HTML
+- CSS
+- JavaScript
+- TypeScript
+- React.js
+- Next.js
+- Styled-Components
+
+## **How to Run Locally**
+
+1. Clone the repository to your local machine
+2. Install dependencies
+3. Start the development server
+4. Open your web browser and navigate to http://localhost:3000 to access the site.
+
+## **Author**
+
+- Javier C
+  - GitHub: [https://github.com/JavierLMB](https://github.com/JavierLMB)
+
+## **License**
+
+This project is licensed under the MIT License.
+See [MIT License](https://opensource.org/licenses/mit-license.php) for details.
