@@ -14,7 +14,16 @@ type CheeseObjectType = {
   country: string;
   animal: string;
   pricePerKg: number;
-  images: { [key: string]: string };
+  imagesSmall: {
+    image1Small: any;
+    image2Small: any;
+    image3Small: any;
+  };
+  imagesBig: {
+    image1Big: any;
+    image2Big: any;
+    image3Big: any;
+  };
 };
 
 type CheesePageProps = {

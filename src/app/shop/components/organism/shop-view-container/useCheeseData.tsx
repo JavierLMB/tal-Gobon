@@ -1,12 +1,14 @@
 export type CheeseDataType = {
   id: number;
-  images: {
-    image1Small: string;
-    image2Small: string;
-    image3Small: string;
-    image1Big: string;
-    image2Big: string;
-    image3Big: string;
+  imagesSmall: {
+    image1Small: any;
+    image2Small: any;
+    image3Small: any;
+  };
+  imagesBig: {
+    image1Big: any;
+    image2Big: any;
+    image3Big: any;
   };
   name: string;
   desc: string;
@@ -25,10 +27,12 @@ export type CheeseDataType = {
 export const cheesesData: CheeseDataType[] = [
   {
     id: 1,
-    images: {
+    imagesSmall: {
       image1Small: "/previewCardCheeseImages/small/1Brie/BrieCheese1.jpg",
       image2Small: "/previewCardCheeseImages/small/1Brie/BrieCheese2.jpg",
       image3Small: "/previewCardCheeseImages/small/1Brie/BrieCheese3.jpg",
+    },
+    imagesBig: {
       image1Big: "/previewCardCheeseImages/big/1Brie/BrieCheese1.jpg",
       image2Big: "/previewCardCheeseImages/big/1Brie/BrieCheese2.jpg",
       image3Big: "/previewCardCheeseImages/big/1Brie/BrieCheese3.jpg",
@@ -41,10 +45,12 @@ export const cheesesData: CheeseDataType[] = [
   },
   {
     id: 2,
-    images: {
+    imagesSmall: {
       image1Small: "/previewCardCheeseImages/small/2Cheddar/CheddarCheese1.jpg",
       image2Small: "/previewCardCheeseImages/small/2Cheddar/CheddarCheese2.jpg",
       image3Small: "/previewCardCheeseImages/small/2Cheddar/CheddarCheese3.jpg",
+    },
+    imagesBig: {
       image1Big: "/previewCardCheeseImages/big/2Cheddar/CheddarCheese1.jpg",
       image2Big: "/previewCardCheeseImages/big/2Cheddar/CheddarCheese2.jpg",
       image3Big: "/previewCardCheeseImages/big/2Cheddar/CheddarCheese3.jpg",
@@ -57,10 +63,12 @@ export const cheesesData: CheeseDataType[] = [
   },
   {
     id: 3,
-    images: {
+    imagesSmall: {
       image1Small: "/previewCardCheeseImages/small/3Gouda/GoudaCheese1.jpg",
       image2Small: "/previewCardCheeseImages/small/3Gouda/GoudaCheese2.jpg",
       image3Small: "/previewCardCheeseImages/small/3Gouda/GoudaCheese3.jpg",
+    },
+    imagesBig: {
       image1Big: "/previewCardCheeseImages/big/3Gouda/GoudaCheese1.jpg",
       image2Big: "/previewCardCheeseImages/big/3Gouda/GoudaCheese2.jpg",
       image3Big: "/previewCardCheeseImages/big/3Gouda/GoudaCheese3.jpg",
@@ -73,10 +81,12 @@ export const cheesesData: CheeseDataType[] = [
   },
   {
     id: 4,
-    images: {
+    imagesSmall: {
       image1Small: "/previewCardCheeseImages/small/4Feta/FetaCheese1.jpg",
       image2Small: "/previewCardCheeseImages/small/4Feta/FetaCheese2.jpg",
       image3Small: "/previewCardCheeseImages/small/4Feta/FetaCheese3.jpg",
+    },
+    imagesBig: {
       image1Big: "/previewCardCheeseImages/big/4Feta/FetaCheese1.jpg",
       image2Big: "/previewCardCheeseImages/big/4Feta/FetaCheese2.jpg",
       image3Big: "/previewCardCheeseImages/big/4Feta/FetaCheese3.jpg",
@@ -89,13 +99,15 @@ export const cheesesData: CheeseDataType[] = [
   },
   {
     id: 5,
-    images: {
+    imagesSmall: {
       image1Small:
         "/previewCardCheeseImages/small/5Manchego/ManchegoCheese1.jpg",
       image2Small:
         "/previewCardCheeseImages/small/5Manchego/ManchegoCheese2.jpg",
       image3Small:
         "/previewCardCheeseImages/small/5Manchego/ManchegoCheese3.jpg",
+    },
+    imagesBig: {
       image1Big: "/previewCardCheeseImages/big/5Manchego/ManchegoCheese1.jpg",
       image2Big: "/previewCardCheeseImages/big/5Manchego/ManchegoCheese2.jpg",
       image3Big: "/previewCardCheeseImages/big/5Manchego/ManchegoCheese3.jpg",
@@ -108,10 +120,12 @@ export const cheesesData: CheeseDataType[] = [
   },
   {
     id: 6,
-    images: {
+    imagesSmall: {
       image1Small: "/previewCardCheeseImages/small/6Gruyere/GruyereCheese1.jpg",
       image2Small: "/previewCardCheeseImages/small/6Gruyere/GruyereCheese2.jpg",
       image3Small: "/previewCardCheeseImages/small/6Gruyere/GruyereCheese3.jpg",
+    },
+    imagesBig: {
       image1Big: "/previewCardCheeseImages/big/6Gruyere/GruyereCheese1.jpg",
       image2Big: "/previewCardCheeseImages/big/6Gruyere/GruyereCheese2.jpg",
       image3Big: "/previewCardCheeseImages/big/6Gruyere/GruyereCheese3.jpg",
@@ -124,13 +138,15 @@ export const cheesesData: CheeseDataType[] = [
   },
   {
     id: 7,
-    images: {
+    imagesSmall: {
       image1Small:
         "/previewCardCheeseImages/small/7Parmesan/ParmesanCheese1.jpg",
       image2Small:
         "/previewCardCheeseImages/small/7Parmesan/ParmesanCheese2.jpg",
       image3Small:
         "/previewCardCheeseImages/small/7Parmesan/ParmesanCheese3.jpg",
+    },
+    imagesBig: {
       image1Big: "/previewCardCheeseImages/big/7Parmesan/ParmesanCheese1.jpg",
       image2Big: "/previewCardCheeseImages/big/7Parmesan/ParmesanCheese2.jpg",
       image3Big: "/previewCardCheeseImages/big/7Parmesan/ParmesanCheese3.jpg",
@@ -143,10 +159,12 @@ export const cheesesData: CheeseDataType[] = [
   },
   {
     id: 8,
-    images: {
+    imagesSmall: {
       image1Small: "/previewCardCheeseImages/small/8Blue/BlueCheese1.jpg",
       image2Small: "/previewCardCheeseImages/small/8Blue/BlueCheese2.jpg",
       image3Small: "/previewCardCheeseImages/small/8Blue/BlueCheese3.jpg",
+    },
+    imagesBig: {
       image1Big: "/previewCardCheeseImages/big/8Blue/BlueCheese1.jpg",
       image2Big: "/previewCardCheeseImages/big/8Blue/BlueCheese2.jpg",
       image3Big: "/previewCardCheeseImages/big/8Blue/BlueCheese3.jpg",
@@ -159,13 +177,15 @@ export const cheesesData: CheeseDataType[] = [
   },
   {
     id: 9,
-    images: {
+    imagesSmall: {
       image1Small:
         "/previewCardCheeseImages/small/9Camembert/CamembertCheese1.jpg",
       image2Small:
         "/previewCardCheeseImages/small/9Camembert/CamembertCheese2.jpg",
       image3Small:
         "/previewCardCheeseImages/small/9Camembert/CamembertCheese3.jpg",
+    },
+    imagesBig: {
       image1Big: "/previewCardCheeseImages/big/9Camembert/CamembertCheese1.jpg",
       image2Big: "/previewCardCheeseImages/big/9Camembert/CamembertCheese2.jpg",
       image3Big: "/previewCardCheeseImages/big/9Camembert/CamembertCheese3.jpg",
@@ -178,13 +198,15 @@ export const cheesesData: CheeseDataType[] = [
   },
   {
     id: 10,
-    images: {
+    imagesSmall: {
       image1Small:
         "/previewCardCheeseImages/small/10Mozzarella/MozzarellaCheese1.jpg",
       image2Small:
         "/previewCardCheeseImages/small/10Mozzarella/MozzarellaCheese2.jpg",
       image3Small:
         "/previewCardCheeseImages/small/10Mozzarella/MozzarellaCheese3.jpg",
+    },
+    imagesBig: {
       image1Big:
         "/previewCardCheeseImages/big/10Mozzarella/MozzarellaCheese1.jpg",
       image2Big:
@@ -200,13 +222,15 @@ export const cheesesData: CheeseDataType[] = [
   },
   {
     id: 11,
-    images: {
+    imagesSmall: {
       image1Small:
         "/previewCardCheeseImages/small/11Havarti/HavartiCheese1.jpg",
       image2Small:
         "/previewCardCheeseImages/small/11Havarti/HavartiCheese2.jpg",
       image3Small:
         "/previewCardCheeseImages/small/11Havarti/HavartiCheese3.jpg",
+    },
+    imagesBig: {
       image1Big: "/previewCardCheeseImages/big/11Havarti/HavartiCheese1.jpg",
       image2Big: "/previewCardCheeseImages/big/11Havarti/HavartiCheese2.jpg",
       image3Big: "/previewCardCheeseImages/big/11Havarti/HavartiCheese3.jpg",
@@ -219,13 +243,15 @@ export const cheesesData: CheeseDataType[] = [
   },
   {
     id: 12,
-    images: {
+    imagesSmall: {
       image1Small:
         "/previewCardCheeseImages/small/12Provolone/ProvoloneCheese1.jpg",
       image2Small:
         "/previewCardCheeseImages/small/12Provolone/ProvoloneCheese2.jpg",
       image3Small:
         "/previewCardCheeseImages/small/12Provolone/ProvoloneCheese3.jpg",
+    },
+    imagesBig: {
       image1Big:
         "/previewCardCheeseImages/big/12Provolone/ProvoloneCheese1.jpg",
       image2Big:
@@ -241,13 +267,15 @@ export const cheesesData: CheeseDataType[] = [
   },
   {
     id: 13,
-    images: {
+    imagesSmall: {
       image1Small:
         "/previewCardCheeseImages/small/13Roquefort/RoquefortCheese1.jpg",
       image2Small:
         "/previewCardCheeseImages/small/13Roquefort/RoquefortCheese2.jpg",
       image3Small:
         "/previewCardCheeseImages/small/13Roquefort/RoquefortCheese3.jpg",
+    },
+    imagesBig: {
       image1Big:
         "/previewCardCheeseImages/big/13Roquefort/RoquefortCheese1.jpg",
       image2Big:
@@ -263,13 +291,15 @@ export const cheesesData: CheeseDataType[] = [
   },
   {
     id: 14,
-    images: {
+    imagesSmall: {
       image1Small:
         "/previewCardCheeseImages/small/14Emmental/EmmentalCheese1.jpg",
       image2Small:
         "/previewCardCheeseImages/small/14Emmental/EmmentalCheese2.jpg",
       image3Small:
         "/previewCardCheeseImages/small/14Emmental/EmmentalCheese3.jpg",
+    },
+    imagesBig: {
       image1Big: "/previewCardCheeseImages/big/14Emmental/EmmentalCheese1.jpg",
       image2Big: "/previewCardCheeseImages/big/14Emmental/EmmentalCheese2.jpg",
       image3Big: "/previewCardCheeseImages/big/14Emmental/EmmentalCheese3.jpg",
@@ -282,13 +312,15 @@ export const cheesesData: CheeseDataType[] = [
   },
   {
     id: 15,
-    images: {
+    imagesSmall: {
       image1Small:
         "/previewCardCheeseImages/small/15MontereyJack/MontereyJackCheese1.jpg",
       image2Small:
         "/previewCardCheeseImages/small/15MontereyJack/MontereyJackCheese2.jpg",
       image3Small:
         "/previewCardCheeseImages/small/15MontereyJack/MontereyJackCheese3.jpg",
+    },
+    imagesBig: {
       image1Big:
         "/previewCardCheeseImages/big/15MontereyJack/MontereyJackCheese1.jpg",
       image2Big:
@@ -304,13 +336,15 @@ export const cheesesData: CheeseDataType[] = [
   },
   {
     id: 16,
-    images: {
+    imagesSmall: {
       image1Small:
         "/previewCardCheeseImages/small/16PepperJack/PepperJackCheese1.jpg",
       image2Small:
         "/previewCardCheeseImages/small/16PepperJack/PepperJackCheese2.jpg",
       image3Small:
         "/previewCardCheeseImages/small/16PepperJack/PepperJackCheese3.jpg",
+    },
+    imagesBig: {
       image1Big:
         "/previewCardCheeseImages/big/16PepperJack/PepperJackCheese1.jpg",
       image2Big:
@@ -326,13 +360,15 @@ export const cheesesData: CheeseDataType[] = [
   },
   {
     id: 17,
-    images: {
+    imagesSmall: {
       image1Small:
         "/previewCardCheeseImages/small/17Fontina/FontinaCheese1.jpg",
       image2Small:
         "/previewCardCheeseImages/small/17Fontina/FontinaCheese2.jpg",
       image3Small:
         "/previewCardCheeseImages/small/17Fontina/FontinaCheese3.jpg",
+    },
+    imagesBig: {
       image1Big: "/previewCardCheeseImages/big/17Fontina/FontinaCheese1.jpg",
       image2Big: "/previewCardCheeseImages/big/17Fontina/FontinaCheese2.jpg",
       image3Big: "/previewCardCheeseImages/big/17Fontina/FontinaCheese3.jpg",
@@ -345,10 +381,12 @@ export const cheesesData: CheeseDataType[] = [
   },
   {
     id: 18,
-    images: {
+    imagesSmall: {
       image1Small: "/previewCardCheeseImages/small/18Swiss/SwissCheese1.jpg",
       image2Small: "/previewCardCheeseImages/small/18Swiss/SwissCheese2.jpg",
       image3Small: "/previewCardCheeseImages/small/18Swiss/SwissCheese3.jpg",
+    },
+    imagesBig: {
       image1Big: "/previewCardCheeseImages/big/18Swiss/SwissCheese1.jpg",
       image2Big: "/previewCardCheeseImages/big/18Swiss/SwissCheese2.jpg",
       image3Big: "/previewCardCheeseImages/big/18Swiss/SwissCheese3.jpg",
@@ -361,13 +399,15 @@ export const cheesesData: CheeseDataType[] = [
   },
   {
     id: 19,
-    images: {
+    imagesSmall: {
       image1Small:
         "/previewCardCheeseImages/small/19Limburger/LimburgerCheese1.jpg",
       image2Small:
         "/previewCardCheeseImages/small/19Limburger/LimburgerCheese2.jpg",
       image3Small:
         "/previewCardCheeseImages/small/19Limburger/LimburgerCheese3.jpg",
+    },
+    imagesBig: {
       image1Big:
         "/previewCardCheeseImages/big/19Limburger/LimburgerCheese1.jpg",
       image2Big:
@@ -383,10 +423,12 @@ export const cheesesData: CheeseDataType[] = [
   },
   {
     id: 20,
-    images: {
+    imagesSmall: {
       image1Small: "/previewCardCheeseImages/small/20Asiago/AsiagoCheese1.jpg",
       image2Small: "/previewCardCheeseImages/small/20Asiago/AsiagoCheese2.jpg",
       image3Small: "/previewCardCheeseImages/small/20Asiago/AsiagoCheese3.jpg",
+    },
+    imagesBig: {
       image1Big: "/previewCardCheeseImages/big/20Asiago/AsiagoCheese1.jpg",
       image2Big: "/previewCardCheeseImages/big/20Asiago/AsiagoCheese2.jpg",
       image3Big: "/previewCardCheeseImages/big/20Asiago/AsiagoCheese3.jpg",

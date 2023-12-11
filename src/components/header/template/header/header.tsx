@@ -26,8 +26,8 @@ export default function Header() {
           <StyledLogoImage
             src={"/GobonLogo/small/GobonLogo.png"}
             alt={"tal Gobon Logo"}
-            width={350}
-            height={350}
+            width={148}
+            height={148}
             priority
           />
           <StyledLogoName>tal-Ġobon</StyledLogoName>

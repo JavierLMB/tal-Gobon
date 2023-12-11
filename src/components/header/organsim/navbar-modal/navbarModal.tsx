@@ -25,8 +25,8 @@ export default function NavbarModal({
               <StyledLogoImage
                 src={"/GobonLogo/small/GobonLogo.png"}
                 alt={"tal Gobon Logo"}
-                width={80}
-                height={80}
+                width={148}
+                height={148}
                 priority
                 onClick={onClick}
               />

@@ -47,6 +47,7 @@ export default function PreviewCard({
         height={660}
         loading={id < 9 ? "eager" : "lazy"}
         priority={id < 9 ? true : undefined}
+        style={{ objectFit: "cover", objectPosition: "center" }}
       />
       <StyledContent>
         <StyledProductContainer>
@@ -85,8 +86,8 @@ const StyledImage = styled(Image)`
   height: 22rem;
   height: clamp(22rem, 30vw, 45rem);
   border-radius: 0.5rem 0.5rem 0rem 0rem;
-  object-fit: center;
-  object-position: center;
+  /* object-fit: center; */
+  /* object-position: center; */
   @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
     border-radius: 1rem 1rem 0rem 0rem;
   }

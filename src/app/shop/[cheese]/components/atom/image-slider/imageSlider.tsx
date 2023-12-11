@@ -1,18 +1,27 @@
 import styled from "styled-components";
 import Image from "next/image";
+import useWindowSize from "@/components/useWindowSize/useWindowSize";
 
 type CheeseObjectProps = {
   cheeseObject?: {
     name: string;
-    images: { [key: string]: string };
+    imagesBig: { [key: string]: string };
+    imagesSmall: { [key: string]: string };
   };
 };
 
 export default function ImageSlider({ cheeseObject }: CheeseObjectProps) {
+  const [isBigScreen, isSmallScreen] = useWindowSize();
+
+  const cheeseImages: { [key: string]: string } | undefined =
+    (isBigScreen && cheeseObject?.imagesBig) ||
+    (isSmallScreen && cheeseObject?.imagesSmall) ||
+    {};
+
   return (
     <StyledImagesContainer>
       {cheeseObject &&
-        Object.entries(cheeseObject.images).map(([key, image]) => (
+        Object.entries(cheeseImages).map(([key, image]) => (
           <StyledImage
             key={key}
             src={image}
