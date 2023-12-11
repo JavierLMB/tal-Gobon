@@ -1,9 +1,12 @@
 export type CheeseDataType = {
   id: number;
   images: {
-    image1: string;
-    image2: string;
-    image3: string;
+    image1Small: string;
+    image2Small: string;
+    image3Small: string;
+    image1Big: string;
+    image2Big: string;
+    image3Big: string;
   };
   name: string;
   desc: string;
@@ -23,9 +26,12 @@ export const cheesesData: CheeseDataType[] = [
   {
     id: 1,
     images: {
-      image1: "/previewCardCheeseImages/small/1Brie/BrieCheese1.jpg",
-      image2: "/previewCardCheeseImages/small/1Brie/BrieCheese2.jpg",
-      image3: "/previewCardCheeseImages/small/1Brie/BrieCheese3.jpg",
+      image1Small: "/previewCardCheeseImages/small/1Brie/BrieCheese1.jpg",
+      image2Small: "/previewCardCheeseImages/small/1Brie/BrieCheese2.jpg",
+      image3Small: "/previewCardCheeseImages/small/1Brie/BrieCheese3.jpg",
+      image1Big: "/previewCardCheeseImages/big/1Brie/BrieCheese1.jpg",
+      image2Big: "/previewCardCheeseImages/big/1Brie/BrieCheese2.jpg",
+      image3Big: "/previewCardCheeseImages/big/1Brie/BrieCheese3.jpg",
     },
     name: "Brie",
     desc: "A soft, creamy French cheese known for its mild flavor and bloomy rind.",
@@ -36,9 +42,12 @@ export const cheesesData: CheeseDataType[] = [
   {
     id: 2,
     images: {
-      image1: "/previewCardCheeseImages/small/2Cheddar/CheddarCheese1.jpg",
-      image2: "/previewCardCheeseImages/small/2Cheddar/CheddarCheese2.jpg",
-      image3: "/previewCardCheeseImages/small/2Cheddar/CheddarCheese3.jpg",
+      image1Small: "/previewCardCheeseImages/small/2Cheddar/CheddarCheese1.jpg",
+      image2Small: "/previewCardCheeseImages/small/2Cheddar/CheddarCheese2.jpg",
+      image3Small: "/previewCardCheeseImages/small/2Cheddar/CheddarCheese3.jpg",
+      image1Big: "/previewCardCheeseImages/big/2Cheddar/CheddarCheese1.jpg",
+      image2Big: "/previewCardCheeseImages/big/2Cheddar/CheddarCheese2.jpg",
+      image3Big: "/previewCardCheeseImages/big/2Cheddar/CheddarCheese3.jpg",
     },
     name: "Cheddar",
     desc: `A firm, yellow cheese originating from England, with a rich, sharp flavor that intensifies with age.`,
@@ -49,9 +58,12 @@ export const cheesesData: CheeseDataType[] = [
   {
     id: 3,
     images: {
-      image1: "/previewCardCheeseImages/small/3Gouda/GoudaCheese1.jpg",
-      image2: "/previewCardCheeseImages/small/3Gouda/GoudaCheese2.jpg",
-      image3: "/previewCardCheeseImages/small/3Gouda/GoudaCheese3.jpg",
+      image1Small: "/previewCardCheeseImages/small/3Gouda/GoudaCheese1.jpg",
+      image2Small: "/previewCardCheeseImages/small/3Gouda/GoudaCheese2.jpg",
+      image3Small: "/previewCardCheeseImages/small/3Gouda/GoudaCheese3.jpg",
+      image1Big: "/previewCardCheeseImages/big/3Gouda/GoudaCheese1.jpg",
+      image2Big: "/previewCardCheeseImages/big/3Gouda/GoudaCheese2.jpg",
+      image3Big: "/previewCardCheeseImages/big/3Gouda/GoudaCheese3.jpg",
     },
     name: "Gouda",
     desc: `A mild, yellow cheese made from cow's milk, originating in the Netherlands.`,
@@ -62,9 +74,12 @@ export const cheesesData: CheeseDataType[] = [
   {
     id: 4,
     images: {
-      image1: "/previewCardCheeseImages/small/4Feta/FetaCheese1.jpg",
-      image2: "/previewCardCheeseImages/small/4Feta/FetaCheese2.jpg",
-      image3: "/previewCardCheeseImages/small/4Feta/FetaCheese3.jpg",
+      image1Small: "/previewCardCheeseImages/small/4Feta/FetaCheese1.jpg",
+      image2Small: "/previewCardCheeseImages/small/4Feta/FetaCheese2.jpg",
+      image3Small: "/previewCardCheeseImages/small/4Feta/FetaCheese3.jpg",
+      image1Big: "/previewCardCheeseImages/big/4Feta/FetaCheese1.jpg",
+      image2Big: "/previewCardCheeseImages/big/4Feta/FetaCheese2.jpg",
+      image3Big: "/previewCardCheeseImages/big/4Feta/FetaCheese3.jpg",
     },
     name: "Feta",
     desc: "A crumbly Greek cheese made from sheep or goat milk, with a tangy flavor.",
@@ -75,9 +90,15 @@ export const cheesesData: CheeseDataType[] = [
   {
     id: 5,
     images: {
-      image1: "/previewCardCheeseImages/small/5Manchego/ManchegoCheese1.jpg",
-      image2: "/previewCardCheeseImages/small/5Manchego/ManchegoCheese2.jpg",
-      image3: "/previewCardCheeseImages/small/5Manchego/ManchegoCheese3.jpg",
+      image1Small:
+        "/previewCardCheeseImages/small/5Manchego/ManchegoCheese1.jpg",
+      image2Small:
+        "/previewCardCheeseImages/small/5Manchego/ManchegoCheese2.jpg",
+      image3Small:
+        "/previewCardCheeseImages/small/5Manchego/ManchegoCheese3.jpg",
+      image1Big: "/previewCardCheeseImages/big/5Manchego/ManchegoCheese1.jpg",
+      image2Big: "/previewCardCheeseImages/big/5Manchego/ManchegoCheese2.jpg",
+      image3Big: "/previewCardCheeseImages/big/5Manchego/ManchegoCheese3.jpg",
     },
     name: "Manchego",
     desc: `A Spanish cheese made from sheep's milk, known for its distinctive flavor and texture.`,
@@ -88,9 +109,12 @@ export const cheesesData: CheeseDataType[] = [
   {
     id: 6,
     images: {
-      image1: "/previewCardCheeseImages/small/6Gruyere/GruyereCheese1.jpg",
-      image2: "/previewCardCheeseImages/small/6Gruyere/GruyereCheese2.jpg",
-      image3: "/previewCardCheeseImages/small/6Gruyere/GruyereCheese3.jpg",
+      image1Small: "/previewCardCheeseImages/small/6Gruyere/GruyereCheese1.jpg",
+      image2Small: "/previewCardCheeseImages/small/6Gruyere/GruyereCheese2.jpg",
+      image3Small: "/previewCardCheeseImages/small/6Gruyere/GruyereCheese3.jpg",
+      image1Big: "/previewCardCheeseImages/big/6Gruyere/GruyereCheese1.jpg",
+      image2Big: "/previewCardCheeseImages/big/6Gruyere/GruyereCheese2.jpg",
+      image3Big: "/previewCardCheeseImages/big/6Gruyere/GruyereCheese3.jpg",
     },
     name: "Gruyere",
     desc: "A Swiss cheese known for its sweet and nutty flavor, often used in fondue.",
@@ -101,9 +125,15 @@ export const cheesesData: CheeseDataType[] = [
   {
     id: 7,
     images: {
-      image1: "/previewCardCheeseImages/small/7Parmesan/ParmesanCheese1.jpg",
-      image2: "/previewCardCheeseImages/small/7Parmesan/ParmesanCheese2.jpg",
-      image3: "/previewCardCheeseImages/small/7Parmesan/ParmesanCheese3.jpg",
+      image1Small:
+        "/previewCardCheeseImages/small/7Parmesan/ParmesanCheese1.jpg",
+      image2Small:
+        "/previewCardCheeseImages/small/7Parmesan/ParmesanCheese2.jpg",
+      image3Small:
+        "/previewCardCheeseImages/small/7Parmesan/ParmesanCheese3.jpg",
+      image1Big: "/previewCardCheeseImages/big/7Parmesan/ParmesanCheese1.jpg",
+      image2Big: "/previewCardCheeseImages/big/7Parmesan/ParmesanCheese2.jpg",
+      image3Big: "/previewCardCheeseImages/big/7Parmesan/ParmesanCheese3.jpg",
     },
     name: "Parmesan",
     desc: "A hard, granular cheese from Italy, usually aged and grated over pasta dishes.",
@@ -114,9 +144,12 @@ export const cheesesData: CheeseDataType[] = [
   {
     id: 8,
     images: {
-      image1: "/previewCardCheeseImages/small/8Blue/BlueCheese1.jpg",
-      image2: "/previewCardCheeseImages/small/8Blue/BlueCheese2.jpg",
-      image3: "/previewCardCheeseImages/small/8Blue/BlueCheese3.jpg",
+      image1Small: "/previewCardCheeseImages/small/8Blue/BlueCheese1.jpg",
+      image2Small: "/previewCardCheeseImages/small/8Blue/BlueCheese2.jpg",
+      image3Small: "/previewCardCheeseImages/small/8Blue/BlueCheese3.jpg",
+      image1Big: "/previewCardCheeseImages/big/8Blue/BlueCheese1.jpg",
+      image2Big: "/previewCardCheeseImages/big/8Blue/BlueCheese2.jpg",
+      image3Big: "/previewCardCheeseImages/big/8Blue/BlueCheese3.jpg",
     },
     name: "Blue Cheese",
     desc: "A type of cheese that has been ripened with cultures of the mold Penicillium.",
@@ -127,9 +160,15 @@ export const cheesesData: CheeseDataType[] = [
   {
     id: 9,
     images: {
-      image1: "/previewCardCheeseImages/small/9Camembert/CamembertCheese1.jpg",
-      image2: "/previewCardCheeseImages/small/9Camembert/CamembertCheese2.jpg",
-      image3: "/previewCardCheeseImages/small/9Camembert/CamembertCheese3.jpg",
+      image1Small:
+        "/previewCardCheeseImages/small/9Camembert/CamembertCheese1.jpg",
+      image2Small:
+        "/previewCardCheeseImages/small/9Camembert/CamembertCheese2.jpg",
+      image3Small:
+        "/previewCardCheeseImages/small/9Camembert/CamembertCheese3.jpg",
+      image1Big: "/previewCardCheeseImages/big/9Camembert/CamembertCheese1.jpg",
+      image2Big: "/previewCardCheeseImages/big/9Camembert/CamembertCheese2.jpg",
+      image3Big: "/previewCardCheeseImages/big/9Camembert/CamembertCheese3.jpg",
     },
     name: "Camembert",
     desc: `A moist, creamy, surface-ripened cow's milk cheese.`,
@@ -140,12 +179,18 @@ export const cheesesData: CheeseDataType[] = [
   {
     id: 10,
     images: {
-      image1:
+      image1Small:
         "/previewCardCheeseImages/small/10Mozzarella/MozzarellaCheese1.jpg",
-      image2:
+      image2Small:
         "/previewCardCheeseImages/small/10Mozzarella/MozzarellaCheese2.jpg",
-      image3:
+      image3Small:
         "/previewCardCheeseImages/small/10Mozzarella/MozzarellaCheese3.jpg",
+      image1Big:
+        "/previewCardCheeseImages/big/10Mozzarella/MozzarellaCheese1.jpg",
+      image2Big:
+        "/previewCardCheeseImages/big/10Mozzarella/MozzarellaCheese2.jpg",
+      image3Big:
+        "/previewCardCheeseImages/big/10Mozzarella/MozzarellaCheese3.jpg",
     },
     name: "Mozzarella",
     desc: "A soft, fresh cheese made from cow, goat, or buffalo milk.",
@@ -156,9 +201,15 @@ export const cheesesData: CheeseDataType[] = [
   {
     id: 11,
     images: {
-      image1: "/previewCardCheeseImages/small/11Havarti/HavartiCheese1.jpg",
-      image2: "/previewCardCheeseImages/small/11Havarti/HavartiCheese2.jpg",
-      image3: "/previewCardCheeseImages/small/11Havarti/HavartiCheese3.jpg",
+      image1Small:
+        "/previewCardCheeseImages/small/11Havarti/HavartiCheese1.jpg",
+      image2Small:
+        "/previewCardCheeseImages/small/11Havarti/HavartiCheese2.jpg",
+      image3Small:
+        "/previewCardCheeseImages/small/11Havarti/HavartiCheese3.jpg",
+      image1Big: "/previewCardCheeseImages/big/11Havarti/HavartiCheese1.jpg",
+      image2Big: "/previewCardCheeseImages/big/11Havarti/HavartiCheese2.jpg",
+      image3Big: "/previewCardCheeseImages/big/11Havarti/HavartiCheese3.jpg",
     },
     name: "Havarti",
     desc: "A semi-soft Danish cheese with a creamy texture and a mild, buttery flavor.",
@@ -169,9 +220,18 @@ export const cheesesData: CheeseDataType[] = [
   {
     id: 12,
     images: {
-      image1: "/previewCardCheeseImages/small/12Provolone/ProvoloneCheese1.jpg",
-      image2: "/previewCardCheeseImages/small/12Provolone/ProvoloneCheese2.jpg",
-      image3: "/previewCardCheeseImages/small/12Provolone/ProvoloneCheese3.jpg",
+      image1Small:
+        "/previewCardCheeseImages/small/12Provolone/ProvoloneCheese1.jpg",
+      image2Small:
+        "/previewCardCheeseImages/small/12Provolone/ProvoloneCheese2.jpg",
+      image3Small:
+        "/previewCardCheeseImages/small/12Provolone/ProvoloneCheese3.jpg",
+      image1Big:
+        "/previewCardCheeseImages/big/12Provolone/ProvoloneCheese1.jpg",
+      image2Big:
+        "/previewCardCheeseImages/big/12Provolone/ProvoloneCheese2.jpg",
+      image3Big:
+        "/previewCardCheeseImages/big/12Provolone/ProvoloneCheese3.jpg",
     },
     name: "Provolone",
     desc: `An Italian semi-hard cheese made from cow's milk.`,
@@ -182,9 +242,18 @@ export const cheesesData: CheeseDataType[] = [
   {
     id: 13,
     images: {
-      image1: "/previewCardCheeseImages/small/13Roquefort/RoquefortCheese1.jpg",
-      image2: "/previewCardCheeseImages/small/13Roquefort/RoquefortCheese2.jpg",
-      image3: "/previewCardCheeseImages/small/13Roquefort/RoquefortCheese3.jpg",
+      image1Small:
+        "/previewCardCheeseImages/small/13Roquefort/RoquefortCheese1.jpg",
+      image2Small:
+        "/previewCardCheeseImages/small/13Roquefort/RoquefortCheese2.jpg",
+      image3Small:
+        "/previewCardCheeseImages/small/13Roquefort/RoquefortCheese3.jpg",
+      image1Big:
+        "/previewCardCheeseImages/big/13Roquefort/RoquefortCheese1.jpg",
+      image2Big:
+        "/previewCardCheeseImages/big/13Roquefort/RoquefortCheese2.jpg",
+      image3Big:
+        "/previewCardCheeseImages/big/13Roquefort/RoquefortCheese3.jpg",
     },
     name: "Roquefort",
     desc: "A French blue cheese made from sheep milk, characterized by its strong, tangy flavor.",
@@ -195,9 +264,15 @@ export const cheesesData: CheeseDataType[] = [
   {
     id: 14,
     images: {
-      image1: "/previewCardCheeseImages/small/14Emmental/EmmentalCheese1.jpg",
-      image2: "/previewCardCheeseImages/small/14Emmental/EmmentalCheese2.jpg",
-      image3: "/previewCardCheeseImages/small/14Emmental/EmmentalCheese3.jpg",
+      image1Small:
+        "/previewCardCheeseImages/small/14Emmental/EmmentalCheese1.jpg",
+      image2Small:
+        "/previewCardCheeseImages/small/14Emmental/EmmentalCheese2.jpg",
+      image3Small:
+        "/previewCardCheeseImages/small/14Emmental/EmmentalCheese3.jpg",
+      image1Big: "/previewCardCheeseImages/big/14Emmental/EmmentalCheese1.jpg",
+      image2Big: "/previewCardCheeseImages/big/14Emmental/EmmentalCheese2.jpg",
+      image3Big: "/previewCardCheeseImages/big/14Emmental/EmmentalCheese3.jpg",
     },
     name: "Emmental",
     desc: "A Swiss yellow cheese, known for its characteristic holes and sweet, nutty flavor.",
@@ -208,12 +283,18 @@ export const cheesesData: CheeseDataType[] = [
   {
     id: 15,
     images: {
-      image1:
+      image1Small:
         "/previewCardCheeseImages/small/15MontereyJack/MontereyJackCheese1.jpg",
-      image2:
+      image2Small:
         "/previewCardCheeseImages/small/15MontereyJack/MontereyJackCheese2.jpg",
-      image3:
+      image3Small:
         "/previewCardCheeseImages/small/15MontereyJack/MontereyJackCheese3.jpg",
+      image1Big:
+        "/previewCardCheeseImages/big/15MontereyJack/MontereyJackCheese1.jpg",
+      image2Big:
+        "/previewCardCheeseImages/big/15MontereyJack/MontereyJackCheese2.jpg",
+      image3Big:
+        "/previewCardCheeseImages/big/15MontereyJack/MontereyJackCheese3.jpg",
     },
     name: "Monterey Jack",
     desc: "An American semi-hard cheese, mild in flavor and popular in Mexican cuisine.",
@@ -224,12 +305,18 @@ export const cheesesData: CheeseDataType[] = [
   {
     id: 16,
     images: {
-      image1:
+      image1Small:
         "/previewCardCheeseImages/small/16PepperJack/PepperJackCheese1.jpg",
-      image2:
+      image2Small:
         "/previewCardCheeseImages/small/16PepperJack/PepperJackCheese2.jpg",
-      image3:
+      image3Small:
         "/previewCardCheeseImages/small/16PepperJack/PepperJackCheese3.jpg",
+      image1Big:
+        "/previewCardCheeseImages/big/16PepperJack/PepperJackCheese1.jpg",
+      image2Big:
+        "/previewCardCheeseImages/big/16PepperJack/PepperJackCheese2.jpg",
+      image3Big:
+        "/previewCardCheeseImages/big/16PepperJack/PepperJackCheese3.jpg",
     },
     name: "Pepper Jack",
     desc: "A variation of Monterey Jack cheese spiced with jalapeño peppers.",
@@ -240,9 +327,15 @@ export const cheesesData: CheeseDataType[] = [
   {
     id: 17,
     images: {
-      image1: "/previewCardCheeseImages/small/17Fontina/FontinaCheese1.jpg",
-      image2: "/previewCardCheeseImages/small/17Fontina/FontinaCheese2.jpg",
-      image3: "/previewCardCheeseImages/small/17Fontina/FontinaCheese3.jpg",
+      image1Small:
+        "/previewCardCheeseImages/small/17Fontina/FontinaCheese1.jpg",
+      image2Small:
+        "/previewCardCheeseImages/small/17Fontina/FontinaCheese2.jpg",
+      image3Small:
+        "/previewCardCheeseImages/small/17Fontina/FontinaCheese3.jpg",
+      image1Big: "/previewCardCheeseImages/big/17Fontina/FontinaCheese1.jpg",
+      image2Big: "/previewCardCheeseImages/big/17Fontina/FontinaCheese2.jpg",
+      image3Big: "/previewCardCheeseImages/big/17Fontina/FontinaCheese3.jpg",
     },
     name: "Fontina",
     desc: "An Italian cow's milk cheese, known for its earthy and nutty flavor.",
@@ -253,9 +346,12 @@ export const cheesesData: CheeseDataType[] = [
   {
     id: 18,
     images: {
-      image1: "/previewCardCheeseImages/small/18Swiss/SwissCheese1.jpg",
-      image2: "/previewCardCheeseImages/small/18Swiss/SwissCheese2.jpg",
-      image3: "/previewCardCheeseImages/small/18Swiss/SwissCheese3.jpg",
+      image1Small: "/previewCardCheeseImages/small/18Swiss/SwissCheese1.jpg",
+      image2Small: "/previewCardCheeseImages/small/18Swiss/SwissCheese2.jpg",
+      image3Small: "/previewCardCheeseImages/small/18Swiss/SwissCheese3.jpg",
+      image1Big: "/previewCardCheeseImages/big/18Swiss/SwissCheese1.jpg",
+      image2Big: "/previewCardCheeseImages/big/18Swiss/SwissCheese2.jpg",
+      image3Big: "/previewCardCheeseImages/big/18Swiss/SwissCheese3.jpg",
     },
     name: "Swiss Cheese",
     desc: "A mild, nutty-flavored cheese with distinctive holes, originating from Switzerland.",
@@ -266,9 +362,18 @@ export const cheesesData: CheeseDataType[] = [
   {
     id: 19,
     images: {
-      image1: "/previewCardCheeseImages/small/19Limburger/LimburgerCheese1.jpg",
-      image2: "/previewCardCheeseImages/small/19Limburger/LimburgerCheese2.jpg",
-      image3: "/previewCardCheeseImages/small/19Limburger/LimburgerCheese3.jpg",
+      image1Small:
+        "/previewCardCheeseImages/small/19Limburger/LimburgerCheese1.jpg",
+      image2Small:
+        "/previewCardCheeseImages/small/19Limburger/LimburgerCheese2.jpg",
+      image3Small:
+        "/previewCardCheeseImages/small/19Limburger/LimburgerCheese3.jpg",
+      image1Big:
+        "/previewCardCheeseImages/big/19Limburger/LimburgerCheese1.jpg",
+      image2Big:
+        "/previewCardCheeseImages/big/19Limburger/LimburgerCheese2.jpg",
+      image3Big:
+        "/previewCardCheeseImages/big/19Limburger/LimburgerCheese3.jpg",
     },
     name: "Limburger",
     desc: "A cheese known for its strong odor and creamy texture, originally from Belgium.",
@@ -279,9 +384,12 @@ export const cheesesData: CheeseDataType[] = [
   {
     id: 20,
     images: {
-      image1: "/previewCardCheeseImages/small/20Asiago/AsiagoCheese1.jpg",
-      image2: "/previewCardCheeseImages/small/20Asiago/AsiagoCheese2.jpg",
-      image3: "/previewCardCheeseImages/small/20Asiago/AsiagoCheese3.jpg",
+      image1Small: "/previewCardCheeseImages/small/20Asiago/AsiagoCheese1.jpg",
+      image2Small: "/previewCardCheeseImages/small/20Asiago/AsiagoCheese2.jpg",
+      image3Small: "/previewCardCheeseImages/small/20Asiago/AsiagoCheese3.jpg",
+      image1Big: "/previewCardCheeseImages/big/20Asiago/AsiagoCheese1.jpg",
+      image2Big: "/previewCardCheeseImages/big/20Asiago/AsiagoCheese2.jpg",
+      image3Big: "/previewCardCheeseImages/big/20Asiago/AsiagoCheese3.jpg",
     },
     name: "Asiago",
     desc: "An Italian cheese, produced using cow, sheep, or goat milk, with a firm texture.",
@@ -290,529 +398,3 @@ export const cheesesData: CheeseDataType[] = [
     pricePerKg: 20.6,
   },
 ];
-
-// export const cheesesData = [
-//   {
-//     id: 1,
-//     images: {
-//       image1: "/previewCardCheeseImages/small/1Brie/BrieCheese1.jpg",
-//       image2: "/previewCardCheeseImages/small/1Brie/BrieCheese2.jpg",
-//       image3: "/previewCardCheeseImages/small/1Brie/BrieCheese3.jpg",
-//     },
-//     name: "Brie",
-//     desc: "A soft, creamy French cheese known for its mild flavor and bloomy rind.",
-//     animal: "Cow",
-//     country: "France",
-//     pricePerKg: 20.99,
-//   },
-//   {
-//     id: 2,
-//     images: {
-//       image1: "/previewCardCheeseImages/small/2Cheddar/CheddarCheese1.jpg",
-//       image2: "/previewCardCheeseImages/small/2Cheddar/CheddarCheese2.jpg",
-//       image3: "/previewCardCheeseImages/small/2Cheddar/CheddarCheese3.jpg",
-//     },
-//     name: "Cheddar",
-//     desc: `A firm, yellow cheese originating from England, with a rich, sharp flavor that intensifies with age.`,
-//     animal: "Cow",
-//     country: "United Kingdom",
-//     pricePerKg: 15.5,
-//   },
-//   {
-//     id: 3,
-//     images: {
-//       image1: "/previewCardCheeseImages/small/3Gouda/GoudaCheese1.jpg",
-//       image2: "/previewCardCheeseImages/small/3Gouda/GoudaCheese2.jpg",
-//       image3: "/previewCardCheeseImages/small/3Gouda/GoudaCheese3.jpg",
-//     },
-//     name: "Gouda",
-//     desc: `A mild, yellow cheese made from cow's milk, originating in the Netherlands.`,
-//     animal: "Cow",
-//     country: "Netherlands",
-//     pricePerKg: 18.75,
-//   },
-//   {
-//     id: 4,
-//     images: {
-//       image1: "/previewCardCheeseImages/small/4Feta/FetaCheese1.jpg",
-//       image2: "/previewCardCheeseImages/small/4Feta/FetaCheese2.jpg",
-//       image3: "/previewCardCheeseImages/small/4Feta/FetaCheese3.jpg",
-//     },
-//     name: "Feta",
-//     desc: "A crumbly Greek cheese made from sheep or goat milk, with a tangy flavor.",
-//     animal: "Sheep/Goat",
-//     country: "Greece",
-//     pricePerKg: 14.25,
-//   },
-//   {
-//     id: 5,
-//     images: {
-//       image1: "/previewCardCheeseImages/small/5Manchego/ManchegoCheese1.jpg",
-//       image2: "/previewCardCheeseImages/small/5Manchego/ManchegoCheese2.jpg",
-//       image3: "/previewCardCheeseImages/small/5Manchego/ManchegoCheese3.jpg",
-//     },
-//     name: "Manchego",
-//     desc: `A Spanish cheese made from sheep's milk, known for its distinctive flavor and texture.`,
-//     animal: "Sheep",
-//     country: "Spain",
-//     pricePerKg: 21.5,
-//   },
-//   {
-//     id: 6,
-//     images: {
-//       image1: "/previewCardCheeseImages/small/6Gruyere/GruyereCheese1.jpg",
-//       image2: "/previewCardCheeseImages/small/6Gruyere/GruyereCheese2.jpg",
-//       image3: "/previewCardCheeseImages/small/6Gruyere/GruyereCheese3.jpg",
-//     },
-//     name: "Gruyere",
-//     desc: "A Swiss cheese known for its sweet and nutty flavor, often used in fondue.",
-//     animal: "Cow",
-//     country: "Switzerland",
-//     pricePerKg: 23.99,
-//   },
-//   {
-//     id: 7,
-//     images: {
-//       image1: "/previewCardCheeseImages/small/7Parmesan/ParmesanCheese1.jpg",
-//       image2: "/previewCardCheeseImages/small/7Parmesan/ParmesanCheese2.jpg",
-//       image3: "/previewCardCheeseImages/small/7Parmesan/ParmesanCheese3.jpg",
-//     },
-//     name: "Parmesan",
-//     desc: "A hard, granular cheese from Italy, usually aged and grated over pasta dishes.",
-//     animal: "Cow",
-//     country: "Italy",
-//     pricePerKg: 27.0,
-//   },
-//   {
-//     id: 8,
-//     images: {
-//       image1: "/previewCardCheeseImages/small/8Blue/BlueCheese1.jpg",
-//       image2: "/previewCardCheeseImages/small/8Blue/BlueCheese2.jpg",
-//       image3: "/previewCardCheeseImages/small/8Blue/BlueCheese3.jpg",
-//     },
-//     name: "Blue Cheese",
-//     desc: "A type of cheese that has been ripened with cultures of the mold Penicillium.",
-//     animal: "Cow/Sheep/Goat",
-//     country: "Various",
-//     pricePerKg: 19.99,
-//   },
-//   {
-//     id: 9,
-//     images: {
-//       image1: "/previewCardCheeseImages/small/9Camembert/CamembertCheese1.jpg",
-//       image2: "/previewCardCheeseImages/small/9Camembert/CamembertCheese2.jpg",
-//       image3: "/previewCardCheeseImages/small/9Camembert/CamembertCheese3.jpg",
-//     },
-//     name: "Camembert",
-//     desc: `A moist, creamy, surface-ripened cow's milk cheese.`,
-//     animal: "Cow",
-//     country: "France",
-//     pricePerKg: 22.45,
-//   },
-//   {
-//     id: 10,
-//     images: {
-//       image1: "/previewCardCheeseImages/small/10Mozzarella/MozzarellaCheese1.jpg",
-//       image2: "/previewCardCheeseImages/small/10Mozzarella/MozzarellaCheese2.jpg",
-//       image3: "/previewCardCheeseImages/small/10Mozzarella/MozzarellaCheese3.jpg",
-//     },
-//     name: "Mozzarella",
-//     desc: "A soft, fresh cheese made from cow, goat, or buffalo milk.",
-//     animal: "Cow/Goat/Buffalo",
-//     country: "Italy",
-//     pricePerKg: 16.8,
-//   },
-//   {
-//     id: 11,
-//     images: {
-//       image1: "/previewCardCheeseImages/small/11Havarti/HavartiCheese1.jpg",
-//       image2: "/previewCardCheeseImages/small/11Havarti/HavartiCheese2.jpg",
-//       image3: "/previewCardCheeseImages/small/11Havarti/HavartiCheese3.jpg",
-//     },
-//     name: "Havarti",
-//     desc: "A semi-soft Danish cheese with a creamy texture and a mild, buttery flavor.",
-//     animal: "Cow",
-//     country: "Denmark",
-//     pricePerKg: 19.25,
-//   },
-//   {
-//     id: 12,
-//     images: {
-//       image1: "/previewCardCheeseImages/small/12Provolone/ProvoloneCheese1.jpg",
-//       image2: "/previewCardCheeseImages/small/12Provolone/ProvoloneCheese2.jpg",
-//       image3: "/previewCardCheeseImages/small/12Provolone/ProvoloneCheese3.jpg",
-//     },
-//     name: "Provolone",
-//     desc: `An Italian semi-hard cheese made from cow's milk.`,
-//     animal: "Cow",
-//     country: "Italy",
-//     pricePerKg: 17.99,
-//   },
-//   {
-//     id: 13,
-//     images: {
-//       image1: "/previewCardCheeseImages/small/13Roquefort/RoquefortCheese1.jpg",
-//       image2: "/previewCardCheeseImages/small/13Roquefort/RoquefortCheese2.jpg",
-//       image3: "/previewCardCheeseImages/small/13Roquefort/RoquefortCheese3.jpg",
-//     },
-//     name: "Roquefort",
-//     desc: "A French blue cheese made from sheep milk, characterized by its strong, tangy flavor.",
-//     animal: "Sheep",
-//     country: "France",
-//     pricePerKg: 24.99,
-//   },
-//   {
-//     id: 14,
-//     images: {
-//       image1: "/previewCardCheeseImages/small/14Emmental/EmmentalCheese1.jpg",
-//       image2: "/previewCardCheeseImages/small/14Emmental/EmmentalCheese2.jpg",
-//       image3: "/previewCardCheeseImages/small/14Emmental/EmmentalCheese3.jpg",
-//     },
-//     name: "Emmental",
-//     desc: "A Swiss yellow cheese, known for its characteristic holes and sweet, nutty flavor.",
-//     animal: "Cow",
-//     country: "Switzerland",
-//     pricePerKg: 21.2,
-//   },
-//   {
-//     id: 15,
-//     images: {
-//       image1: "/previewCardCheeseImages/small/15MontereyJack/MontereyJackCheese1.jpg",
-//       image2: "/previewCardCheeseImages/small/15MontereyJack/MontereyJackCheese2.jpg",
-//       image3: "/previewCardCheeseImages/small/15MontereyJack/MontereyJackCheese3.jpg",
-//     },
-//     name: "Monterey Jack",
-//     desc: "An American semi-hard cheese, mild in flavor and popular in Mexican cuisine.",
-//     animal: "Cow",
-//     country: "United States",
-//     pricePerKg: 14.99,
-//   },
-//   {
-//     id: 16,
-//     images: {
-//       image1: "/previewCardCheeseImages/small/16PepperJack/PepperJackCheese1.jpg",
-//       image2: "/previewCardCheeseImages/small/16PepperJack/PepperJackCheese2.jpg",
-//       image3: "/previewCardCheeseImages/small/16PepperJack/PepperJackCheese3.jpg",
-//     },
-//     name: "Pepper Jack",
-//     desc: "A variation of Monterey Jack cheese spiced with jalapeño peppers.",
-//     animal: "Cow",
-//     country: "United States",
-//     pricePerKg: 16.75,
-//   },
-//   {
-//     id: 17,
-//     images: {
-//       image1: "/previewCardCheeseImages/small/17Fontina/FontinaCheese1.jpg",
-//       image2: "/previewCardCheeseImages/small/17Fontina/FontinaCheese2.jpg",
-//       image3: "/previewCardCheeseImages/small/17Fontina/FontinaCheese3.jpg",
-//     },
-//     name: "Fontina",
-//     desc: "An Italian cow's milk cheese, known for its earthy and nutty flavor.",
-//     animal: "Cow",
-//     country: "Italy",
-//     pricePerKg: 25.4,
-//   },
-//   {
-//     id: 18,
-//     images: {
-//       image1: "/previewCardCheeseImages/small/18Swiss/SwissCheese1.jpg",
-//       image2: "/previewCardCheeseImages/small/18Swiss/SwissCheese2.jpg",
-//       image3: "/previewCardCheeseImages/small/18Swiss/SwissCheese3.jpg",
-//     },
-//     name: "Swiss Cheese",
-//     desc: "A mild, nutty-flavored cheese with distinctive holes, originating from Switzerland.",
-//     animal: "Cow",
-//     country: "Switzerland",
-//     pricePerKg: 22.5,
-//   },
-//   {
-//     id: 19,
-//     images: {
-//       image1: "/previewCardCheeseImages/small/19Limburger/LimburgerCheese1.jpg",
-//       image2: "/previewCardCheeseImages/small/19Limburger/LimburgerCheese2.jpg",
-//       image3: "/previewCardCheeseImages/small/19Limburger/LimburgerCheese3.jpg",
-//     },
-//     name: "Limburger",
-//     desc: "A cheese known for its strong odor and creamy texture, originally from Belgium.",
-//     animal: "Cow",
-//     country: "Belgium",
-//     pricePerKg: 18.95,
-//   },
-//   {
-//     id: 20,
-//     images: {
-//       image1: "/previewCardCheeseImages/small/20Asiago/AsiagoCheese1.jpg",
-//       image2: "/previewCardCheeseImages/small/20Asiago/AsiagoCheese2.jpg",
-//       image3: "/previewCardCheeseImages/small/20Asiago/AsiagoCheese3.jpg",
-//     },
-//     name: "Asiago",
-//     desc: "An Italian cheese, produced using cow, sheep, or goat milk, with a firm texture.",
-//     animal: "Cow/Sheep/Goat",
-//     country: "Italy",
-//     pricePerKg: 20.6,
-//   },
-//   {
-//     id: 21,
-//     images: {
-//       image1: "/previewCardCheeseImages/small/21ColbyJack/ColbyJackCheese1.jpg",
-//       image2: "/previewCardCheeseImages/small/21ColbyJack/ColbyJackCheese2.jpg",
-//       image3: "/previewCardCheeseImages/small/21ColbyJack/ColbyJackCheese3.jpg",
-//     },
-//     name: "Colby Jack",
-//     desc: "A cheese blend of Colby and Monterey Jack, known for its marbled appearance.",
-//     animal: "Cow",
-//     country: "United States",
-//     pricePerKg: 15.9,
-//   },
-//   {
-//     id: 22,
-//     images: {
-//       image1: "/previewCardCheeseImages/small/22Cambozola/CambozolaCheese1.jpg",
-//       image2: "/previewCardCheeseImages/small/22Cambozola/CambozolaCheese2.jpg",
-//       image3: "/previewCardCheeseImages/small/22Cambozola/CambozolaCheese3.jpg",
-//     },
-//     name: "Cambozola",
-//     desc: "A German cheese that combines the creaminess of Camembert with the sharpness of Gorgonzola.",
-//     animal: "Cow",
-//     country: "Germany",
-//     pricePerKg: 26.75,
-//   },
-//   {
-//     id: 23,
-//     images: {
-//       image1: "/previewCardCheeseImages/small/23Manouri/ManouriCheese1.jpg",
-//       image2: "/previewCardCheeseImages/small/23Manouri/ManouriCheese2.jpg",
-//       image3: "/previewCardCheeseImages/small/23Manouri/ManouriCheese3.jpg",
-//     },
-//     name: "Manouri",
-//     desc: "A Greek semi-soft, fresh white cheese made from goat or sheep milk.",
-//     animal: "Sheep/Goat",
-//     country: "Greece",
-//     pricePerKg: 17.3,
-//   },
-//   {
-//     id: 24,
-//     images: {
-//       image1: "/previewCardCheeseImages/small/24DanishBlue/DanishBlueCheese1.jpg",
-//       image2: "/previewCardCheeseImages/small/24DanishBlue/DanishBlueCheese2.jpg",
-//       image3: "/previewCardCheeseImages/small/24DanishBlue/DanishBlueCheese3.jpg",
-//     },
-//     name: "Danish Blue",
-//     desc: "A blue-veined cheese from Denmark, creamy in texture and strong in flavor.",
-//     animal: "Cow",
-//     country: "Denmark",
-//     pricePerKg: 23.15,
-//   },
-//   {
-//     id: 25,
-//     images: {
-//       image1:
-//         "/previewCardCheeseImages/small/25PecorinoRomano/PecorinoRomanoCheese1.jpg",
-//       image2:
-//         "/previewCardCheeseImages/small/25PecorinoRomano/PecorinoRomanoCheese2.jpg",
-//       image3:
-//         "/previewCardCheeseImages/small/25PecorinoRomano/PecorinoRomanoCheese3.jpg",
-//     },
-//     name: "Pecorino Romano",
-//     desc: "A hard, salty Italian cheese made from sheep milk, often used in pasta dishes.",
-//     animal: "Sheep",
-//     country: "Italy",
-//     pricePerKg: 28.5,
-//   },
-//   {
-//     id: 26,
-//     images: {
-//       image1: "/previewCardCheeseImages/small/26Tomme/TommeCheese1.jpg",
-//       image2: "/previewCardCheeseImages/small/26Tomme/TommeCheese2.jpg",
-//       image3: "/previewCardCheeseImages/small/26Tomme/TommeCheese3.jpg",
-//     },
-//     name: "Tomme",
-//     desc: "A generic name for a variety of cheese produced in the French Alps and Pyrenees.",
-//     animal: "Cow/Sheep/Goat",
-//     country: "France",
-//     pricePerKg: 19.8,
-//   },
-//   {
-//     id: 27,
-//     images: {
-//       image1: "/previewCardCheeseImages/small/27Burrata/BurrataCheese1.jpg",
-//       image2: "/previewCardCheeseImages/small/27Burrata/BurrataCheese2.jpg",
-//       image3: "/previewCardCheeseImages/small/27Burrata/BurrataCheese3.jpg",
-//     },
-//     name: "Burrata",
-//     desc: "An Italian cheese made from mozzarella and cream, with a rich, buttery flavor.",
-//     animal: "Cow",
-//     country: "Italy",
-//     pricePerKg: 30.25,
-//   },
-//   {
-//     id: 28,
-//     images: {
-//       image1: "/previewCardCheeseImages/small/28Taleggio/TaleggioCheese1.jpg",
-//       image2: "/previewCardCheeseImages/small/28Taleggio/TaleggioCheese2.jpg",
-//       image3: "/previewCardCheeseImages/small/28Taleggio/TaleggioCheese3.jpg",
-//     },
-//     name: "Taleggio",
-//     desc: "An Italian washed-rind cheese, known for its strong aroma and creamy texture.",
-//     animal: "Cow",
-//     country: "Italy",
-//     pricePerKg: 24.9,
-//   },
-//   {
-//     id: 29,
-//     images: {
-//       image1: "/previewCardCheeseImages/small/29Ricotta/RicottaCheese1.jpg",
-//       image2: "/previewCardCheeseImages/small/29Ricotta/RicottaCheese2.jpg",
-//       image3: "/previewCardCheeseImages/small/29Ricotta/RicottaCheese3.jpg",
-//     },
-//     name: "Ricotta",
-//     desc: "An Italian whey cheese made from sheep, cow, goat, or buffalo milk.",
-//     animal: "Sheep/Cow/Goat/Buffalo",
-//     country: "Italy",
-//     pricePerKg: 13.75,
-//   },
-//   {
-//     id: 30,
-//     images: {
-//       image1: "/previewCardCheeseImages/small/30SmokedGouda/SmokedGoudaCheese1.jpg",
-//       image2: "/previewCardCheeseImages/small/30SmokedGouda/SmokedGoudaCheese2.jpg",
-//       image3: "/previewCardCheeseImages/small/30SmokedGouda/SmokedGoudaCheese3.jpg",
-//     },
-//     name: "Smoked Gouda",
-//     desc: "A variety of Gouda with a smoky flavor, achieved by smoking the cheese.",
-//     animal: "Cow",
-//     country: "Netherlands",
-//     pricePerKg: 19.99,
-//   },
-//   {
-//     id: 31,
-//     images: {
-//       image1: "/previewCardCheeseImages/small/31TripleCream/TripleCreamCheese1.jpg",
-//       image2: "/previewCardCheeseImages/small/31TripleCream/TripleCreamCheese2.jpg",
-//       image3: "/previewCardCheeseImages/small/31TripleCream/TripleCreamCheese3.jpg",
-//     },
-//     name: "Triple Cream",
-//     desc: "A high-fat content cheese with a creamy texture, often enriched with extra cream.",
-//     animal: "Various",
-//     country: "Various",
-//     pricePerKg: 32.5,
-//   },
-//   {
-//     id: 32,
-//     images: {
-//       image1: "/previewCardCheeseImages/small/32Wensleydale/WensleydaleCheese1.jpg",
-//       image2: "/previewCardCheeseImages/small/32Wensleydale/WensleydaleCheese2.jpg",
-//       image3: "/previewCardCheeseImages/small/32Wensleydale/WensleydaleCheese3.jpg",
-//     },
-//     name: "Wensleydale",
-//     desc: "A mild, moist cheese from England, often flavored with fruits such as cranberries.",
-//     animal: "Cow",
-//     country: "United Kingdom",
-//     pricePerKg: 16.4,
-//   },
-//   {
-//     id: 33,
-//     images: {
-//       image1: "/previewCardCheeseImages/small/33RedLeicester/RedLeicesterCheese1.jpg",
-//       image2: "/previewCardCheeseImages/small/33RedLeicester/RedLeicesterCheese2.jpg",
-//       image3: "/previewCardCheeseImages/small/33RedLeicester/RedLeicesterCheese3.jpg",
-//     },
-//     name: "Red Leicester",
-//     desc: "An English cheese with a firm texture and a rich, nutty flavor.",
-//     animal: "Cow",
-//     country: "United Kingdom",
-//     pricePerKg: 17.9,
-//   },
-//   {
-//     id: 34,
-//     images: {
-//       image1: "/previewCardCheeseImages/small/34Halloumi/HalloumiCheese1.jpg",
-//       image2: "/previewCardCheeseImages/small/34Halloumi/HalloumiCheese2.jpg",
-//       image3: "/previewCardCheeseImages/small/34Halloumi/HalloumiCheese3.jpg",
-//     },
-//     name: "Halloumi",
-//     desc: "A Cypriot cheese with a high melting point, often grilled or fried.",
-//     animal: "Cow/Sheep/Goat",
-//     country: "Cyprus",
-//     pricePerKg: 22.0,
-//   },
-//   {
-//     id: 35,
-//     images: {
-//       image1: "/previewCardCheeseImages/small/35Jarlsberg/JarlsbergCheese1.jpg",
-//       image2: "/previewCardCheeseImages/small/35Jarlsberg/JarlsbergCheese2.jpg",
-//       image3: "/previewCardCheeseImages/small/35Jarlsberg/JarlsbergCheese3.jpg",
-//     },
-//     name: "Jarlsberg",
-//     desc: "A mild, semi-soft Norwegian cheese, similar to Swiss cheese.",
-//     animal: "Cow",
-//     country: "Norway",
-//     pricePerKg: 18.6,
-//   },
-//   {
-//     id: 36,
-//     images: {
-//       image1: "/previewCardCheeseImages/small/36QuesoFresco/QuesoFrescoCheese1.jpg",
-//       image2: "/previewCardCheeseImages/small/36QuesoFresco/QuesoFrescoCheese2.jpg",
-//       image3: "/previewCardCheeseImages/small/36QuesoFresco/QuesoFrescoCheese3.jpg",
-//     },
-//     name: "Queso Fresco",
-//     desc: "A fresh Mexican cheese with a mild flavor and crumbly texture.",
-//     animal: "Cow/Goat",
-//     country: "Mexico",
-//     pricePerKg: 14.99,
-//   },
-//   {
-//     id: 37,
-//     images: {
-//       image1: "/previewCardCheeseImages/small/37Boursin/BoursinCheese1.jpg",
-//       image2: "/previewCardCheeseImages/small/37Boursin/BoursinCheese2.jpg",
-//       image3: "/previewCardCheeseImages/small/37Boursin/BoursinCheese3.jpg",
-//     },
-//     name: "Boursin",
-//     desc: "A creamy French cheese flavored with garlic and herbs.",
-//     animal: "Cow",
-//     country: "France",
-//     pricePerKg: 26.2,
-//   },
-//   {
-//     id: 38,
-//     images: {
-//       image1: "/previewCardCheeseImages/small/38Stilton/StiltonCheese1.jpg",
-//       image2: "/previewCardCheeseImages/small/38Stilton/StiltonCheese2.jpg",
-//       image3: "/previewCardCheeseImages/small/38Stilton/StiltonCheese3.jpg",
-//     },
-//     name: "Stilton",
-//     desc: "An English blue cheese with a strong flavor and crumbly texture.",
-//     animal: "Cow",
-//     country: "United Kingdom",
-//     pricePerKg: 25.99,
-//   },
-//   {
-//     id: 39,
-//     images: {
-//       image1: "/previewCardCheeseImages/small/39Cotija/CotijaCheese1.jpg",
-//       image2: "/previewCardCheeseImages/small/39Cotija/CotijaCheese2.jpg",
-//       image3: "/previewCardCheeseImages/small/39Cotija/CotijaCheese3.jpg",
-//     },
-//     name: "Cotija",
-//     desc: "A Mexican cheese, often crumbled on top of dishes like tacos and salads.",
-//     animal: "Cow",
-//     country: "Mexico",
-//     pricePerKg: 16.75,
-//   },
-//   {
-//     id: 40,
-//     images: {
-//       image1: "/previewCardCheeseImages/small/40Munster/MunsterCheese1.jpg",
-//       image2: "/previewCardCheeseImages/small/40Munster/MunsterCheese2.jpg",
-//       image3: "/previewCardCheeseImages/small/40Munster/MunsterCheese3.jpg",
-//     },
-//     name: "Munster",
-//     desc: "A strong-smelling French cheese with a smooth texture and powerful flavor.",
-//     animal: "Cow",
-//     country: "France",
-//     pricePerKg: 21.8,
-//   },
-// ];

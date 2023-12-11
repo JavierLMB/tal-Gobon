@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
 import { promotionImages } from "./usePromotionImages";
 import { useInView } from "react-hook-inview";
+import useWindowSize from "@/components/useWindowSize/useWindowSize";
 
 export default function Promotion() {
   const [ref1, inView1] = useInView({
@@ -12,12 +13,16 @@ export default function Promotion() {
     unobserveOnEnter: true,
   });
 
+  const [isBigScreen, isSmallScreen] = useWindowSize();
+
   return (
     <StyledPromotionMainContainer>
-      {promotionImages.map(({ id, image, content }) => (
+      {promotionImages.map(({ id, imageSmall, imageBig, content }) => (
         <StyledPromotionBackground
           key={id}
-          $background={image}
+          $background={
+            (isSmallScreen && imageSmall) || (isBigScreen && imageBig)
+          }
           ref={id === 1 ? ref1 : ref2}
         >
           <StyledPromotionContainer $inView={id === 1 ? inView1 : inView2}>
@@ -42,7 +47,7 @@ const StyledPromotionMainContainer = styled.div`
 `;
 
 const StyledPromotionBackground = styled.div<{
-  $background: string;
+  $background: string | boolean;
 }>`
   height: clamp(40rem, 40vw, 75rem);
   border-radius: 0.5rem;
@@ -55,7 +60,7 @@ const StyledPromotionBackground = styled.div<{
   box-shadow: ${({ theme }) => theme.shadows.v3Shadow};
   transition: all 0.5s cubic-bezier(0.01, -0.02, 0.51, 1.6);
   ${({ $background }) => css`
-    background-image: url(${$background});
+    background-image: ${$background ? `url(${$background})` : "none"};
   `}
 
   @media (max-width: ${({ theme }) => theme.breakpoints.bpSmallest}) {

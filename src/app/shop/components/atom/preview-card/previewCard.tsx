@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import useWindowSize from "@/components/useWindowSize/useWindowSize";
 
 type PreviewCardProps = {
-  image1: string;
+  image1: any;
   name: string;
   animal:
     | "Cow"

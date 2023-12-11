@@ -13,10 +13,10 @@ export default function Hero() {
   return (
     <StyledHeroBackground ref={ref}>
       <StyledLogoImage
-        src={"/GobonLogo/small/GobonLogo.png"}
+        src={"/GobonLogo/big/GobonLogoHero.png"}
         alt={"tal Gobon Logo"}
-        width={400}
-        height={400}
+        width={750}
+        height={750}
         priority
       />
       <StyledTitle>
@@ -37,7 +37,7 @@ const StyledHeroBackground = styled.div`
   height: 100%;
   margin: 0rem 1rem;
   border-radius: 0.5rem;
-  background-image: url("cheeseBackgrounds/small/hero-background5.jpg");
+  background-image: url("cheeseBackgrounds/small/hero-background.jpg");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -52,6 +52,9 @@ const StyledHeroBackground = styled.div`
   box-shadow: ${({ theme }) => theme.shadows.v3Shadow};
   @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
     border-radius: 1rem;
+  }
+  @media (min-width: ${({ theme }) => theme.breakpoints.bpSmaller}) {
+    background-image: url("cheeseBackgrounds/big/hero-background.jpg");
   }
 `;
 

@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { SampleNextArrow, SamplePrevArrow } from "./useCarouselArrows";
 import { carouselImages } from "./useCarouselImages";
+import useWindowSize from "@/components/useWindowSize/useWindowSize";
 
 export default function Carousel() {
   const sliderSettings = {
@@ -19,11 +20,18 @@ export default function Carousel() {
     pauseOnHover: false,
   };
 
+  const [isBigScreen, isSmallScreen] = useWindowSize();
+
   return (
     <StyledCarouselContainer>
       <Slider {...sliderSettings}>
-        {carouselImages.map(({ id, image, content }) => (
-          <StyledHeroBackground key={id} $background={image}>
+        {carouselImages.map(({ id, imageSmall, imageBig, content }) => (
+          <StyledHeroBackground
+            key={id}
+            $background={
+              (isSmallScreen && imageSmall) || (isBigScreen && imageBig)
+            }
+          >
             <StyledPromotionContainer>
               <h3>{content}</h3>
             </StyledPromotionContainer>
@@ -47,7 +55,7 @@ const StyledCarouselContainer = styled.div`
   }
 `;
 
-const StyledHeroBackground = styled.div<{ $background: string }>`
+const StyledHeroBackground = styled.div<{ $background: string | boolean }>`
   height: clamp(20rem, 40vw, 50rem);
   border-radius: 0.5rem;
   background-size: cover;
@@ -56,7 +64,7 @@ const StyledHeroBackground = styled.div<{ $background: string }>`
   font-size: ${({ theme }) => theme.fonts.defaultFont};
   color: ${({ theme }) => theme.colors.primaryLight};
   ${({ $background }) => css`
-    background-image: url(${$background});
+    background-image: ${$background ? `url(${$background})` : "none"};
   `}
 
   @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {

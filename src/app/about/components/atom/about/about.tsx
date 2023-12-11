@@ -67,6 +67,11 @@ const StyledHeroBackground = styled.div`
   @media (min-width: ${({ theme }) => theme.breakpoints.bpNormals}) {
     border-radius: 1rem;
   }
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.bpSmaller}) {
+    background-image: url("cheeseAbout/big/aboutImage.jpg");
+    background-position: top;
+  }
 `;
 
 const StyledTitle = styled.h1`

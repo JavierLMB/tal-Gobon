@@ -2,6 +2,7 @@ import styled from "styled-components";
 import PreviewCard from "../../atom/preview-card/previewCard";
 import { CheeseDataType } from "../../organism/shop-view-container/useCheeseData";
 import { useRouter } from "next/navigation";
+import useWindowSize from "@/components/useWindowSize/useWindowSize";
 
 type PreviewCardContainerProps = {
   activeProducts: CheeseDataType[];
@@ -11,6 +12,8 @@ export default function PreviewCardContainer({
   activeProducts,
 }: PreviewCardContainerProps) {
   const router = useRouter();
+
+  const [isBigScreen, isSmallScreen] = useWindowSize();
 
   const handleCardClick = (name: string) => {
     const url = name
@@ -27,7 +30,10 @@ export default function PreviewCardContainer({
           <PreviewCard
             key={id}
             id={id}
-            image1={images.image1}
+            image1={
+              (isBigScreen && images.image1Small) ||
+              (isSmallScreen && images.image1Big)
+            }
             name={name}
             animal={animal}
             pricePerKg={pricePerKg}
