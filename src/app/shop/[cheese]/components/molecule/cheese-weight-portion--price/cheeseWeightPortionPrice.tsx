@@ -12,7 +12,9 @@ type CheeseWeightPortionPriceProps = {
     id?: number;
     name?: string;
     pricePerKg?: number;
-    images?: { image1?: string };
+    imagesSmall?: {
+      image1Small: string;
+    };
   };
 };
 
@@ -51,7 +53,7 @@ export default function CheeseWeightPortionPrice({
       price: updateTotalPrice(selectedWeight, portionQuantity, true),
       weight: selectedWeight,
       quantity: portionQuantity,
-      image: cheeseObject?.images?.image1,
+      image: cheeseObject?.imagesSmall?.image1Small,
     };
 
     addItem(newProduct, portionQuantity);

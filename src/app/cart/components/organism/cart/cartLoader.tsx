@@ -8,9 +8,9 @@ export default function CartLoader() {
         <StyledCheeseIcon />
       </StyledCheeseContainer>
       <StyledDotsContainer>
-        <StyledDot delay="0s" />
-        <StyledDot delay="0.2s" />
-        <StyledDot delay="0.4s" />
+        <StyledDot $delay="0s" />
+        <StyledDot $delay="0.2s" />
+        <StyledDot $delay="0.4s" />
       </StyledDotsContainer>
     </StyledLoaderContainer>
   );
@@ -59,11 +59,11 @@ const StyledDotsContainer = styled.div`
   justify-content: center;
 `;
 
-const StyledDot = styled.div<{ delay: string }>`
+const StyledDot = styled.div<{ $delay: string }>`
   width: 10px;
   height: 10px;
   border-radius: 50%;
   margin: 0 4px;
-  animation: ${dotFade} 0.9s infinite ${({ delay }) => delay || "0s"};
+  animation: ${dotFade} 0.9s infinite ${({ $delay }) => $delay || "0s"};
   background-color: ${({ theme }) => theme.colors.primaryDark};
 `;

@@ -15,14 +15,14 @@ type CheeseObjectType = {
   animal: string;
   pricePerKg: number;
   imagesSmall: {
-    image1Small: any;
-    image2Small: any;
-    image3Small: any;
+    image1Small: string;
+    image2Small: string;
+    image3Small: string;
   };
   imagesBig: {
-    image1Big: any;
-    image2Big: any;
-    image3Big: any;
+    image1Big: string;
+    image2Big: string;
+    image3Big: string;
   };
 };
 
