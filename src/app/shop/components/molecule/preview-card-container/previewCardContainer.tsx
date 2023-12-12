@@ -28,22 +28,19 @@ export default function PreviewCardContainer({
       <StyledProductCardContainer>
         {activeProducts.map(
           ({ id, imagesSmall, imagesBig, name, animal, pricePerKg }) => (
-            console.log(imagesBig.image1Big),
-            (
-              <PreviewCard
-                key={id}
-                id={id}
-                image1={
-                  (isBigScreen && imagesBig.image1Big) ||
-                  (isSmallScreen && imagesSmall.image1Small) ||
-                  imagesSmall.image1Small
-                }
-                name={name}
-                animal={animal}
-                pricePerKg={pricePerKg}
-                onClick={() => handleCardClick(name)}
-              />
-            )
+            <PreviewCard
+              key={id}
+              id={id}
+              image1={
+                (isBigScreen && imagesBig.image1Big) ||
+                (isSmallScreen && imagesSmall.image1Small) ||
+                imagesSmall.image1Small
+              }
+              name={name}
+              animal={animal}
+              pricePerKg={pricePerKg}
+              onClick={() => handleCardClick(name)}
+            />
           )
         )}
       </StyledProductCardContainer>
