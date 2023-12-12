@@ -110,7 +110,7 @@ export const cheesesData: CheeseDataType[] = [
     imagesBig: {
       image1Big: "/previewCardCheeseImages/big/5Manchego/ManchegoCheese1.jpg",
       image2Big: "/previewCardCheeseImages/big/5Manchego/ManchegoCheese2.jpg",
-      image3Big: "/previewCardCheeseImages/big/5Manchego/ManchegoCheese3.jpg",
+      image3Big: "/previewCardCheeseImages/small/5Manchego/ManchegoCheese3.jpg",
     },
     name: "Manchego",
     desc: `A Spanish cheese made from sheep's milk, known for its distinctive flavor and texture.`,
@@ -148,8 +148,8 @@ export const cheesesData: CheeseDataType[] = [
     },
     imagesBig: {
       image1Big: "/previewCardCheeseImages/big/7Parmesan/ParmesanCheese1.jpg",
-      image2Big: "/previewCardCheeseImages/big/7Parmesan/ParmesanCheese2.jpg",
-      image3Big: "/previewCardCheeseImages/big/7Parmesan/ParmesanCheese3.jpg",
+      image2Big: "/previewCardCheeseImages/small/7Parmesan/ParmesanCheese2.jpg",
+      image3Big: "/previewCardCheeseImages/small/7Parmesan/ParmesanCheese3.jpg",
     },
     name: "Parmesan",
     desc: "A hard, granular cheese from Italy, usually aged and grated over pasta dishes.",
@@ -301,9 +301,11 @@ export const cheesesData: CheeseDataType[] = [
     },
     imagesBig: {
       image1Big:
-        "/../public/previewCardCheeseImages/big/14Emmental/EmmentalCheese1.jpg",
-      image2Big: "/previewCardCheeseImages/big/14Emmental/EmmentalCheese2.jpg",
-      image3Big: "/previewCardCheeseImages/big/14Emmental/EmmentalCheese3.jpg",
+        "/previewCardCheeseImages/small/14Emmental/big/EmmentalCheese1.jpg",
+      image2Big:
+        "/previewCardCheeseImages/small/14Emmental/big/EmmentalCheese2.jpg",
+      image3Big:
+        "/previewCardCheeseImages/small/14Emmental/big/EmmentalCheese3.jpg",
     },
     name: "Emmental",
     desc: "A Swiss yellow cheese, known for its characteristic holes and sweet, nutty flavor.",
@@ -323,7 +325,7 @@ export const cheesesData: CheeseDataType[] = [
     },
     imagesBig: {
       image1Big:
-        "/previewCardCheeseImages/big/15MontereyJack/MontereyJackCheese1.jpg",
+        "/previewCardCheeseImages/small/15MontereyJack/MontereyJackCheese1.jpg",
       image2Big:
         "/previewCardCheeseImages/big/15MontereyJack/MontereyJackCheese2.jpg",
       image3Big:
@@ -349,7 +351,7 @@ export const cheesesData: CheeseDataType[] = [
       image1Big:
         "/previewCardCheeseImages/big/16PepperJack/PepperJackCheese1.jpg",
       image2Big:
-        "/previewCardCheeseImages/big/16PepperJack/PepperJackCheese2.jpg",
+        "/previewCardCheeseImages/small/16PepperJack/PepperJackCheese2.jpg",
       image3Big:
         "/previewCardCheeseImages/big/16PepperJack/PepperJackCheese3.jpg",
     },
@@ -441,6 +443,7 @@ export const cheesesData: CheeseDataType[] = [
     pricePerKg: 20.6,
   },
 ];
+
 // export type CheeseDataType = {
 //   id: number;
 //   imagesSmall: {
