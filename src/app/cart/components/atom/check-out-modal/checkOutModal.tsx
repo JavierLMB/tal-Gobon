@@ -54,7 +54,7 @@ const StyledCheckOutModalContainer = styled.div<{
   transform: translate(-50%, -50%);
   box-shadow: ${({ theme }) => theme.shadows.v1Shadow};
   border: 5px solid ${({ theme }) => theme.colors.accentGoldLight};
-  transition: all 0.4s cubic-bezier(0.01, -0.02, 0.51, 1.6);
+  transition: all 0.3s;
   background: linear-gradient(
     45deg,
     ${({ theme }) => theme.colors.primaryDark},
